@@ -1,0 +1,41 @@
+﻿<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+    <ion-view dir="rtl" view-title="Home Page" hide-nav-bar="true">
+        <ion-content class="content" scroll="false">
+            <div class="Banner">
+                <ul>
+                    <li class="animated01 fadeInLeft"><a ng-click="toggleMenu()"><img alt="" src="img/icon/menu.png" /></a></li>
+                    <li class="animated03 fadeInDown"><a href="#"><img alt="" src="img/logo.png" /></a></li>
+                    <li class="animated02 fadeInRight">
+                    <a><img class="Left" alt="" src="img/en.png" /></a> 
+                    <a ui-sref="SlideTest"><img class="Right" alt="" src="img/icon/Help.png" /></a>
+                    </li>
+                </ul>
+            </div>
+            <div style="height: .5em"></div>
+            <div class='circle-container animated04 rotateIn' style="left: -8em">
+                <img src='img/home/home.png'>
+                <div class='circle-container' id="C-container">
+                    <img ui-sref="contact" class='deg0' src='img/home/contact.png'>
+                    <img ui-sref="manual" class='deg45' src='img/home/guide.png'>
+                    <img ui-sref="complains" class='deg90' src='img/home/suggest.png'>
+                    <img ui-sref="about" class='deg135' src='img/home/about.png'>
+                    <img ui-sref="mediaCenter" class='deg180' src='img/home/media.png'>
+                    <img ui-sref="servicesGuide" class='deg225' src='img/home/serviceguideA.png'>
+                    <img ui-sref="ChairmanWord" class='deg270' src='img/home/word.png'>
+                    <img ui-sref="OnlineServices" class='deg315' src='img/home/services.png'>
+                </div>
+            </div>
+            <div style="height: 1em"></div>
+            <div class="TAC animated04 fadeIn">
+                <img src="img/ajmanlogo.png" style="width: 37%;" />
+            </div>
+        </ion-content>
+    </ion-view>
+</body>
+</html>

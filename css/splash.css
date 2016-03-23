@@ -1,0 +1,13 @@
+﻿body {
+    padding: 0;
+    margin: 0;
+    background-image: url(../img/pattern.png);
+    background-repeat: repeat;
+    background-color: #b6985a;
+}
+.SplashWrapper
+{
+    padding: 5em 0 0 0;
+}
+
+

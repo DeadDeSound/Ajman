@@ -1,0 +1,30 @@
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+</head>
+<ion-view view-title="Home Page" hide-nav-bar="true">
+    <ion-content class="content" scroll="false">
+        <div class="Banner">
+            <ul>
+                <li><a ng-click="toggleMenu()"><img alt="" src="img/icon/menu.png"/></a></li>
+                <li><a href="#"><img alt="" src="img/logo.png"/></a></li>
+                <li><a ng-click="changeLang()"><img alt="" src="img/en.png"/></a></li>
+            </ul>
+        </div>
+
+        <div style="height: 2em"></div>
+
+        <div class='circle-container'>
+            <img src='img/home/home.png'>
+            <div class='circle-container' id="C-container">
+                <img ui-sref="contact" class='deg0' src='img/home/en/contact.png'>
+                <img ui-sref="manual" class='deg45' src='img/home/en/guide.png'>
+                <img ui-sref="complains" class='deg90' src='img/home/en/suggest.png'>
+                <img ui-sref="about" class='deg135' src='img/home/en/about.png'>
+                <img ui-sref="mediaCenter" class='deg180' src='img/home/en/media.png'>
+                <img ui-sref="services" class='deg225' src='img/home/en/register.png'>
+                <img ui-sref="manual" class='deg270' src='img/home/en/guide.png'>
+                <img ui-sref="complains" class='deg315' src='img/home/en/suggest.png'>
+            </div>
+        </div>
+    </ion-content>
+</ion-view>

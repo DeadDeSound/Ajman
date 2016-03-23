@@ -1,0 +1,48 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+    <ion-view view-title="الغاء شركة اعمال" dir="rtl">
+        <ion-content scroll="false" class="content">
+            <div class="Wrapper animated03 fadeInRightBig">
+                <h3>موقع تقديم الخدمة :</h3>
+                <p>مراكز خدمة عملاء دائرة التنمية الاقتصادية عجمان</p>
+                <h3>وقت تقديم الخدمة :</h3>
+                <p>خلال ساعات الدوام الرسمية</p>
+                <h3>المستفيد من الخدمة :</h3>
+                <p>موظف / متعامل أفراد / متعامل شركات/ مؤسسات</p>
+
+
+
+                <div ng-model="expandme">
+                    <div ng-click="expandme=!expandme">
+                        <h3 class="CollapsTitle animated fadeInRightBig"><i class="ion-ios-arrow-down"></i>  المستندات المطلوبة للحصول على الخدمة :</h3>
+                    </div>
+                </div>
+                <div ng-show="expandme" class="fadeInRightBig">
+                    <p>1.	تعبئة الطلب</p>
+                    <p>2.	الترخيص الاصلي او صورة عنه في حالة فقدانه</p>
+                    <p>3.	الأوراق الثبوتية لاصحاب الترخيص</p>
+                </div>
+
+                <div ng-model="expandme1">
+                    <div ng-click="expandme1=!expandme1">
+                        <h3 class="CollapsTitle animated fadeInRightBig"><i class="ion-ios-arrow-down"></i>  خطوات تقديم الخدمة المطلوبة من المتعامل :</h3>
+                    </div>
+                </div>
+                <div ng-show="expandme1" class="fadeInRightBig">
+                    <p>1.	تقديم الطلب ومرفقاته للاعتماد</p>
+                    <p>2.	مراجعة قسم التفتيش والمعاينات</p>
+                    <p>3.	تحصيل	الرسوم</p>
+                    <p>4.	مراجعة الدوائر الحكوميه الاخرى( غرقة التجارة+العمل والعمال+ادراة الحنسية)</p>
+                    <p>5.	النشر في الجريده وبعد مرور 15 يوما يتم طباعة شهادة الالغاء ويتم تسليمها للعميل</p>
+                </div>
+
+            </div>
+        </ion-content>
+    </ion-view>
+</body>
+</html>

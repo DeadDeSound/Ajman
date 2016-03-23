@@ -1,0 +1,337 @@
+.SideCollapsMenu .tabs-top > .tabs, .tabs.tabs-top {
+    top: 0;
+}
+.SideCollapsMenu .tabs-icon-top > .tabs .tab-item, 
+.SideCollapsMenu .tabs-icon-top.tabs .tab-item, 
+.SideCollapsMenu .tabs-icon-bottom > .tabs .tab-item, 
+.SideCollapsMenu .tabs-icon-bottom.tabs .tab-item {
+    font-size: 12px;
+    line-height: 16px;
+    background-color: #9c8560; 
+    padding-top: 1em;
+    color: #FFF;
+}
+.SideCollapsMenu .tabs {
+    height: 75px;
+}
+.SideCollapsMenu .has-tabs-top {
+    top: 65px;
+}
+.SideCollapsMenu .tab-title
+{
+    font-family: "HelveticaNeueLTW20-Roma";
+    font-size: 1.4em;
+    color: #FFF;
+}
+/**/
+.MainMenu
+{
+    padding: 0;
+    margin: 0;
+    width: 100%;
+}
+.MainMenu li
+{
+    padding: 0;
+    margin: 0;
+    display: block;
+    border-bottom: .1em solid #ddd;
+}
+.MainMenu li:hover
+{
+    background-color: #e7e7e7;
+}
+.MainMenu li h2
+{
+    display: block;
+    padding: .8em 1.4em .8em 0;
+    margin: 0;
+    font-size: 1.3em;
+}
+.MainMenu li a
+{
+    display: block;
+    padding: .8em 1.4em .8em 0;
+    margin: 0;
+    color: #333;
+    font-size: 1.0em;
+}
+.MainMenu li a.Arabic{color: #167ab6;}
+.MainMenu li a.International{color: #167ab6;}
+.MainMenu li a.UAE{color: #167ab6;}
+.MainMenu li a.Directions{color: #6e7e48;}
+
+.MainMenu li a.Technology{color: #cccf51;}
+.MainMenu li a.Health{color: #2294db;}
+.MainMenu li a.Sport{color: #009451;}
+
+.MainMenu li a.LifeStyle{color: #9f2f78;}
+.MainMenu li a.Varitiess{color: #5f3fa3;}
+
+.MainMenu li a.Bsiness{color: #d36f22;}
+.MainMenu li a.Youth{color: #da035d;}
+.MainMenu li a.Pictures{color: #333;}
+
+.MainMenu li a.News{color: #1f75b0;}
+.MainMenu li a.UAE2{color: #bb0002;}
+.MainMenu li a.Documentary{color: #8b6325;}
+.MainMenu li a.Varitiess2{color: #8f2968;}
+.MainMenu li a.Sport2{color: #006134;}
+
+.MainMenu li .Soical-Icons
+{
+    padding: 0;
+    margin: 0;
+    width: 100%;
+}
+.MainMenu li .Soical-Icons li
+{
+    width: 4.6em;
+    padding: .1px .2px;
+    margin: 0;
+    display: inline-block;
+    border-bottom: 0 solid #ddd;
+}
+.MainMenu li .Soical-Icons li a
+{
+    display: inline-block;
+    padding: 0 0;
+    margin: 0;
+    color: #333;
+}
+.MainMenu li .Soical-Icons li a img
+{
+    width: 100%;
+}
+/**/
+  
+/*.tabs {
+    width: 100%;
+    height: 100%;
+    float: none;
+    list-style: none;
+    padding: 0;
+    position: absolute;
+    top: 0.8em;
+    right: 0;
+}
+
+.tabs-Wrapper-Fixed{
+    position: fixed;
+    top: 2.3em;
+    right: 0;
+    width: 100%;
+}
+
+.tabs:after {
+    content: '';
+    display: table;
+    clear: both;
+}
+
+.tabs input[type=radio] {
+    display:none;
+}
+
+.tabs label {
+    display: block;
+    float: right;
+    width: 24.8%;
+    padding: .7em 0;
+    white-space: nowrap;
+
+    color: #FFF;
+    font-size: 1.1em;
+    font-weight: normal;
+    text-decoration: none;
+    text-align: center;
+
+    background-color: #8a939c;
+
+    cursor: pointer;
+
+    -webkit-transition: all 0.5s; 
+    transition: all 0.5s;
+}
+ 
+.tabs label span {}
+
+.tabs label i {
+    padding: 5px;
+    margin-right: 0;
+}
+
+.tabs label:hover {
+    background-color: #1779b6;
+}
+
+.tab-content {
+    display: none;
+    width: 100%;
+    height: 100%;
+    padding: 1em;
+    box-sizing: border-box;
+ 
+    background-color:#ffffff;
+    position: absolute;
+    top: 3.5em;
+    right: 0;
+}
+
+.tab-content * {
+
+    -webkit-animation: scale 0.7s ease-in-out;
+    -moz-animation: scale 0.7s ease-in-out;
+    animation: scale 0.7s ease-in-out;
+}
+
+@keyframes scale {
+
+  0% { 
+    transform: scale(0.9);
+    opacity: 0;
+    }
+
+  50% {
+    transform: scale(1.01);
+    opacity: 0.5;
+    }
+
+  100% { 
+    transform: scale(1);
+    opacity: 1;
+  }
+
+}
+  
+.tabs [id^="tab"]:checked + label {
+    background-color: #1779b6;
+    color: #FFF;
+}
+
+#tab1:checked ~ #tab-content1,
+#tab2:checked ~ #tab-content2,
+#tab3:checked ~ #tab-content3,
+#tab4:checked ~ #tab-content4 {
+    display: block;
+}*/
+
+
+/*RightMenuTaps*/
+/*.RightMenuTaps {
+    width: 100%;
+    height: 100%;
+    float: none;
+    list-style: none;
+    padding: 0;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.RightMenuTaps-Wrapper-Fixed{
+    position: fixed;
+    top: 2.3em;
+    right: 0;
+    width: 100%;
+}
+
+.RightMenuTaps:after {
+    content: '';
+    display: table;
+    clear: both;
+}
+
+.RightMenuTaps input[type=radio] {
+    display:none;
+}
+
+.RightMenuTaps label {
+    display: block;
+    float: left;
+    width: 33.3%;
+    padding: .4em 0;
+    margin: 0;
+    white-space: nowrap;
+
+    color: #FFF;
+    font-size: 1.1em;
+    font-weight: normal;
+    text-decoration: none;
+    text-align: center;
+
+    background-color: #8a939c;
+
+
+    cursor: pointer;
+
+    -webkit-transition: all 0.5s; /* Safari 3.1 to 6.0 */
+    transition: all 0.5s;
+}
+ 
+.RightMenuTaps label span {
+    display: inline-block;
+    padding: 0;
+    margin: 0;
+    width: 2.3em;
+    height: 2.3em;
+}
+.RightMenuTaps label .NewsLink
+{
+    background-image: url( ../Images/Icon/news.png);
+    background-position: center;
+    background-size: 100%;
+    background-repeat: repeat-x;
+}
+.RightMenuTaps label .VideoLink
+{
+    background-image: url( ../Images/Icon/video.png);
+    background-position: center;
+    background-size: 97%;
+    background-repeat: no-repeat;
+}
+.RightMenuTaps label .AboutLink
+{
+    background-image: url( ../Images/Icon/info.png);
+    background-position: center;
+    background-size: 97%;
+    background-repeat: no-repeat;
+}
+
+.RightMenuTaps label i {}
+
+.RightMenuTaps label:hover {
+    background-color: #bababa;
+}
+
+.RightMenuTaps-content {
+    display: none;
+    width: 100%;
+    height: 100%;
+    padding: 1em;
+    box-sizing: border-box;
+ 
+    background-color:#ffffff;
+    position: absolute;
+    top: 3.5em;
+    right: 0;
+}
+
+.RightMenuTaps-content * {
+
+    -webkit-animation: scale 0.7s ease-in-out;
+    -moz-animation: scale 0.7s ease-in-out;
+    animation: scale 0.7s ease-in-out;
+}
+
+.RightMenuTaps [id^="RightMenuTaps-tab"]:checked + label {
+    background-color: #bababa;
+    color: #FFF;
+}
+
+#RightMenuTaps-tab1:checked ~ #RightMenuTaps-content1,
+#RightMenuTaps-tab2:checked ~ #RightMenuTaps-content2,
+#RightMenuTaps-tab3:checked ~ #RightMenuTaps-content3,
+#RightMenuTaps-tab4:checked ~ #RightMenuTaps-content4 {
+    display: block;
+}*/

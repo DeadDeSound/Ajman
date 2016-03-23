@@ -1,0 +1,74 @@
+<ion-view dir="rtl" class="SideCollapsMenu">
+    <ion-tabs class="tabs-light tabs-icon-top tabs-top">
+        <ion-content>
+            <ion-tab title="نبذه" icon-on="ion-document-text" icon-off="ion-document">
+                <ion-pane>
+                    <ion-content class="has-tabs-top has-header padding">
+                        <div class="MainMenu">
+                            <ul>
+                                <li ng-click="closeMenu()"><a ui-sref="home">الرئيسية</a></li>
+                                <li ng-click="closeMenu()"><a ui-sref="ChairmanWord">كلمة رئيس الدائرة</a></li>
+                                <li ng-click="closeMenu()"><a ui-sref="knowUs">عن الدائرة</a></li>
+                                <li ng-click="closeMenu()"><a ui-sref="departmentObjectives">أهداف الدائرة</a></li>
+                                <li ng-click="closeMenu()"><a ui-sref="contact">تواصل معنا</a></li>
+                                <li ng-click="closeMenu()"><a ui-sref="complains">الشكاوي</a></li>
+                                <li ng-click="closeMenu()"><a ui-sref="Suggestion">المقترحات</a></li>
+                            </ul>
+                        </div>
+                    </ion-content>
+                </ion-pane>
+            </ion-tab>
+            <ion-tab title="خدمات" icon-on="ion-gear-b" icon-off="ion-gear-a">
+                <ion-pane>
+                    <ion-content class="has-tabs-top has-header padding">
+                        <div class="MainMenu">
+                            <ul>
+                                <li ng-click="closeMenu()"><a ui-sref="Enquiry">الاستعلام عن رخصة</a></li>
+                                <li ng-click="closeMenu()"><a ui-sref="renewal">تجديد الرخصة</a></li>
+                                <li ng-click="closeMenu()"><a ui-sref="manual">دليل المستهلك</a></li>
+                                <li ng-click="closeMenu()"><a ui-sref="MediaServices">خدمات الاعلامية</a></li>
+                                <li ng-click="closeMenu()"><a ui-sref="services">خدمات الترخيص</a></li>
+                                <li ng-click="closeMenu()"><a ui-sref="activitiesGuide">دليل الأنشطة</a></li>
+                                <li ng-click="closeMenu()"><a ui-sref="irregularitiesList">قائمة المخالفات</a></li>
+                            </ul>
+                        </div>
+                        
+                    </ion-content>
+                    <ion-pane>
+            </ion-tab>
+            <ion-tab title="أخري" icon-on="ion-ios-plus" icon-off="ion-ios-plus-outline">
+                <ion-pane>
+                    <ion-content class="MainMenu has-tabs-top has-header padding">
+                        <div class="MainMenu">
+                            <ul>
+                                <li ng-click="closeMenu()"><a ui-sref="mediaCenter">المركز الاعلامي</a></li>
+                                <li ng-click="closeMenu()"><h2 ui-sref="legislation">اللوائح</h2></li>
+                                <li ng-click="closeMenu()"><a ui-sref="regulations">التشريعات الاقتصادية</a></li>
+                                <li ng-click="closeMenu()"><a ui-sref="investment">الاستثمار في عجمان</a></li>
+                                <li ng-click="closeMenu()"><h2 ui-sref="statistics">الاحصاءات</h2></li>
+                                <li ng-click="closeMenu()"><a ui-sref="annual_report">التقرير السنوي</a></li>
+                            </ul>
+                        </div>
+                        
+                        <!--<div ng-controller="sideMenuCtrl">-->
+                            <!--<div class="row" ng-repeat="icon in icons" ng-if="$index % 4 === 0">-->
+                                <!--<div class="col col-25" ng-if="$index < icons.length" ng-click="icons[$index].onClick()">-->
+                                    <!--<img ng-src="{{icons[$index].icon}}" width="100%"/>-->
+                                <!--</div>-->
+                                <!--<div class="col col-25" ng-if="$index + 1 < icons.length" ng-click="icons[$index + 1].onClick()">-->
+                                    <!--<img ng-src="{{icons[$index + 1].icon}}" width="100%"/>-->
+                                <!--</div>-->
+                                <!--<div class="col col-25" ng-if="$index + 2 < icons.length" ng-click="icons[$index + 2].onClick()">-->
+                                    <!--<img ng-src="{{icons[$index + 2].icon}}" width="100%"/>-->
+                                <!--</div>-->
+                                <!--<div class="col col-25" ng-if="$index + 3 < icons.length" ng-click="icons[$index + 3].onClick()">-->
+                                    <!--<img ng-src="{{icons[$index + 3].icon}}" width="100%"/>-->
+                                <!--</div>-->
+                            <!--</div>-->
+                        <!--</div>-->
+                    </ion-content>
+                </ion-pane>
+            </ion-tab>
+        </ion-content>
+    </ion-tabs>
+</ion-view>

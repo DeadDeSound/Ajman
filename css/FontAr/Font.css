@@ -1,0 +1,16 @@
+﻿@font-face{
+font-family:"HelveticaNeueLTW20-Roma";
+src:url("normal.eot");
+src:url("normal.eot") format("eot"),
+    url("normal.woff") format("woff"),
+    url("normal.ttf") format("truetype"),
+    url("normal.svg") format("svg");
+}
+@font-face{
+font-family:"HelveticaNeueLTW20-bold";
+src:url("bold/bold.eot");
+src:url("bold/bold.eot") format("eot"),
+    url("bold/bold.woff") format("woff"),
+    url("bold/bold.ttf") format("truetype"),
+    url("bold/bold.svg") format("svg");
+}

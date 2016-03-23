@@ -1,0 +1,148 @@
+
+
+/**
+	General styling
+**/
+
+body {
+	margin: 0;
+	padding: 0;
+	font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif;
+}
+
+* {
+	-webkit-box-sizing: border-box;
+	-mox-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+h1 {
+	font-size: 40px;
+	line-height: 60px;
+	text-align: center;
+}
+
+a {
+	text-decoration: none;
+}
+
+img {
+	max-width: 100%;
+}
+
+#container::after {
+	content: '';
+	display: table;
+	clear: both;
+}
+
+/**
+	Header styles
+**/
+
+.header {
+	display: block;
+	padding: 15px;
+	background-color: #293e4f;
+	border-bottom: 10px solid #96c231;
+}
+
+.btn {
+	display: block;
+	margin: 0 0 15px 0;
+	padding: 10px 15px;
+	border-radius: 5px;
+	font-size: 17px;
+	color: #fff;
+	font-weight: bold;
+	background-color: #96c231;
+	text-align: center;
+}
+
+.next {
+	margin: 0;
+}
+
+
+
+/**
+	Footer Styles
+**/
+
+.footer {
+	display: block;
+	width: 100%;
+	background-color: #293e4f;
+	border-top: 10px solid #96c231;
+}
+
+.ad {
+	display: block;
+	padding: 15px;
+	margin-top: 20px;
+	text-align: center;
+}
+
+.copy {
+	text-align: center;
+	padding: 15px;
+	color: #FFF;
+}
+
+.examples {
+	border-bottom: 10px solid #96c231;
+	text-align: center;
+}
+
+.examples h3 {
+	font-size: 30px;
+	color: #fff;
+}
+
+.examples ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+.examples ul li {
+	display: block;
+	max-width: 80%;
+	margin: 15px auto;
+}
+
+.examples ul li span {
+	display: block;
+	font-size: 22px;
+	line-height: 35px;
+	color: #fff;
+}
+
+
+/**
+	Responsive Styles
+**/
+
+@media (min-width: 680px) {
+
+	.btn {
+		display: inline-block;
+		margin: 0;
+	}
+
+	.next {
+		float: right;
+	}
+
+	.examples ul li {
+		display: inline-block;
+		max-width: 30%;
+		margin: 15px 10px;
+		top: 0;
+	}
+
+	.hide-mobile {
+		display: none;
+	}
+
+} 
