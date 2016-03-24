@@ -1,0 +1,75 @@
+.pane, .view {
+    background-color: none;
+    background-image: url(../img/pattern.jpg);
+    background-size: 20%;
+    background-repeat: repeat;
+}
+.popup-body span {
+    height: 1.2em;
+    display: block;
+    line-height: 1.2em;
+}
+
+.menu .pane, .menu .view, .menu  {
+    background-color: #FFF;
+    background-image: none;
+}
+
+.SideCollapsMenu 
+{
+    top: -75px !important
+}
+
+.Wrapper {
+    margin-top: -75px !important;
+}
+
+/* HOME CIRCLE */
+
+.Circle-Left{
+    left: -10em !important
+}
+
+.circle-container {
+    width: 16em !important;
+    height: 16em !important;
+}
+.circle-container img {
+    width: 6em !important;
+    height: 6em !important;
+    margin: -3.0em !important; /* 2em = 4em/2 */
+    /* half the width */
+}
+
+.deg0 {
+    transform: rotate(0deg) translate(8em) rotate(-270deg) !important;
+}
+
+/* 12em = half the width of the wrapper */
+.deg45 {
+    transform: rotate(45deg) translate(8em) rotate(-270deg) !important;
+}
+
+.deg90 {
+    transform: rotate(90deg) translate(8em) rotate(-270deg) !important;
+}
+
+.deg135 {
+    transform: rotate(135deg) translate(8em) rotate(-270deg) !important;
+}
+
+.deg180 {
+    transform: rotate(180deg) translate(8em) rotate(-270deg) !important;
+}
+
+.deg225 {
+    transform: rotate(225deg) translate(8em) rotate(-270deg) !important;
+}
+
+.deg270 {
+    transform: rotate(270deg) translate(8em) rotate(-270deg) !important;
+}
+
+.deg315 {
+    transform: rotate(315deg) translate(8em) rotate(-270deg) !important;
+}

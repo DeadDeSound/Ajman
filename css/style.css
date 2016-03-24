@@ -32,6 +32,11 @@
     width: 30px;
 }
 
+
+.Circle-Left{
+    left: -8em
+}
+
 .circle-container {
     position: relative;
     width: 21em;
