@@ -40,11 +40,11 @@ app.controller('mainController', function ($scope,
 
     $scope.changeLang = function () {
         console.log($rootScope.appLang);
-        if ($rootScope.appLang === "en") {
-            $rootScope.appLang = "ar";
+        if (localStorage.getItem("lang") === "en") {
+            localStorage.setItem("lang", "ar");
             $state.reload();
         } else {
-            $rootScope.appLang = "en";
+            localStorage.setItem("lang", "en");
             $state.reload();
         }
     };
@@ -161,20 +161,63 @@ app.controller('mainController', function ($scope,
 });
 
 
+app.controller('splashController', function ($scope, $state, $rootScope, $timeout, $ionicViewService, $ionicHistory) {
+
+    $scope.setAr = function () {
+        localStorage.setItem("lang", "ar");
+        $ionicHistory.nextViewOptions({
+            historyRoot: true
+        });
+        $ionicViewService.clearHistory();
+        console.log("home");
+        $state.go('home')
+    };
+
+    $scope.setEn = function () {
+        localStorage.setItem("lang", "en");
+        $ionicHistory.nextViewOptions({
+            historyRoot: true
+        });
+        $ionicViewService.clearHistory();
+        console.log("home");
+        $state.go('home')
+    };
+
+    $scope.StartSplash = function () {
+        if (localStorage.getItem("lang") == "NA") {
+            $timeout(function () {
+                $state.go('splash2')
+            }, 4000);
+        } else {
+            $timeout(function () {
+                $ionicHistory.nextViewOptions({
+                    historyRoot: true
+                });
+                $ionicViewService.clearHistory();
+                $state.go('home')
+            }, 4000);
+        }
+    }
+
+    $scope.StartSplash();
+
+
+});
 app.controller('SlideBoxCtrl', function ($scope, $state, $ionicSlideBoxDelegate) {
 
-        $scope.next = function () {
-            $ionicSlideBoxDelegate.next();
-        };
-        $scope.previous = function () {
-            $ionicSlideBoxDelegate.previous();
-        };
 
-        // Called each time the slide changes
-        $scope.slideChanged = function (index) {
-            $scope.slideIndex = index;
-        };
+    $scope.next = function () {
+        $ionicSlideBoxDelegate.next();
+    };
+    $scope.previous = function () {
+        $ionicSlideBoxDelegate.previous();
+    };
 
-    })
+    // Called each time the slide changes
+    $scope.slideChanged = function (index) {
+        $scope.slideIndex = index;
+    };
+
+});
 
 

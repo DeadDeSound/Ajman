@@ -15,8 +15,13 @@ var app = angular.module('app', [
 app.constant("CONFIG", "ar");
 
 app.run(function ($rootScope) {
-    $rootScope.appLang = "ar";
-    $rootScope.SlidePage=false;
+    if(localStorage.getItem("lang") !== "ar" && localStorage.getItem("lang") !== "en"){
+        localStorage.setItem("lang", "NA");
+    }else{
+        $rootScope.appLang = localStorage.getItem("lang");
+    }
+    $rootScope.SlidePage = false;
+    $rootScope.iosCSS = "";
 });
 
 
@@ -31,14 +36,30 @@ app.run(function ($rootScope) {
 
 //app.constant = "en";
 
-app.run(function ($ionicPlatform, $cordovaStatusbar) {
+app.run(function ($ionicPlatform, $cordovaStatusbar, $rootScope, $window) {
+    console.log("IOS CSS 1 : " + $rootScope.iosCSS);
+        if (!ionic.Platform.is('android')) {
+            //$window.location.reload(true);
+            $rootScope.iosCSS = "Iphon";
+            console.log("IOS CSS 2 " + $rootScope.iosCSS);
+        }
     $ionicPlatform.ready(function () {
+
+        console.log("IOS CSS 1 : " + $rootScope.iosCSS);
+        if (ionic.Platform.is('android') && $rootScope.iosCSS == false) {
+            //$window.location.reload(true);
+            $rootScope.iosCSS = "Iphon";
+            console.log("IOS CSS 2 " + $rootScope.iosCSS);
+        }
+
+
         if (window.cordova && window.cordova.plugins.Keyboard) {
             // Hide the accessory bar by default (remove this to show the accessory bar above the keyboard
             // for form inputs)
             cordova.plugins.Keyboard.hideKeyboardAccessoryBar(true);
 
-            if(cordova.plugin.keyboard.isOpening){
+
+            if (cordova.plugin.keyboard.isOpening) {
                 document.getElementById("homeFooterContainer").style.visibility = "hidden";
             }
 

@@ -1,5 +1,5 @@
-﻿<!DOCTYPE html>
-<html>
+<!DOCTYPE html>
+<html ng-app="app" ng-controller="mainController">
 <head>
     <meta http-equiv="Content-Type" content="text/html" charset="utf-8">
     <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
@@ -10,12 +10,15 @@
     <link href="lib/ionic/css/ionic.css" rel="stylesheet">
     <link href="css/content.css" rel="stylesheet">
 
-    <link href="css/FontAr/Font.css" rel="stylesheet"/>
-    <link href="css/style.css" rel="stylesheet"/>
-    <link href="css/global.css" rel="stylesheet"/>
-    <link href="css/splash.css" rel="stylesheet"/>
-    <link href="css/Taps/MyCss2.css" rel="stylesheet" />
-    <link href="css/animate.css" rel="stylesheet" />
+    <link href="css/FontAr/Font.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/global.css" rel="stylesheet">
+    <link href="css/splash.css" rel="stylesheet">
+    <link href="css/Taps/MyCss2.css" rel="stylesheet">
+    <link href="css/animate.css" rel="stylesheet"/>
+    <!--<link ng-if="iosCSS" href="css/Iphon.css" rel="stylesheet">-->
+    <link ng-href="css/{{iosCSS}}.css" href="/" rel="stylesheet">
+
 
     <!-- IF using Sass (run gulp sass first), then uncomment below and remove the CSS includes above
     <link href="css/ionic.app.css" rel="stylesheet">
@@ -49,8 +52,8 @@
     <!--  app's js -->
     <script src="js/app.js"></script>
 </head>
-<body ng-app="app">
-<ion-pane ng-controller="mainController">
+<body>
+<ion-pane>
     <ion-side-menus>
         <ion-side-menu-content drag-content="false">
             <ion-nav-bar class="NewHeader animated02 fadeInDownInIonic">
@@ -63,29 +66,36 @@
             </ion-nav-bar>
             <ion-nav-view class="contentIonic">
             </ion-nav-view>
-            <ion-footer-bar id="homeFooterContainer" class="footerContainer animated05 fadeInUpBig" ng-hide='SlidePage'>
+            <ion-footer-bar id="homeFooterContainer" class="footerContainer animated05 fadeInUpBig" ng-hide="SlidePage">
                 <div id="homeFooter" class="BottomWrapper">
                     <ul>
                         <li class="animated06 fadeInUpBig">
                             <!--<a ui-sref="messages"><img alt="" src="img/icon/smile.png"/></a>-->
-                            <a ng-click="callAlert2()"><img alt="" src="img/icon/smile.png"/></a>
+                            <a ng-click="callAlert2()"><img alt="" src="img/icon/smile.png"></a>
 
                         </li>
                         <li class="animated07 fadeInUpBig">
-                            <a ui-sref="notification"><img alt="" src="img/icon/alerts.png"/></a>
+                            <a ui-sref="notification"><img alt="" src="img/icon/alerts.png"></a>
                             <span class="AlertsNum">2</span>
                         </li>
-                        <li ui-sref="home" class="Home animated08 fadeInUpBig"><a ><img alt="" src="img/icon/home.png"/></a></li>
-                        <li ng-click="shareSocial()" class="animated09 fadeInUpBig"><a ><img alt="" src="img/icon/share.png"/></a></li>
-                        <li ng-click="callAlert()" class="animated010 fadeInUpBig"><a ><img alt="" src="img/icon/call.png"/></a></li>
+                        <li ui-sref="home" class="Home animated08 fadeInUpBig"><a><img alt=""
+                                                                                       src="img/icon/home.png"></a></li>
+                        <li ng-click="shareSocial()" class="animated09 fadeInUpBig"><a><img alt=""
+                                                                                            src="img/icon/share.png"></a>
+                        </li>
+                        <li ng-click="callAlert()" class="animated010 fadeInUpBig"><a><img alt=""
+                                                                                           src="img/icon/call.png"></a>
+                        </li>
                     </ul>
                 </div>
             </ion-footer-bar>
         </ion-side-menu-content>
         <ion-side-menu side="right">
-            <div ng-include="'templates/ar/sideMenu.html'">
+            <div ng-include="&apos;templates/ar/sideMenu.html&apos;">
             </div>
             <ion-side-menu>
+            </ion-side-menu>
+        </ion-side-menu>
     </ion-side-menus>
 </ion-pane>
 </body>

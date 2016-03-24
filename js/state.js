@@ -9,8 +9,43 @@ app.config(function ($stateProvider, $urlRouterProvider, $ionicConfigProvider) {
         .state('index', {
             url: '/',
             abstract: true,
-            historyRoot: true,
             templateUrl: 'index.html'
+        }).state('splash', {
+            url: '/splash',
+            controller: 'splashController',
+            templateProvider: function ($http, $templateCache, $rootScope) {
+                $rootScope.SlidePage=true;
+                var templateName = 'templates/splash.html';
+                var tpl = $templateCache.get(templateName);
+                if (tpl) {
+                    return tpl;
+                }
+                return $http
+                    .get(templateName)
+                    .then(function (response) {
+                        tpl = response.data;
+                        $templateCache.put(templateName, tpl);
+                        return tpl;
+                    });
+            }
+        }).state('splash2', {
+            url: '/splash2',
+            controller: 'splashController',
+            templateProvider: function ($http, $templateCache, $rootScope) {
+                $rootScope.SlidePage=true;
+                var templateName = 'templates/splash2.html';
+                var tpl = $templateCache.get(templateName);
+                if (tpl) {
+                    return tpl;
+                }
+                return $http
+                    .get(templateName)
+                    .then(function (response) {
+                        tpl = response.data;
+                        $templateCache.put(templateName, tpl);
+                        return tpl;
+                    });
+            }
         }).state('home', {
             url: "/home",
             cache: false,
@@ -1132,7 +1167,7 @@ app.config(function ($stateProvider, $urlRouterProvider, $ionicConfigProvider) {
             }
         });
 
-    $urlRouterProvider.otherwise('/home');
+    $urlRouterProvider.otherwise('/splash');
     $ionicConfigProvider.views.maxCache(2);
     $ionicConfigProvider.backButton.text('').icon('my-back-button').previousTitleText(false);
 
