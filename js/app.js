@@ -45,12 +45,12 @@ app.run(function ($ionicPlatform, $cordovaStatusbar, $rootScope, $window) {
         }
     $ionicPlatform.ready(function () {
 
-        console.log("IOS CSS 1 : " + $rootScope.iosCSS);
-        if (ionic.Platform.is('android') && $rootScope.iosCSS == false) {
-            //$window.location.reload(true);
-            $rootScope.iosCSS = "Iphon";
-            console.log("IOS CSS 2 " + $rootScope.iosCSS);
-        }
+        //console.log("IOS CSS 1 : " + $rootScope.iosCSS);
+        //if (ionic.Platform.is('android') && $rootScope.iosCSS == false) {
+        //    //$window.location.reload(true);
+        //    $rootScope.iosCSS = "Iphon";
+        //    console.log("IOS CSS 2 " + $rootScope.iosCSS);
+        //}
 
 
         if (window.cordova && window.cordova.plugins.Keyboard) {
