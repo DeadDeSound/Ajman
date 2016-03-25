@@ -39,13 +39,17 @@ app.controller('mainController', function ($scope,
     };
 
     $scope.changeLang = function () {
-        console.log($rootScope.appLang);
+        console.log(localStorage.getItem("lang"));
         if (localStorage.getItem("lang") === "en") {
             localStorage.setItem("lang", "ar");
-            $state.reload();
+            console.log(localStorage.getItem("lang"));
+            $window.location.reload(true);
+      
         } else {
             localStorage.setItem("lang", "en");
-            $state.reload();
+            console.log(localStorage.getItem("lang"));
+            $window.location.reload(true);
+
         }
     };
 
