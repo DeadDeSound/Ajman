@@ -1,10 +1,58 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <title></title>
 </head>
 <body>
+    <ion-view view-title="Assignment of Company">
+        <ion-content scroll="false" class="content">
+            <div class="Wrapper animated03 fadeInRightBig">
+                <h3>LOCATION OF SERVICE PROVISION</h3>
+                <p>Available on all Ajman DED Customer Service Center</p>
+                <h3>SERVICE PROVISION TIME:</h3>
+                <p>During Office Working Hours</p>
+                <h3>SERVICE BENEFICIARY</h3>
+                <p>Employee | Individuals liaison officer | Corporate | liaison officer</p>
 
+                <div ng-model="expandme">
+                    <div ng-click="expandme=!expandme">
+                        <h3 class="CollapsTitle animated fadeInRightBig"><i class="ion-ios-arrow-down"></i>  The Required Documents:</h3>
+                    </div>
+                </div>
+                <div ng-show="expandme" class="animated01010 fadeInRightBig">
+                    <p>
+
+                        1.	Filling in the application form.<br>
+                        2.	No Objection Certificate regarding the (assignment), from the other governmental authorities as per the activity<br>
+                        3.	The original copy of license, or photocopy (if original is lost)<br>
+                        4.	Identity documents for the assignee.<br>
+
+
+
+
+                    </p>
+                </div>
+                <div ng-model="expandme1">
+                    <div ng-click="expandme1=!expandme1">
+                        <h3 class="CollapsTitle animated fadeInRightBig"><i class="ion-ios-arrow-down"></i>  Procedures</h3>
+                    </div>
+                </div>
+                <div ng-show="expandme1" class="animated01010 fadeInRightBig">
+                    <p>
+
+                        1.	Submitting the request for Authentication in the presence of concerned party.<br>
+                        2.	Referring to Control &amp; Inspection Division + Referring to Drainage Department <br>
+                        3.	Collecting fees, then transferring the transaction to Notary Public <br>
+                        4.	Referring to other governmental authorities (Chamber of Commerce + Ministry of Labor + Residence and Naturalization Department)<br>
+                        5.	Referring to the Notary Public for publishing, and after 15 days, the certificate to be printed and delivered to customer
+
+
+
+                    </p>
+                </div>
+            </div>
+        </ion-content>
+    </ion-view>
 </body>
 </html>

@@ -25,6 +25,7 @@
 
 .Wrapper {
     margin-top: -75px !important;
+    padding-top: 25px !important;
 }
 .NewHeader {
     top: -10px;
@@ -77,4 +78,8 @@
 
 .deg315 {
     transform: rotate(315deg) translate(8em) rotate(-270deg) !important;
+}
+
+.HorisontalListBlock2 ul li {
+    width: 40% !important;
 }
