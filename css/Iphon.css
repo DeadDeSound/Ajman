@@ -4,10 +4,13 @@
     background-size: 20%;
     background-repeat: repeat;
 }
+.popup-body {
+        height: 3em;
+}
 .popup-body span {
-    height: 1.2em;
+    /*height: 1.2em;
     display: block;
-    line-height: 1.2em;
+    line-height: 1.2em;*/
 }
 
 .menu .pane, .menu .view, .menu  {
@@ -23,11 +26,13 @@
 .Wrapper {
     margin-top: -75px !important;
 }
-
+.NewHeader {
+    top: -10px;
+}
 /* HOME CIRCLE */
 
 .Circle-Left{
-    left: -10em !important
+    left: -7em !important
 }
 
 .circle-container {
