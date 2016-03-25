@@ -30,6 +30,15 @@ app.controller('mainController', function ($scope,
         throwProps: true
     });
 
+    $scope.getInclude= function () {
+        if(localStorage.getItem("lang") === "en"){
+            return "templates/en/sideMenu.html"
+        }else{
+            return "templates/ar/sideMenu.html"
+        }
+
+    };
+
     $scope.toggleMenu = function () {
         $ionicSideMenuDelegate.toggleRight();
     };
@@ -44,7 +53,7 @@ app.controller('mainController', function ($scope,
             localStorage.setItem("lang", "ar");
             console.log(localStorage.getItem("lang"));
             $window.location.reload(true);
-      
+
         } else {
             localStorage.setItem("lang", "en");
             console.log(localStorage.getItem("lang"));
