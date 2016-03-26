@@ -1,44 +1,45 @@
 ﻿
 .SplashContainer40
 {
-    height: 40em;
+    height: 21em;
 }
 .SplashContainer
 {
     padding: 0 0 0 0;
     margin: 0 auto;
-    width: 664px;
+    width: 100%;
+    height: 20em;
     position: relative;
 }
 .SplashContainer .Img1
 {
-    width: 58px;
+    width: 8%;
     height: 370px;
     position: absolute;
-    top: 0;
-    left: 222px;
+    bottom: 0;
+    left: 35%;
 }
 .SplashContainer .Img2
 {
-    width: 215px;
+    width: 29%;
     height: 370px;
     position: absolute;
-    top: 0;
-    left: 280px;
+    bottom: 0;
+    left: 42%;
 }
 .SplashContainer .Img3
 {
-    width: 258px;
+    width: 35%;
     height: 370px;
     position: absolute;
-    top: 0;
-    left: 406px;
+    bottom: 0;
+    left: 60%;
 }
 .SplashContainer .Img4
 {
-    width: 222px;
+    width: 30%;
     height: 370px;
     position: absolute;
-    top: 0;
-    left: 0px;
+    bottom: 0;
+    left: 5%;
 }
