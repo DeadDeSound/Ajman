@@ -200,7 +200,7 @@ app.controller('splashController', function ($scope, $state, $rootScope, $timeou
         if (localStorage.getItem("lang") == "NA") {
             $timeout(function () {
                 $state.go('splash2')
-            }, 4000);
+            }, 40000);
         } else {
             $timeout(function () {
                 $ionicHistory.nextViewOptions({
@@ -208,7 +208,7 @@ app.controller('splashController', function ($scope, $state, $rootScope, $timeou
                 });
                 $ionicViewService.clearHistory();
                 $state.go('home')
-            }, 4000);
+            }, 40000);
         }
     }
 
