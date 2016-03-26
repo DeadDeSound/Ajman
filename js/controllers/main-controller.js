@@ -30,10 +30,10 @@ app.controller('mainController', function ($scope,
         throwProps: true
     });
 
-    $scope.getInclude= function () {
-        if(localStorage.getItem("lang") === "en"){
+    $scope.getInclude = function () {
+        if (localStorage.getItem("lang") === "en") {
             return "templates/en/sideMenu.html"
-        }else{
+        } else {
             return "templates/ar/sideMenu.html"
         }
 
@@ -200,7 +200,7 @@ app.controller('splashController', function ($scope, $state, $rootScope, $timeou
         if (localStorage.getItem("lang") == "NA") {
             $timeout(function () {
                 $state.go('splash2')
-            }, 5000);
+            }, 8000);
         } else {
             $timeout(function () {
                 $ionicHistory.nextViewOptions({
@@ -208,7 +208,7 @@ app.controller('splashController', function ($scope, $state, $rootScope, $timeou
                 });
                 $ionicViewService.clearHistory();
                 $state.go('home')
-            }, 5000);
+            }, 8000);
         }
     }
 
@@ -232,5 +232,63 @@ app.controller('SlideBoxCtrl', function ($scope, $state, $ionicSlideBoxDelegate)
     };
 
 });
+
+
+app.controller("MediaCenterPageController", /**
+ * Home Page Controller
+ */
+function ($scope, NewsService, $state) {
+
+    $scope.model = {
+        'RecentArticles': []
+
+    };
+
+    $scope.model = NewsService;
+    NewsService.loadRecentArticles(15);
+
+    $scope.sendData = function (index) {
+        // Initialize packed or we get the word 'undefined'
+        if (typeof index === 'undefined') {
+
+        } else {
+            $state.go();
+            console.log(index);
+        }
+    };
+
+    $scope.goToCategory = function (catID) {
+        // Initialize packed or we get the word 'undefined'
+        window.location = "category.html?" + catID;
+        console.log(catID);
+    };
+    $scope.goToCategory = function (catID) {
+        // Initialize packed or we get the word 'undefined'
+        window.location = "category.html?" + catID;
+        console.log(catID);
+    };
+
+});
+
+
+app.controller("MediaCenterDetailsPageController", /**
+ * Home Page Controller
+ */
+function ($scope, $stateParams,NewsService) {
+
+    $scope.id = $stateParams.id;
+
+    console.log("id "+$scope.id);
+
+    $scope.model = NewsService;
+    NewsService.loadArticle($scope.id);
+
+
+
+
+
+
+});
+
 
 

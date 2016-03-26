@@ -1,0 +1,36 @@
+﻿<head>
+    <meta charset="utf-8">
+</head>
+<ion-view dir="rtl" view-title="المركز الاعلامي">
+    <ion-content scroll="false" class="content">
+
+
+        <div class="Wrapper">
+            <br/>
+            <ion-list>
+
+                <ion-item ng-repeat="item in model.Article" class="No-Item"
+                          ng-click="sendData({{item.NewsID}})">
+
+
+                    <div class="TAC animated03 fadeInRightBig">
+                        <img src="http://ded.sdg.ae/Ufiles/News/{{item.NewsImage}}   "/>
+                    </div>
+                    <h1 class="animated04 fadeInRightBig">{{item.NewsDate}}</h1>
+
+                    <h2 class="Inner animated05 fadeInRightBig">{{item.NewsTitle}}</h2>
+
+                    <p class="animated06 fadeInRightBig">{{item.NewsDetails}}</p>
+
+                    <hr/>
+                    <br/>
+
+
+                </ion-item>
+            </ion-list>
+
+        </div>
+
+
+    </ion-content>
+</ion-view>

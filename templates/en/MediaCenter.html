@@ -5,27 +5,29 @@
     <ion-content scroll="false" class="content">
 
         <div class="Wrapper">
-            <br />
-            <div class="TAC animated03 fadeInRightBig">
-                <img src="img/News/20mar.jpg" />
-            </div>
-            <h1 class="animated04 fadeInRightBig">21 MAR</h1>
-            <h2 class="Inner animated05 fadeInRightBig">The Economic Department of Ajman organizes a workshop on "key managerial skills for managers and supervisors”</h2>
-            <p class="animated06 fadeInRightBig">
-                The Training and Development section in the Department of Economic Development organized a workshop on the key management skills for the new managers and supervisors lasted for three days. The training program included a number of direct impact on the managerial and supervisory objectives to transfer knowledge for managers and supervisors about the global changes and their reflection on the management and ...
+            <br/>
+            <ion-list>
+
+                <ion-item ng-repeat="Article in model.NewsArticles" class="No-Item"
+                         ui-sref="MediaCenterDetails({ id: {{Article.NewsID}} })">
+
+                    <div class="TAC animated03 fadeInRightBig">
+                        <img src="http://ded.sdg.ae/Ufiles/News/{{Article.NewsImage}}   "/>
+                    </div>
+                    <h1 class="animated04 fadeInRightBig">{{Article.NewsDate}}</h1>
+
+                    <h2 class="Inner animated05 fadeInRightBig">{{Article.NewsTitleEn}}</h2>
+
+                    <p class="animated06 fadeInRightBig">{{Article.NewsDetailsEn}}</p>
+
+                    <hr/>
+                    <br/>
 
 
-            </p>
-            <hr />
-            <br />
-            <div class="TAC animated07 fadeInRightBig">
-                <img src="img/News/licmeet.jpg" />
-            </div>
-            <h1>1 MAR</h1>
-            <h2 class="Inner">                 The monthly meeting of Leading Council of the Department of Economic Development Ajman</h2>
-            <p>
-                HH Sheikh Ahmed Bin Humaid Al Nuaimi, the president of the Department of Economic Development convened a meeting with HE Ali Eissa Al Nuaimi, Director General of the Department, and HE Mohammed Ali Al Marzouki, Deputy Director General for Executive Affairs and directors of departments and the other specialized offices of the department. This meeting is scheduled within the monthly follow meetings planned by HH with the officials in the department to follow up the ...
-            </p>
+                </ion-item>
+            </ion-list>
+
         </div>
+
     </ion-content>
 </ion-view>

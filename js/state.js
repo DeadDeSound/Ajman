@@ -570,7 +570,7 @@ app.config(function ($stateProvider, $urlRouterProvider, $ionicConfigProvider) {
         }).state('mediaCenter', {
             url: "/mediaCenter",
             cache: false,
-            controller: 'mainController',
+            controller: 'MediaCenterPageController',
             nativeTransitions: {
                 "type": "flip",
                 "direction": "up"
@@ -1152,6 +1152,32 @@ app.config(function ($stateProvider, $urlRouterProvider, $ionicConfigProvider) {
                 var templateName = 'templates/ar/SlideTest.html';
                 if ($rootScope.appLang === "en") {
                     templateName = 'templates/en/SlideTest.html';
+                }
+                var tpl = $templateCache.get(templateName);
+                if (tpl) {
+                    return tpl;
+                }
+                return $http
+                    .get(templateName)
+                    .then(function (response) {
+                        tpl = response.data;
+                        $templateCache.put(templateName, tpl);
+                        return tpl;
+                    });
+            }
+        }).state('MediaCenterDetails', {
+            url: "/MediaCenterDetails?id",
+            cache: false,
+            controller: 'MediaCenterDetailsPageController',
+            nativeTransitions: {
+                "type": "flip",
+                "direction": "up"
+            },
+            templateProvider: function ($http, $templateCache, $rootScope) {
+                $rootScope.SlidePage=false;
+                var templateName = 'templates/ar/MediaCenterDetails.html';
+                if ($rootScope.appLang === "en") {
+                    templateName = 'templates/en/MediaCenterDetails.html';
                 }
                 var tpl = $templateCache.get(templateName);
                 if (tpl) {

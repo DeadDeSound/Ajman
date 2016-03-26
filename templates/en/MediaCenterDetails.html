@@ -1,7 +1,7 @@
 ﻿<head>
     <meta charset="utf-8">
 </head>
-<ion-view ng-controller="MediaCenterPageController" dir="rtl" view-title="المركز الاعلامي">
+<ion-view  dir="rtl" view-title="المركز الاعلامي">
     <ion-content scroll="false" class="content">
 
 
@@ -10,7 +10,7 @@
             <ion-list>
 
                 <ion-item ng-repeat="Article in model.NewsArticles" class="No-Item"
-                         ui-sref="MediaCenterDetails({ id: {{Article.NewsID}} })">
+                          ng-click="sendData({{Article.NewsID}})">
 
 
                     <div class="TAC animated03 fadeInRightBig">
@@ -18,9 +18,9 @@
                     </div>
                     <h1 class="animated04 fadeInRightBig">{{Article.NewsDate}}</h1>
 
-                    <h2 class="Inner animated05 fadeInRightBig">{{Article.NewsTitle}}</h2>
+                    <h2 class="Inner animated05 fadeInRightBig">{{Article.NewsTitleEn}}</h2>
 
-                    <p class="animated06 fadeInRightBig">{{Article.NewsDetails}}</p>
+                    <p class="animated06 fadeInRightBig">{{Article.NewsDetailsEn}}</p>
 
                     <hr/>
                     <br/>
