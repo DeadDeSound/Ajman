@@ -28,6 +28,7 @@
 .Wrapper {
     margin-top: -75px !important;
     padding-top: 25px !important;
+    padding-bottom: 25px !important;
 }
 
 .NewHeader {
@@ -37,54 +38,66 @@
 /* HOME CIRCLE */
 
 .Circle-Left {
-    left: -7em !important
+    left: -8em !important
 }
 
 .circle-container {
-    width: 16em !important;
-    height: 16em !important;
+    width: 18em !important;
+    height: 18em !important;
 }
 
 .circle-container img {
-    width: 6em !important;
-    height: 6em !important;
-    margin: -3.0em !important; /* 2em = 4em/2 */
+    width: 7em !important;
+    height: 7em !important;
+    margin: -3.5em !important; /* 2em = 4em/2 */
     /* half the width */
 }
 
 .deg0 {
-    transform: rotate(0deg) translate(8em) rotate(-270deg) !important;
+    transform: rotate(0deg) translate(9em) rotate(-270deg) !important;
 }
 
 /* 12em = half the width of the wrapper */
 .deg45 {
-    transform: rotate(45deg) translate(8em) rotate(-270deg) !important;
+    transform: rotate(45deg) translate(9em) rotate(-270deg) !important;
 }
 
 .deg90 {
-    transform: rotate(90deg) translate(8em) rotate(-270deg) !important;
+    transform: rotate(90deg) translate(9em) rotate(-270deg) !important;
 }
 
 .deg135 {
-    transform: rotate(135deg) translate(8em) rotate(-270deg) !important;
+    transform: rotate(135deg) translate(9em) rotate(-270deg) !important;
 }
 
 .deg180 {
-    transform: rotate(180deg) translate(8em) rotate(-270deg) !important;
+    transform: rotate(180deg) translate(9em) rotate(-270deg) !important;
 }
 
 .deg225 {
-    transform: rotate(225deg) translate(8em) rotate(-270deg) !important;
+    transform: rotate(225deg) translate(9em) rotate(-270deg) !important;
 }
 
 .deg270 {
-    transform: rotate(270deg) translate(8em) rotate(-270deg) !important;
+    transform: rotate(270deg) translate(9em) rotate(-270deg) !important;
 }
 
 .deg315 {
-    transform: rotate(315deg) translate(8em) rotate(-270deg) !important;
+    transform: rotate(315deg) translate(9em) rotate(-270deg) !important;
 }
 
 .HorisontalListBlock2 ul li {
     width: 40% !important;
 }
+.IFrame-Wrapper{
+    -webkit-overflow-scrolling: touch;
+  	overflow-y: scroll;
+}
+
+.Wrapper {
+    padding-top:0px !important
+}
+.height1em{    height: 0 !important;}
+.platform-android .bar .title {font-size: 14px !important;}
+.my-back-button {width: 18px !important;}
+.my-menu-button {width: 20px !important;}
