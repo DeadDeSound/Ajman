@@ -1,0 +1,20 @@
+﻿body {
+    padding: 0;
+    margin: 0;
+    background-image: url(../img/pattern.png);
+    background-size: 20% !important;
+    background-repeat: repeat;
+    background-color: #b6985a !important;
+}
+.SplashWrapper
+{
+    padding: 3em 0 0 0;
+    background-image: url(../img/pattern.png);
+    background-size: 20% !important;
+    background-repeat: repeat;
+    background-color: #b6985a !important;
+    height: 100vh;
+    overflow: hidden;
+}
+
+

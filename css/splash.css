@@ -1,13 +1,44 @@
-﻿body {
-    padding: 0;
-    margin: 0;
-    background-image: url(../img/pattern.png);
-    background-repeat: repeat;
-    background-color: #b6985a;
-}
-.SplashWrapper
+﻿
+.SplashContainer40
 {
-    padding: 5em 0 0 0;
+    height: 40em;
 }
-
-
+.SplashContainer
+{
+    padding: 0 0 0 0;
+    margin: 0 auto;
+    width: 664px;
+    position: relative;
+}
+.SplashContainer .Img1
+{
+    width: 58px;
+    height: 370px;
+    position: absolute;
+    top: 0;
+    left: 222px;
+}
+.SplashContainer .Img2
+{
+    width: 215px;
+    height: 370px;
+    position: absolute;
+    top: 0;
+    left: 280px;
+}
+.SplashContainer .Img3
+{
+    width: 258px;
+    height: 370px;
+    position: absolute;
+    top: 0;
+    left: 406px;
+}
+.SplashContainer .Img4
+{
+    width: 222px;
+    height: 370px;
+    position: absolute;
+    top: 0;
+    left: 0px;
+}
