@@ -1,4 +1,11 @@
 ﻿
+.Splash-Wrapper
+{
+    background-image: url(../img/pattern.jpg);
+    background-size: 20%;
+    background-repeat: repeat;
+    background-color: #f8f4eb;
+}
 .SplashContainer40
 {
     height: 21em;
