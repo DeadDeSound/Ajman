@@ -4,22 +4,24 @@
     background-size: 20%;
     background-repeat: repeat;
 }
+
 .popup-body {
-        height: auto;
+    height: auto;
+    padding:2em;
 }
+
 .popup-body span {
     /*height: 1.2em;
     display: block;
     line-height: 1.2em;*/
 }
 
-.menu .pane, .menu .view, .menu  {
+.menu .pane, .menu .view, .menu {
     background-color: #FFF;
     background-image: none;
 }
 
-.SideCollapsMenu 
-{
+.SideCollapsMenu {
     top: -75px !important
 }
 
@@ -27,12 +29,14 @@
     margin-top: -75px !important;
     padding-top: 25px !important;
 }
+
 .NewHeader {
     top: -10px;
 }
+
 /* HOME CIRCLE */
 
-.Circle-Left{
+.Circle-Left {
     left: -7em !important
 }
 
@@ -40,6 +44,7 @@
     width: 16em !important;
     height: 16em !important;
 }
+
 .circle-container img {
     width: 6em !important;
     height: 6em !important;
