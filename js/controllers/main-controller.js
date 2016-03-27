@@ -82,8 +82,8 @@ app.controller('mainController', function ($scope,
 
         //       A confirm dialog
         var confirmPopup = $ionicPopup.confirm({
-            title: '',
-            template: '80055',
+            title: '80055',
+            template: '',
             cssClass: 'custom-popup'
             //buttons: [
             //    {
