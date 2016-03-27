@@ -36,7 +36,7 @@ app.run(function ($rootScope) {
 
 //app.constant = "en";
 
-app.run(function ($ionicPlatform, $cordovaStatusbar, $rootScope, $window) {
+app.run(function ($ionicPlatform, $cordovaStatusbar, $rootScope, $window,$ionicPopup) {
     console.log("IOS CSS 1 : " + $rootScope.iosCSS);
         if (!ionic.Platform.is('android')) {
             //$window.location.reload(true);
@@ -44,6 +44,53 @@ app.run(function ($ionicPlatform, $cordovaStatusbar, $rootScope, $window) {
             console.log("IOS CSS 2 " + $rootScope.iosCSS);
         }
     $ionicPlatform.ready(function () {
+
+
+        //$rootScope.deviceInformation = ionic.Platform.device();
+        //console.log("DEvice Info",$rootScope.deviceInformation.version);
+        //alert($rootScope.deviceInformation.version);
+
+
+
+    //     $rootScope.callAlert = function () {
+    //
+    //    var confirmPopup = $ionicPopup.confirm({
+    //        title: '',
+    //        template: $rootScope.deviceInformation.uuid,
+    //        cssClass: 'custom-popup'
+    //        //buttons: [
+    //        //    {
+    //        //        text: 'cancel'
+    //        //
+    //        //    },
+    //        //    {
+    //        //        text: 'OK',
+    //        //        type: 'button-positive',
+    //        //        onTap: function (e) {
+    //        //          document.location.href = 'tel:80055';
+    //        //        }
+    //        //    }
+    //        //]
+    //    });
+    //
+    //    confirmPopup.then(function (res) {
+    //        if (res) {
+    //            document.location.href = 'tel:80055';
+    //            console.log('Yes');
+    //        } else {
+    //            console.log('No');
+    //        }
+    //    });
+    //};
+    //
+    //
+    //
+    //    $rootScope.callAlert();
+    //
+
+
+
+
 
 
         if (window.cordova && window.cordova.plugins.Keyboard) {
