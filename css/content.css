@@ -317,3 +317,19 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e7d8b9', end
     width: 100%;
 }
 
+
+
+
+.Home-Bottm-Logo
+{
+    position: absolute;
+    width: 100%;
+    bottom: 13%;
+    left: 0;
+    display: block;
+    text-align: center;
+}
+.Home-Bottm-Logo img
+{
+    width: 33%
+}
