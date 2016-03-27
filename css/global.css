@@ -130,11 +130,12 @@ li {
     text-align: center;
 }
 .platform-android .bar .title {
+    font-size: 0.2em;
     line-height: 50px;
     font-family: "HelveticaNeueLTW20-Roma";
 }
 
-.bar .title{font-size: 23px;
+.bar .title{
     font-family: "HelveticaNeueLTW20-Roma";}
 
 .pane, .view {

@@ -100,7 +100,7 @@
 
 
 .height1em{    height: 0 !important;}
-.platform-android .bar .title {font-size: 14px !important;}
+.platform-android .bar .title {font-size: .2em !important;}
 .my-back-button {width: 18px !important;}
 .my-menu-button {width: 20px !important;}
 
