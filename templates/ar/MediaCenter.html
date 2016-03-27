@@ -9,12 +9,9 @@
             <br/>
             <ion-list>
 
-                <ion-item ng-repeat="Article in model.NewsArticles" class="No-Item"
-                         ui-sref="MediaCenterDetails({ id: {{Article.NewsID}} })">
-
-
+                <ion-item ng-repeat="Article in model.NewsArticles" class="No-Item" ui-sref="MediaCenterDetails({ id: {{Article.NewsID}} })">
                     <div class="TAC animated03 fadeInRightBig">
-                        <img src="http://ded.sdg.ae/Ufiles/News/{{Article.NewsImage}}   "/>
+                        <img src="http://ded.sdg.ae/Ufiles/News/{{Article.NewsImage}}"/>
                     </div>
                     <h1 class="animated04 fadeInRightBig">{{Article.NewsDate}}</h1>
 
