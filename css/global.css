@@ -287,22 +287,22 @@ ul.VerticalList01 li {
 
 /**/
 .MapsTapsWrapper {
-    position: relative !important;
-    height: 11.9em !important;
+    position: relative;
+    height: 16em;
 }
 .MapsTapsWrapper .tabs-top > .tabs, .MapsTapsWrapper .tabs.tabs-top {
     top: 0px !important;
 }
 
 .MapsTapsWrapper .pane, .MapsTapsWrapper .view {
-    position: absolute !important;
-    top: 0 !important;
-    right: 0 !important;
-    left: 0 !important;
-    width: 100% !important;
-    height: 12em !important;
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    width: 100%;
+    height: 16em;
     background-color: none !important;
-    overflow: hidden !important;
+    overflow: hidden;
 }
 
 .MapsTapsWrapper .tab-item-active
@@ -317,12 +317,12 @@ ul.VerticalList01 li {
 }
 .MapsTapsWrapper .padding 
 {
-    padding: 0 !important;
+    padding: 0;
 }
 .MapsTapsWrapper .has-header img 
 {
-    max-width: initial !important;
-    height: 12em !important
+    max-width: initial;
+    height: 12em
 }
 
 /**/
@@ -353,8 +353,29 @@ input[type=submit]:hover,
   background-color: #303436; }
 
 .IFrame-Wrapper{
-    width: 100% ; height: 80vh;
-    overflow-y: auto;
+    width: 100% ; 
+    height: 80vh;
+    overflow-y: scroll;
 }
 
 .height1em{    height: 1em;}
+
+
+/**/
+.Wrapper .item {
+    border-color: #ddd;
+        background-color: rgba(255,255,255,0);
+    color: #444;
+    position: relative;
+    z-index: 2;
+    display: block;
+    margin: -1px;
+    padding: 16px;
+    border-width: 0;
+    border-style: solid;
+    font-size: 12px;
+}
+.item-complex .item-content, .item-radio .item-content {
+    padding: .4em;
+     background-color: rgba(255,255,255,0);
+}

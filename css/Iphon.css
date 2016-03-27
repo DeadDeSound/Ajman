@@ -29,10 +29,10 @@
 }
 
 .Wrapper {
-    margin-top: -75px !important;
+    margin-top: 0 !important;
     padding-top: 0px !important;
     padding-bottom: 25px !important;
-    max-height: 80% !important;
+    max-height: 80vh !important;
 }
 
 .NewHeader {
@@ -98,10 +98,55 @@
   	overflow-y: scroll;
 }
 
-.Wrapper {
-    padding-top:0px !important
-}
+
 .height1em{    height: 0 !important;}
 .platform-android .bar .title {font-size: 14px !important;}
 .my-back-button {width: 18px !important;}
 .my-menu-button {width: 20px !important;}
+
+
+
+/**/
+.MapsTapsWrapper {
+    position: relative !important;
+    height: 14em !important;
+}
+.MapsTapsWrapper .tabs-top > .tabs, .MapsTapsWrapper .tabs.tabs-top {
+    top: 0px !important;
+}
+
+.MapsTapsWrapper .pane, .MapsTapsWrapper .view {
+    position: absolute !important;
+    top: 0 !important;
+    right: 0 !important;
+    left: 0 !important;
+    width: 100% !important;
+    height: 12em !important;
+    background-color: none !important;
+    overflow: hidden !important;
+}
+
+.MapsTapsWrapper .tab-item-active
+{
+    color: #FFF !important;
+    background-color: #896d32 !important;
+}
+.MapsTapsWrapper .tab-item
+{
+    color: #FFF !important;
+    background-color: #b6985a !important;
+}
+.MapsTapsWrapper .padding 
+{
+    padding: 0 !important;
+}
+.MapsTapsWrapper .has-header 
+{
+    padding-top: 0px !important;
+}
+.MapsTapsWrapper .has-header img 
+{
+    max-width: initial !important;
+    height: 12em !important
+}
+/**/
