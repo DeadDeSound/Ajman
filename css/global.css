@@ -298,10 +298,9 @@ ul.VerticalList01 li {
     position: absolute !important;
     top: 0 !important;
     right: 0 !important;
-    bottom: 0 !important;
     left: 0 !important;
     width: 100% !important;
-    height: auto !important;
+    height: 12em !important;
     background-color: none !important;
     overflow: hidden !important;
 }

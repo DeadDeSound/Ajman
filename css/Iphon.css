@@ -14,6 +14,9 @@
     /*height: 1.2em;
     display: block;
     line-height: 1.2em;*/
+    font-family: Tahoma !important;
+    font-size: .9em !important;
+    font-weight: normal !important;
 }
 
 .menu .pane, .menu .view, .menu {
@@ -27,8 +30,9 @@
 
 .Wrapper {
     margin-top: -75px !important;
-    padding-top: 25px !important;
+    padding-top: 0px !important;
     padding-bottom: 25px !important;
+    max-height: 80% !important;
 }
 
 .NewHeader {
@@ -38,7 +42,7 @@
 /* HOME CIRCLE */
 
 .Circle-Left {
-    left: -8em !important
+    left: -7.5em !important
 }
 
 .circle-container {
