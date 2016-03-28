@@ -31,10 +31,17 @@ app.controller('mainController', function ($scope,
     });
 
 
+    $scope.GoToNotification = function () {
+
+        if (NewsService.EnableNotification) {
+
+            $state.go('notification');
+        }
+    }
 
 
     $scope.model = NewsService;
-    NewsService.LoadNotification(0);
+    NewsService.LoadNotification(4);
 
 
     $scope.getInclude = function () {
@@ -306,13 +313,13 @@ function ($scope, NewsService, $state) {
     $scope.model.Notifications = $scope.model = NewsService;
 
 
-    if(NewsService.EnableNotification) {
+    if (NewsService.EnableNotification) {
 
         console.log("INside Notification", $scope.model.Notifications);
 
         for (i = 0; i < $scope.model.Notifications.length; i++) {
 
-            NewsService.LoadReadNotification(0, $scope.model.Notifications[i].NotificationID);
+            NewsService.LoadReadNotification(4, $scope.model.Notifications[i].NotificationID);
             console.log("ID : ", $scope.model.Notifications[i].NotificationID);
 
         }
