@@ -104,6 +104,7 @@ h3.InnerTitle {
     color: #333;
     background-color: #d7d5d0;
     padding: .4em 1em;
+    margin-bottom: .4em;
     font-size: 1em;
     border-bottom: 1px solid #ccc;
         line-height: 28px;
@@ -322,8 +323,7 @@ ul.VerticalList01 li {
 }
 .MapsTapsWrapper .has-header img 
 {
-    max-width: initial;
-    height: 12em
+    /*height: 12em*/
 }
 
 /**/
