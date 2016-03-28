@@ -1,6 +1,6 @@
 ﻿body {
     direction: ltr;
-    font-family: Tahoma;
+    font-family: 'Helvetica Neue';
     font-size: .9em;
     height: 100vh;
     position: relative;
@@ -81,10 +81,10 @@ h1, h2, h3, h4, h5, h6 {
     font-family: "HelveticaNeueLTW20-Roma";
 }
 
-h1 {font-size: 1.8em;}
-h2 {font-size: 1.6em;}
-h3 {font-size: 1.3em;}
-h4 {font-size: 1.2em;}
+h1 {font-size: 1.3em;}
+h2 {font-size: 1.2em;}
+h3 {font-size: 1.1em;}
+h4 {font-size: 1.0em;}
 h5 {font-size: 1.0em;}
 h6 {font-size: 1.0em;}
 
@@ -116,6 +116,7 @@ p {
     color: #424242;
         font-size: .9em;
     padding: .1em 1em 0 1em;
+    font-family: 'Helvetica Neue';
 }
 
 li {

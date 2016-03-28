@@ -13,6 +13,16 @@
     background-repeat: repeat;
 }
 
+.Status-Bar-Home
+{
+    position: absolute;
+    display: none;
+    width: 100%;
+    top: 0;
+    height: 17px;
+    background-color: #896D32;
+}
+
 .TitleWrapper{
     /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#896d32+0,b6985a+100 */
 background: rgb(137,109,50); /* Old browsers */
@@ -47,8 +57,8 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#896d32', end
     float: right;
     
 }
-.Banner ul li:nth-child(1){ width: 13%;text-align: right;}
-.Banner ul li:nth-child(2){ width: 60%;text-align: center;}
+.Banner ul li:nth-child(1){ width: 10%;text-align: right;}
+.Banner ul li:nth-child(2){ width: 63%;text-align: center;}
 .Banner ul li:nth-child(3){ width: 27%;text-align: left;padding: 1.5em 0 0 1em;}
 
 .Banner ul li:nth-child(1) img{ padding: 2em 1em 0 0;}

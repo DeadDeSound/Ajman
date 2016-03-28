@@ -1,3 +1,25 @@
+/*SideCollapsMenu*/
+.SideCollapsMenu .tabs-icon-top > .tabs .tab-item, 
+.SideCollapsMenu .tabs-icon-top.tabs .tab-item, 
+.SideCollapsMenu .tabs-icon-bottom > .tabs .tab-item, 
+.SideCollapsMenu .tabs-icon-bottom.tabs .tab-item {
+    padding-top: 2.7em;
+}
+.SideCollapsMenu .tabs {
+    height: 100px;
+}
+
+/**/
+
+.Status-Bar-Home
+{
+    position: absolute;
+    display: block;
+    width: 100%;
+    top: 0;
+    height: 17px;
+    background-color: #896D32;
+}
 .pane, .view {
     background-color: none;
     background-image: url(../img/pattern.jpg);
@@ -29,7 +51,7 @@
 }
 
 .Wrapper {
-    margin-top: -60px !important;
+    margin-top: -50px !important;
     padding-top: 0px !important;
     padding-bottom: 25px !important;
     max-height: 75vh !important;
