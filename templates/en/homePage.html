@@ -1,35 +1,36 @@
 ﻿<head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
 </head>
 <ion-view view-title="Home Page" hide-nav-bar="true">
     <ion-content class="content" scroll="false">
         <div class="Status-Bar-Home"></div>
         <div class="Banner">
             <ul>
-                <li class="animated01 fadeInLeft"><a ng-click="toggleMenu()"><img alt="" src="img/icon/menu.png" /></a></li>
-                <li class="animated03 fadeInDown"><a href="#"><img alt="" src="img/logo.png" /></a></li>
+                <li class="animated01 fadeInLeft"><a ng-click="toggleMenu()"><img alt="" src="img/icon/menu.png"/></a>
+                </li>
+                <li class="animated03 fadeInDown"><a href="#"><img alt="" src="img/logo.png"/></a></li>
                 <li class="animated02 fadeInRight">
-                <a ng-click="changeLang()"><img alt="" src="img/ar.png" /></a>
-                <a ui-sref="SlideTest"><img class="Right" alt="" src="img/icon/Help.png" /></a>
+                    <a ng-click="changeLang()"><img alt="" src="img/ar.png"/></a>
+                    <a ui-sref="SlideTest"><img class="Right" alt="" src="img/icon/Help.png"/></a>
                 </li>
             </ul>
         </div>
         <div style="height: .5em"></div>
         <div class='circle-container Circle-Left animated04 rotateIn'>
             <img src='img/home/en/home.png'>
-            <div class='circle-container' id="C-container">
-                <img ui-sref="contact" class='deg0' src='img/home/en/contact.png'>
-                <img ui-sref="manual" class='deg45' src='img/home/en/guide.png'>
-                <img ui-sref="complains" class='deg90' src='img/home/en/suggest.png'>
-                <img ui-sref="about" class='deg135' src='img/home/en/about.png'>
+            <a class='circle-container' id="C-container">
+                <a ui-sref="contact"> <img class='deg0' src='img/home/en/contact.png'> </a>
+                <a ui-sref="manual"> <img class='deg45' src='img/home/en/guide.png'> </a>
+                <a ui-sref="complains"> <img class='deg90' src='img/home/en/suggest.png'> </a>
+                <a ui-sref="about"> <img class='deg135' src='img/home/en/about.png'> </a>
                 <img ui-sref="mediaCenter" class='deg180' src='img/home/en/media.png'>
                 <img ui-sref="servicesGuide" class='deg225' src='img/home/en/ServicesGuide.png'>
                 <img ui-sref="ChairmanWord" class='deg270' src='img/home/en/word.png'>
                 <img ui-sref="OnlineServices" class='deg315' src='img/home/en/services.png'>
-            </div>
+        </div>
         </div>
         <div class="Home-Bottm-Logo animated04 fadeIn">
-            <img src="img/ajmanlogo.png" />
+            <img src="img/ajmanlogo.png"/>
         </div>
     </ion-content>
 </ion-view>
