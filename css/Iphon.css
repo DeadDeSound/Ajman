@@ -117,11 +117,7 @@
 .HorisontalListBlock2 ul li {
     width: 40% !important;
 }
-.IFrame-Wrapper{
-    height: inherit !important;
-    -webkit-overflow-scrolling: touch;
-  	overflow-y: scroll;
-}
+
 
 
 .height1em{    height: 0 !important;}
