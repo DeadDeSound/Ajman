@@ -59,7 +59,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#896d32', end
 }
 .Banner ul li:nth-child(1){ width: 10%;text-align: right;}
 .Banner ul li:nth-child(2){ width: 63%;text-align: center;}
-.Banner ul li:nth-child(3){ width: 27%;text-align: left;padding: 1.5em 0 0 1em;}
+.Banner ul li:nth-child(3){ width: 27%;text-align: left;padding: 1.7em 0 0 1em;}
 
 .Banner ul li:nth-child(1) img{ padding: 2em 1em 0 0;}
 .Banner ul li:nth-child(2) img{ padding: 1.5em 0 0 0;width: 60%}
