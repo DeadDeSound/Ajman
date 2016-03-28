@@ -1,10 +1,9 @@
-<ion-view view-title="اجراءات تأسيس المنشأت الفردية" dir="rtl">
+<ion-view view-title="اجراءات تجديد تراخيص الشركات المساهمة الخاصة" dir="rtl">
     <ion-content class="content" onscroll="false">
-        <!--<a ui-sref="details">التفاصيل</a>-->
         <div class="Wrapper animated03 fadeInRightBig">
             <h3>وصف الخدمة  :</h3>
             <p>
-                الحصول على ترخيص بإنشاء مؤسسة فردية
+                تجديد تراخيص الشركات المساهمة الخاصة
             </p>
             <h3>وقت تقديم الخدمة  :</h3>
             <p>
@@ -23,46 +22,16 @@
                 </div>
             </div>
             <div ng-show="expandme" class="fadeInRightBig">
-                <p>1.	طلب الترخيص</p>
-                <p>2.	الهوية الأصلية مع صورة منها.</p>
-                <p>3.	صورة الجواز</p>
-                <p>4.	لمواطني دول الخليج يتطلب صورة الجواز فقط</p>
-                <p>5.	صورة عن رخصة المركز الرئيسي سارية المفعول + صورة من عقد التأسيس وملحقاته</p>
-            </div>
+                <p>
+                    •	نسخة عن بطاقة الهوية سارية المفعول للمالك الموطن<br />
+                    •	نسخة عن جواز سفر للمالك الموطن أو الخليجي<br />
+                    •	نسخة من شهادة توثيق عقد الإيجار ساري المفعول أو صورة من ملكية العقار أو الخارطة سارية المفعول في حالة كون العقار بأسم صاحب الترخيص<br />
+                    •	نسخة من عقد إيجار أو ملكية المستودعات إن وجدت
 
-            <div ng-model="expandme1">
-                <div ng-click="expandme1=!expandme1">
-                    <h3 class="CollapsTitle animated fadeInRightBig"><i class="ion-ios-arrow-down"></i> الموافقات والاعتمادات المطلوبة من جهات خارجية</h3>
-                </div>
-            </div>
-            <div ng-show="expandme1" class="fadeInRightBig">
-                <p>1.	تصديق عقد إيجار مستودع (إن وجد) من بلدية عجمان.</p>
-                <p>2.	موافقة الدفاع المدني</p>
-                <p>3.	موافقة من شركة إيمز (على المناطق الصناعية وجزء من النعيمية).</p>
-                <p>4.	توفير مخطط لموقع المحل + عقد إيجار أو سند الملكية (يرجى التأكد من مدى ملائمة الموقع لممارسة النشاط بواسطة قسم التفتيش قبل الاستئجار).</p>
-                
+                </p>
             </div>
 
 
-
-            <div ng-model="expandme2">
-                <div ng-click="expandme2=!expandme2">
-                    <h3 class="CollapsTitle animated fadeInRightBig"><i class="ion-ios-arrow-down"></i> النماذج المتعلقة بطلب الخدمة:</h3>
-                </div>
-            </div>
-            <div ng-show="expandme2" class="fadeInRightBig">
-                <p>طلب ترخيص  EA-1-1-F1</p>
-            </div>
-
-            <div ng-model="expandme3">
-                <div ng-click="expandme3=!expandme3">
-                    <h3 class="CollapsTitle animated fadeInRightBig"><i class="ion-ios-arrow-down"></i> القسم المعني بتقديم الخدمة:</h3>
-                </div>
-            </div>
-            <div ng-show="expandme3" class="fadeInRightBig">
-                <p>قسم التراخيص الاقتصادية</p>
-            </div>
-            
 
             <div ng-model="expandme4">
                 <div ng-click="expandme4=!expandme4">
@@ -70,10 +39,33 @@
                 </div>
             </div>
             <div ng-show="expandme4" class="fadeInRightBig">
-                <p>1.	تعبئة نموذج طلب الترخيص</p>
-                <p>2.	إرفاق المستندات المطلوبة</p>
-                <p>3.	الحصول على الموافقة من إدارة الرقابة</p>
-                <p>4.	حجز إسم تجاري</p>
+                <p>
+                    1.	تعبئة نموذج طلب الترخيص<br />
+                    2.	إرفاق المستندات المطلوبة<br />
+                    3.	الحصول على الموافقة من إدارة الرقابة والتفتيش<br />
+                    4.	توفير الموافقات الخارجية<br />
+                    5.	مراجعة كاونتر الاستشارات بمركز الخدمة واعتماده صحة البيانات<br />
+                    6.	دفع الرسوم<br />
+                    7.	استلام الترخيص
+
+                </p>
+
+            </div>
+
+
+            <div ng-model="expandme5">
+                <div ng-click="expandme5=!expandme5">
+                    <h3 class="CollapsTitle animated fadeInRightBig"><i class="ion-ios-arrow-down"></i> الموافقات والاعتمادات المطلوبة من جهات خارجية</h3>
+                </div>
+            </div>
+            <div ng-show="expandme5" class="fadeInRightBig">
+                <p>•	موافقة الجهات الحكومية الاخرى على التجديد وفقاً لما هو وارد بسجل الموافقات الخارجية وبحسب النشاط.</p>
+                <p></p>
+
+                <h4>النماذج المتعلقة بطلب الخدمة</h4>
+                <p>طلب ترخيص  EA-1-1-F1</p>
+                <h4>القسم المعني بتقديم الخدمة</h4>
+                <p>قسم التراخيص الاقتصادية</p>
 
             </div>
 
