@@ -622,7 +622,7 @@ app.config(function ($stateProvider, $urlRouterProvider, $ionicConfigProvider) {
         }).state('notification', {
             url: "/notification",
             cache: false,
-            controller: 'mainController',
+            controller: 'NotificationPageController',
             nativeTransitions: {
                 "type": "flip",
                 "direction": "up"

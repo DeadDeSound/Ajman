@@ -16,7 +16,7 @@ app.controller('mainController', function ($scope,
                                            $cordovaSocialSharing,
                                            $ionicPopup,
                                            $ionicSlideBoxDelegate,
-                                           $window) {
+                                           $window, NewsService) {
 
     $stateParams.locale = $rootScope.appLang;
     $scope.title = 'Ajamn';
@@ -29,6 +29,13 @@ app.controller('mainController', function ($scope,
         type: "rotation",
         throwProps: true
     });
+
+
+
+
+    $scope.model = NewsService;
+    NewsService.LoadNotification(0);
+
 
     $scope.getInclude = function () {
         if (localStorage.getItem("lang") === "en") {
@@ -274,21 +281,46 @@ function ($scope, NewsService, $state) {
 app.controller("MediaCenterDetailsPageController", /**
  * Home Page Controller
  */
-function ($scope, $stateParams,NewsService) {
+function ($scope, $stateParams, NewsService) {
 
     $scope.id = $stateParams.id;
 
-    console.log("id "+$scope.id);
+    console.log("id " + $scope.id);
 
     $scope.model = NewsService;
     NewsService.loadArticle($scope.id);
 
 
+});
 
 
+app.controller("NotificationPageController", /**
+ * Home Page Controller
+ */
+function ($scope, NewsService, $state) {
 
+    $scope.model = {
+        'Notifications': []
+    };
+
+    $scope.model.Notifications = $scope.model = NewsService;
+
+
+    if(NewsService.EnableNotification) {
+
+        console.log("INside Notification", $scope.model.Notifications);
+
+        for (i = 0; i < $scope.model.Notifications.length; i++) {
+
+            NewsService.LoadReadNotification(0, $scope.model.Notifications[i].NotificationID);
+            console.log("ID : ", $scope.model.Notifications[i].NotificationID);
+
+        }
+
+    }
 
 });
+
 
 
 

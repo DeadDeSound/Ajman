@@ -3,19 +3,26 @@
 </head>
 <ion-view view-title="التنبيهات" dir="rtl">
     <ion-content class="content">
+
         <div class="Wrapper animated03 fadeInRightBig">
             <div class="Page-Inner-Padding-Top"></div>
-            <h3 class="InnerTitle">21/3/2016</h3>
-            <h4>
-                <span class="ion-checkmark"></span>
-                تم إضافة خدمة إصدار التصاريح الالكترونية علي التطبيق
-            </h4>
-            <br />
-            <h3 class="InnerTitle">21/3/2016</h3>
-            <h4>
-                <span class="ion-checkmark"></span>
-                تم افتتاح مركز خدمة جديد لتسهيل خدمات المتعاملين
-            </h4>
+
+            <ion-list>
+                <ion-item ng-repeat="item in model.Notifications" class="No-Item">
+                    <h2 class="InnerTitle">{{item.NotificationTitle}}</h2>
+
+                    <h3 class="InnerTitle">{{item.NotificationDate}}</h3>
+                    <h4>
+                        <span class="ion-checkmark"></span>
+                        {{item.NotificationMessage}}
+                    </h4>
+                    <hr />
+                    <br/>
+                </ion-item>
+            </ion-list>
+
         </div>
+
+
     </ion-content>
 </ion-view>
