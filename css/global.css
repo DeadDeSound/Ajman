@@ -359,11 +359,11 @@ input[type=submit]:hover,
 
 .IFrame-Wrapper{
     position: fixed; 
-        height: 80vh;
+        height: 78vh;
       right: 0; 
       bottom: 0; 
       left: 0;
-      top: 0;
+      top: 20px;
       -webkit-overflow-scrolling: touch;
       overflow-y: scroll;
 }
