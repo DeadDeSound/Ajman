@@ -51,6 +51,7 @@ app.run(function ($ionicPlatform, $cordovaStatusbar, $rootScope, $window,$ionicP
         //alert($rootScope.deviceInformation.version);
 
 
+        
 
     //     $rootScope.callAlert = function () {
     //
