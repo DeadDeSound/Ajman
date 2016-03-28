@@ -37,7 +37,8 @@ app.controller('mainController', function ($scope,
 
             $state.go('notification');
         }
-    }
+    };
+
 
 
     $scope.model = NewsService;
