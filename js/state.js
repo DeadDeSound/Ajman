@@ -14,7 +14,7 @@ app.config(function ($stateProvider, $urlRouterProvider, $ionicConfigProvider) {
             url: '/splash',
             controller: 'splashController',
             templateProvider: function ($http, $templateCache, $rootScope) {
-                $rootScope.SlidePage=true;
+                $rootScope.SlidePage = true;
                 var templateName = 'templates/splash.html';
                 var tpl = $templateCache.get(templateName);
                 if (tpl) {
@@ -32,7 +32,7 @@ app.config(function ($stateProvider, $urlRouterProvider, $ionicConfigProvider) {
             url: '/splash2',
             controller: 'splashController',
             templateProvider: function ($http, $templateCache, $rootScope) {
-                $rootScope.SlidePage=true;
+                $rootScope.SlidePage = true;
                 var templateName = 'templates/splash2.html';
                 var tpl = $templateCache.get(templateName);
                 if (tpl) {
@@ -56,7 +56,7 @@ app.config(function ($stateProvider, $urlRouterProvider, $ionicConfigProvider) {
                 "direction": "up"
             },
             templateProvider: function ($http, $templateCache, $rootScope) {
-                $rootScope.SlidePage=false;
+                $rootScope.SlidePage = false;
                 var templateName = 'templates/ar/homePage.html';
                 if ($rootScope.appLang === "en") {
                     templateName = 'templates/en/homePage.html';
@@ -82,7 +82,7 @@ app.config(function ($stateProvider, $urlRouterProvider, $ionicConfigProvider) {
                 "direction": "up"
             },
             templateProvider: function ($http, $templateCache, $rootScope) {
-                $rootScope.SlidePage=false;
+                $rootScope.SlidePage = false;
                 var templateName = 'templates/ar/AboutUs.html';
                 if ($rootScope.appLang === "en") {
                     templateName = 'templates/en/AboutUs.html';
@@ -108,7 +108,7 @@ app.config(function ($stateProvider, $urlRouterProvider, $ionicConfigProvider) {
                 "direction": "up"
             },
             templateProvider: function ($http, $templateCache, $rootScope) {
-              $rootScope.SlidePage=false;
+                $rootScope.SlidePage = false;
                 var templateName = 'templates/ar/ChairmanWord.html';
                 if ($rootScope.appLang === "en") {
                     templateName = 'templates/en/ChairmanWord.html';
@@ -134,7 +134,7 @@ app.config(function ($stateProvider, $urlRouterProvider, $ionicConfigProvider) {
                 "direction": "up"
             },
             templateProvider: function ($http, $templateCache, $rootScope) {
-             $rootScope.SlidePage=false;
+                $rootScope.SlidePage = false;
                 var templateName = 'templates/ar/objective.html';
                 if ($rootScope.appLang === "en") {
                     templateName = 'templates/en/objective.html';
@@ -160,7 +160,7 @@ app.config(function ($stateProvider, $urlRouterProvider, $ionicConfigProvider) {
                 "direction": "up"
             },
             templateProvider: function ($http, $templateCache, $rootScope) {
-                $rootScope.SlidePage=false;
+                $rootScope.SlidePage = false;
                 var templateName = 'templates/ar/Regulations.html';
                 if ($rootScope.appLang === "en") {
                     templateName = 'templates/en/Regulations.html';
@@ -186,7 +186,7 @@ app.config(function ($stateProvider, $urlRouterProvider, $ionicConfigProvider) {
                 "direction": "up"
             },
             templateProvider: function ($http, $templateCache, $rootScope) {
-                $rootScope.SlidePage=false;
+                $rootScope.SlidePage = false;
                 var templateName = 'templates/ar/legislation.html';
                 if ($rootScope.appLang === "en") {
                     templateName = 'templates/en/legislation.html';
@@ -212,7 +212,7 @@ app.config(function ($stateProvider, $urlRouterProvider, $ionicConfigProvider) {
                 "direction": "up"
             },
             templateProvider: function ($http, $templateCache, $rootScope) {
-                $rootScope.SlidePage=false;
+                $rootScope.SlidePage = false;
                 var templateName = 'templates/ar/Investment.html';
                 if ($rootScope.appLang === "en") {
                     templateName = 'templates/en/Investment.html';
@@ -238,7 +238,7 @@ app.config(function ($stateProvider, $urlRouterProvider, $ionicConfigProvider) {
                 "direction": "up"
             },
             templateProvider: function ($http, $templateCache, $rootScope) {
-                $rootScope.SlidePage=false;
+                $rootScope.SlidePage = false;
                 var templateName = 'templates/ar/Statistics.html';
                 if ($rootScope.appLang === "en") {
                     templateName = 'templates/en/Statistics.html';
@@ -264,7 +264,7 @@ app.config(function ($stateProvider, $urlRouterProvider, $ionicConfigProvider) {
                 "direction": "up"
             },
             templateProvider: function ($http, $templateCache, $rootScope) {
-                $rootScope.SlidePage=false;
+                $rootScope.SlidePage = false;
                 var templateName = 'templates/ar/annual_report.html';
                 if ($rootScope.appLang === "en") {
                     templateName = 'templates/en/annual_report.html';
@@ -290,7 +290,7 @@ app.config(function ($stateProvider, $urlRouterProvider, $ionicConfigProvider) {
                 "direction": "up"
             },
             templateProvider: function ($http, $templateCache, $rootScope) {
-                $rootScope.SlidePage=false;
+                $rootScope.SlidePage = false;
                 var templateName = 'templates/ar/QueryingLicense.html';
                 if ($rootScope.appLang === "en") {
                     templateName = 'templates/en/QueryingLicense.html';
@@ -316,7 +316,7 @@ app.config(function ($stateProvider, $urlRouterProvider, $ionicConfigProvider) {
                 "direction": "up"
             },
             templateProvider: function ($http, $templateCache, $rootScope) {
-                $rootScope.SlidePage=false;
+                $rootScope.SlidePage = false;
                 var templateName = 'templates/ar/LicenseRenewal.html';
                 if ($rootScope.appLang === "en") {
                     templateName = 'templates/en/LicenseRenewal.html';
@@ -342,7 +342,7 @@ app.config(function ($stateProvider, $urlRouterProvider, $ionicConfigProvider) {
                 "direction": "up"
             },
             templateProvider: function ($http, $templateCache, $rootScope) {
-                $rootScope.SlidePage=false;
+                $rootScope.SlidePage = false;
                 var templateName = 'templates/ar/activitiesGuide.html';
                 if ($rootScope.appLang === "en") {
                     templateName = 'templates/en/activitiesGuide.html';
@@ -368,7 +368,7 @@ app.config(function ($stateProvider, $urlRouterProvider, $ionicConfigProvider) {
                 "direction": "up"
             },
             templateProvider: function ($http, $templateCache, $rootScope) {
-                $rootScope.SlidePage=false;
+                $rootScope.SlidePage = false;
                 var templateName = 'templates/ar/irregularitiesList.html';
                 if ($rootScope.appLang === "en") {
                     templateName = 'templates/en/irregularitiesList.html';
@@ -394,7 +394,7 @@ app.config(function ($stateProvider, $urlRouterProvider, $ionicConfigProvider) {
                 "direction": "up"
             },
             templateProvider: function ($http, $templateCache, $rootScope) {
-                $rootScope.SlidePage=false;
+                $rootScope.SlidePage = false;
                 var templateName = 'templates/ar/knowUs.html';
                 if ($rootScope.appLang === "en") {
                     templateName = 'templates/en/knowUs.html';
@@ -420,7 +420,7 @@ app.config(function ($stateProvider, $urlRouterProvider, $ionicConfigProvider) {
                 "direction": "up"
             },
             templateProvider: function ($http, $templateCache, $rootScope) {
-                $rootScope.SlidePage=false;
+                $rootScope.SlidePage = false;
                 var templateName = 'templates/ar/departmentObjectives.html';
                 if ($rootScope.appLang === "en") {
                     templateName = 'templates/en/departmentObjectives.html';
@@ -446,7 +446,7 @@ app.config(function ($stateProvider, $urlRouterProvider, $ionicConfigProvider) {
                 "direction": "up"
             },
             templateProvider: function ($http, $templateCache, $rootScope) {
-                $rootScope.SlidePage=false;
+                $rootScope.SlidePage = false;
                 var templateName = 'templates/ar/Suggestion.html';
                 if ($rootScope.appLang === "en") {
                     templateName = 'templates/en/Suggestion.html';
@@ -472,7 +472,7 @@ app.config(function ($stateProvider, $urlRouterProvider, $ionicConfigProvider) {
                 "direction": "up"
             },
             templateProvider: function ($http, $templateCache, $rootScope) {
-                $rootScope.SlidePage=false;
+                $rootScope.SlidePage = false;
                 var templateName = 'templates/ar/ComplainsAndSuggestion.html';
                 if ($rootScope.appLang === "en") {
                     templateName = 'templates/en/ComplainsAndSuggestion.html';
@@ -498,7 +498,7 @@ app.config(function ($stateProvider, $urlRouterProvider, $ionicConfigProvider) {
                 "direction": "up"
             },
             templateProvider: function ($http, $templateCache, $rootScope) {
-                $rootScope.SlidePage=false;
+                $rootScope.SlidePage = false;
                 var templateName = 'templates/ar/ContactUs.html';
                 if ($rootScope.appLang === "en") {
                     templateName = 'templates/en/ContactUs.html';
@@ -524,7 +524,7 @@ app.config(function ($stateProvider, $urlRouterProvider, $ionicConfigProvider) {
                 "direction": "up"
             },
             templateProvider: function ($http, $templateCache, $rootScope) {
-                $rootScope.SlidePage=false;
+                $rootScope.SlidePage = false;
                 var templateName = 'templates/ar/CustomerManual.html';
                 if ($rootScope.appLang === "en") {
                     templateName = 'templates/en/CustomerManual.html';
@@ -550,7 +550,7 @@ app.config(function ($stateProvider, $urlRouterProvider, $ionicConfigProvider) {
                 "direction": "up"
             },
             templateProvider: function ($http, $templateCache, $rootScope) {
-                $rootScope.SlidePage=false;
+                $rootScope.SlidePage = false;
                 var templateName = 'templates/ar/MediaServices.html';
                 if ($rootScope.appLang === "en") {
                     templateName = 'templates/en/MediaServices.html';
@@ -576,7 +576,7 @@ app.config(function ($stateProvider, $urlRouterProvider, $ionicConfigProvider) {
                 "direction": "up"
             },
             templateProvider: function ($http, $templateCache, $rootScope) {
-                $rootScope.SlidePage=false;
+                $rootScope.SlidePage = false;
                 var templateName = 'templates/ar/MediaCenter.html';
                 if ($rootScope.appLang === "en") {
                     templateName = 'templates/en/MediaCenter.html';
@@ -602,7 +602,7 @@ app.config(function ($stateProvider, $urlRouterProvider, $ionicConfigProvider) {
                 "direction": "up"
             },
             templateProvider: function ($http, $templateCache, $rootScope) {
-                $rootScope.SlidePage=false;
+                $rootScope.SlidePage = false;
                 var templateName = 'templates/ar/Messages.html';
                 if ($rootScope.appLang === "en") {
                     templateName = 'templates/en/Messages.html';
@@ -628,7 +628,7 @@ app.config(function ($stateProvider, $urlRouterProvider, $ionicConfigProvider) {
                 "direction": "up"
             },
             templateProvider: function ($http, $templateCache, $rootScope) {
-                $rootScope.SlidePage=false;
+                $rootScope.SlidePage = false;
                 var templateName = 'templates/ar/Notifications.html';
                 if ($rootScope.appLang === "en") {
                     templateName = 'templates/en/Notifications.html';
@@ -654,7 +654,7 @@ app.config(function ($stateProvider, $urlRouterProvider, $ionicConfigProvider) {
                 "direction": "up"
             },
             templateProvider: function ($http, $templateCache, $rootScope) {
-                $rootScope.SlidePage=false;
+                $rootScope.SlidePage = false;
                 var templateName = 'templates/ar/Registration.html';
                 if ($rootScope.appLang === "en") {
                     templateName = 'templates/en/Registration.html';
@@ -680,7 +680,7 @@ app.config(function ($stateProvider, $urlRouterProvider, $ionicConfigProvider) {
                 "direction": "up"
             },
             templateProvider: function ($http, $templateCache, $rootScope) {
-                $rootScope.SlidePage=false;
+                $rootScope.SlidePage = false;
                 var templateName = 'templates/ar/Services.html';
                 if ($rootScope.appLang === "en") {
                     templateName = 'templates/en/Services.html';
@@ -706,7 +706,7 @@ app.config(function ($stateProvider, $urlRouterProvider, $ionicConfigProvider) {
                 "direction": "up"
             },
             templateProvider: function ($http, $templateCache, $rootScope) {
-                $rootScope.SlidePage=false;
+                $rootScope.SlidePage = false;
                 var templateName = 'templates/ar/issuancePermit.html';
                 if ($rootScope.appLang === "en") {
                     templateName = 'templates/en/issuancePermit.html';
@@ -732,7 +732,7 @@ app.config(function ($stateProvider, $urlRouterProvider, $ionicConfigProvider) {
                 "direction": "up"
             },
             templateProvider: function ($http, $templateCache, $rootScope) {
-                $rootScope.SlidePage=false;
+                $rootScope.SlidePage = false;
                 var templateName = 'templates/ar/cancelCompany.html';
                 if ($rootScope.appLang === "en") {
                     templateName = 'templates/en/cancelCompany.html';
@@ -758,7 +758,7 @@ app.config(function ($stateProvider, $urlRouterProvider, $ionicConfigProvider) {
                 "direction": "up"
             },
             templateProvider: function ($http, $templateCache, $rootScope) {
-                $rootScope.SlidePage=false;
+                $rootScope.SlidePage = false;
                 var templateName = 'templates/ar/cancelBusinessCompany.html';
                 if ($rootScope.appLang === "en") {
                     templateName = 'templates/en/cancelBusinessCompany.html';
@@ -784,7 +784,7 @@ app.config(function ($stateProvider, $urlRouterProvider, $ionicConfigProvider) {
                 "direction": "up"
             },
             templateProvider: function ($http, $templateCache, $rootScope) {
-                $rootScope.SlidePage=false;
+                $rootScope.SlidePage = false;
                 var templateName = 'templates/ar/AwarenessMessage.html';
                 if ($rootScope.appLang === "en") {
                     templateName = 'templates/en/AwarenessMessage.html';
@@ -810,7 +810,7 @@ app.config(function ($stateProvider, $urlRouterProvider, $ionicConfigProvider) {
                 "direction": "up"
             },
             templateProvider: function ($http, $templateCache, $rootScope) {
-                $rootScope.SlidePage=false;
+                $rootScope.SlidePage = false;
                 var templateName = 'templates/ar/GeneralRequirements.html';
                 if ($rootScope.appLang === "en") {
                     templateName = 'templates/en/GeneralRequirements.html';
@@ -836,7 +836,7 @@ app.config(function ($stateProvider, $urlRouterProvider, $ionicConfigProvider) {
                 "direction": "up"
             },
             templateProvider: function ($http, $templateCache, $rootScope) {
-                $rootScope.SlidePage=false;
+                $rootScope.SlidePage = false;
                 var templateName = 'templates/ar/SpecialRequirements.html';
                 if ($rootScope.appLang === "en") {
                     templateName = 'templates/en/SpecialRequirements.html';
@@ -862,7 +862,7 @@ app.config(function ($stateProvider, $urlRouterProvider, $ionicConfigProvider) {
                 "direction": "up"
             },
             templateProvider: function ($http, $templateCache, $rootScope) {
-                $rootScope.SlidePage=false;
+                $rootScope.SlidePage = false;
                 var templateName = 'templates/ar/OnlineServices.html';
                 if ($rootScope.appLang === "en") {
                     templateName = 'templates/en/OnlineServices.html';
@@ -888,7 +888,7 @@ app.config(function ($stateProvider, $urlRouterProvider, $ionicConfigProvider) {
                 "direction": "up"
             },
             templateProvider: function ($http, $templateCache, $rootScope) {
-                $rootScope.SlidePage=false;
+                $rootScope.SlidePage = false;
                 var templateName = 'templates/ar/servicesGuide.html';
                 if ($rootScope.appLang === "en") {
                     templateName = 'templates/en/servicesGuide.html';
@@ -914,7 +914,7 @@ app.config(function ($stateProvider, $urlRouterProvider, $ionicConfigProvider) {
                 "direction": "up"
             },
             templateProvider: function ($http, $templateCache, $rootScope) {
-                $rootScope.SlidePage=false;
+                $rootScope.SlidePage = false;
                 var templateName = 'templates/ar/createPermit.html';
                 if ($rootScope.appLang === "en") {
                     templateName = 'templates/en/createPermit.html';
@@ -940,7 +940,7 @@ app.config(function ($stateProvider, $urlRouterProvider, $ionicConfigProvider) {
                 "direction": "up"
             },
             templateProvider: function ($http, $templateCache, $rootScope) {
-                $rootScope.SlidePage=false;
+                $rootScope.SlidePage = false;
                 var templateName = 'templates/ar/renewPermit.html';
                 if ($rootScope.appLang === "en") {
                     templateName = 'templates/en/renewPermit.html';
@@ -966,7 +966,7 @@ app.config(function ($stateProvider, $urlRouterProvider, $ionicConfigProvider) {
                 "direction": "up"
             },
             templateProvider: function ($http, $templateCache, $rootScope) {
-                $rootScope.SlidePage=false;
+                $rootScope.SlidePage = false;
                 var templateName = 'templates/ar/editPermit.html';
                 if ($rootScope.appLang === "en") {
                     templateName = 'templates/en/editPermit.html';
@@ -992,7 +992,7 @@ app.config(function ($stateProvider, $urlRouterProvider, $ionicConfigProvider) {
                 "direction": "up"
             },
             templateProvider: function ($http, $templateCache, $rootScope) {
-                $rootScope.SlidePage=false;
+                $rootScope.SlidePage = false;
                 var templateName = 'templates/ar/cancelPermit.html';
                 if ($rootScope.appLang === "en") {
                     templateName = 'templates/en/cancelPermit.html';
@@ -1018,7 +1018,7 @@ app.config(function ($stateProvider, $urlRouterProvider, $ionicConfigProvider) {
                 "direction": "up"
             },
             templateProvider: function ($http, $templateCache, $rootScope) {
-                $rootScope.SlidePage=false;
+                $rootScope.SlidePage = false;
                 var templateName = 'templates/ar/legalForms.html';
                 if ($rootScope.appLang === "en") {
                     templateName = 'templates/en/legalForms.html';
@@ -1044,7 +1044,7 @@ app.config(function ($stateProvider, $urlRouterProvider, $ionicConfigProvider) {
                 "direction": "up"
             },
             templateProvider: function ($http, $templateCache, $rootScope) {
-                $rootScope.SlidePage=false;
+                $rootScope.SlidePage = false;
                 var templateName = 'templates/ar/details.html';
                 if ($rootScope.appLang === "en") {
                     templateName = 'templates/en/details.html';
@@ -1070,7 +1070,7 @@ app.config(function ($stateProvider, $urlRouterProvider, $ionicConfigProvider) {
                 "direction": "up"
             },
             templateProvider: function ($http, $templateCache, $rootScope) {
-                $rootScope.SlidePage=false;
+                $rootScope.SlidePage = false;
                 var templateName = 'templates/ar/eRegistration.html';
                 if ($rootScope.appLang === "en") {
                     templateName = 'templates/en/eRegistration.html';
@@ -1096,7 +1096,7 @@ app.config(function ($stateProvider, $urlRouterProvider, $ionicConfigProvider) {
                 "direction": "up"
             },
             templateProvider: function ($http, $templateCache, $rootScope) {
-                $rootScope.SlidePage=false;
+                $rootScope.SlidePage = false;
                 var templateName = 'templates/ar/Enquiry.html';
                 if ($rootScope.appLang === "en") {
                     templateName = 'templates/en/Enquiry.html';
@@ -1122,7 +1122,7 @@ app.config(function ($stateProvider, $urlRouterProvider, $ionicConfigProvider) {
                 "direction": "up"
             },
             templateProvider: function ($http, $templateCache, $rootScope) {
-                $rootScope.SlidePage=false;
+                $rootScope.SlidePage = false;
                 var templateName = 'templates/ar/renewal.html';
                 if ($rootScope.appLang === "en") {
                     templateName = 'templates/en/renewal.html';
@@ -1148,7 +1148,7 @@ app.config(function ($stateProvider, $urlRouterProvider, $ionicConfigProvider) {
                 "direction": "up"
             },
             templateProvider: function ($http, $templateCache, $rootScope) {
-                $rootScope.SlidePage=true;
+                $rootScope.SlidePage = true;
                 var templateName = 'templates/ar/SlideTest.html';
                 if ($rootScope.appLang === "en") {
                     templateName = 'templates/en/SlideTest.html';
@@ -1174,10 +1174,636 @@ app.config(function ($stateProvider, $urlRouterProvider, $ionicConfigProvider) {
                 "direction": "up"
             },
             templateProvider: function ($http, $templateCache, $rootScope) {
-                $rootScope.SlidePage=false;
+                $rootScope.SlidePage = false;
                 var templateName = 'templates/ar/MediaCenterDetails.html';
                 if ($rootScope.appLang === "en") {
                     templateName = 'templates/en/MediaCenterDetails.html';
+                }
+                var tpl = $templateCache.get(templateName);
+                if (tpl) {
+                    return tpl;
+                }
+                return $http
+                    .get(templateName)
+                    .then(function (response) {
+                        tpl = response.data;
+                        $templateCache.put(templateName, tpl);
+                        return tpl;
+                    });
+            }
+        }).state('IndividualInstitution', {
+            url: "/IndividualInstitution",
+            cache: false,
+            controller: 'mainController',
+            nativeTransitions: {
+                "type": "flip",
+                "direction": "up"
+            },
+            templateProvider: function ($http, $templateCache, $rootScope) {
+                $rootScope.SlidePage = false;
+                var templateName = 'templates/ar/IndividualInstitution.html';
+                if ($rootScope.appLang === "en") {
+                    templateName = 'templates/en/IndividualInstitution.html';
+                }
+                var tpl = $templateCache.get(templateName);
+                if (tpl) {
+                    return tpl;
+                }
+                return $http
+
+                    .get(templateName)
+                    .then(function (response) {
+                        tpl = response.data;
+                        $templateCache.put(templateName, tpl);
+                        return tpl;
+                    });
+            }
+        }).state('Company-with-limited-liability', {
+            url: "/Company-with-limited-liability",
+            cache: false,
+            controller: 'mainController',
+            nativeTransitions: {
+                "type": "flip",
+                "direction": "up"
+            },
+            templateProvider: function ($http, $templateCache, $rootScope) {
+                $rootScope.SlidePage = false;
+                var templateName = 'templates/ar/Company-with-limited-liability.html';
+                if ($rootScope.appLang === "en") {
+                    templateName = 'templates/en/Company-with-limited-liability.html';
+                }
+                var tpl = $templateCache.get(templateName);
+                if (tpl) {
+                    return tpl;
+                }
+                return $http
+                    .get(templateName)
+                    .then(function (response) {
+                        tpl = response.data;
+                        $templateCache.put(templateName, tpl);
+                        return tpl;
+                    });
+            }
+        }).state('Corporate-solidarity', {
+            url: "/Corporate-solidarity",
+            cache: false,
+            controller: 'mainController',
+            nativeTransitions: {
+                "type": "flip",
+                "direction": "up"
+            },
+            templateProvider: function ($http, $templateCache, $rootScope) {
+                $rootScope.SlidePage = false;
+                var templateName = 'templates/ar/Corporate-solidarity.html';
+                if ($rootScope.appLang === "en") {
+                    templateName = 'templates/en/Corporate-solidarity.html';
+                }
+                var tpl = $templateCache.get(templateName);
+                if (tpl) {
+                    return tpl;
+                }
+                return $http
+                    .get(templateName)
+                    .then(function (response) {
+                        tpl = response.data;
+                        $templateCache.put(templateName, tpl);
+                        return tpl;
+                    });
+            }
+        }).state('Civil-Works-Companies', {
+            url: "/Civil-Works-Companies",
+            cache: false,
+            controller: 'mainController',
+            nativeTransitions: {
+                "type": "flip",
+                "direction": "up"
+            },
+            templateProvider: function ($http, $templateCache, $rootScope) {
+                $rootScope.SlidePage = false;
+                var templateName = 'templates/ar/Civil-Works-Companies.html';
+                if ($rootScope.appLang === "en") {
+                    templateName = 'templates/en/Civil-Works-Companies.html';
+                }
+                var tpl = $templateCache.get(templateName);
+                if (tpl) {
+                    return tpl;
+                }
+                return $http
+                    .get(templateName)
+                    .then(function (response) {
+                        tpl = response.data;
+                        $templateCache.put(templateName, tpl);
+                        return tpl;
+                    });
+            }
+        }).state('Private-joint-StockCompanies', {
+            url: "/Private-joint-StockCompanies",
+            cache: false,
+            controller: 'mainController',
+            nativeTransitions: {
+                "type": "flip",
+                "direction": "up"
+            },
+            templateProvider: function ($http, $templateCache, $rootScope) {
+                $rootScope.SlidePage = false;
+                var templateName = 'templates/ar/Private-joint-StockCompanies.html';
+                if ($rootScope.appLang === "en") {
+                    templateName = 'templates/en/Private-joint-StockCompanies.html';
+                }
+                var tpl = $templateCache.get(templateName);
+                if (tpl) {
+                    return tpl;
+                }
+                return $http
+                    .get(templateName)
+                    .then(function (response) {
+                        tpl = response.data;
+                        $templateCache.put(templateName, tpl);
+                        return tpl;
+                    });
+            }
+        }).state('Public-joint-StockCompanies', {
+            url: "/Public-joint-StockCompanies",
+            cache: false,
+            controller: 'mainController',
+            nativeTransitions: {
+                "type": "flip",
+                "direction": "up"
+            },
+            templateProvider: function ($http, $templateCache, $rootScope) {
+                $rootScope.SlidePage = false;
+                var templateName = 'templates/ar/Public-joint-StockCompanies.html';
+                if ($rootScope.appLang === "en") {
+                    templateName = 'templates/en/Public-joint-StockCompanies.html';
+                }
+                var tpl = $templateCache.get(templateName);
+                if (tpl) {
+                    return tpl;
+                }
+                return $http
+                    .get(templateName)
+                    .then(function (response) {
+                        tpl = response.data;
+                        $templateCache.put(templateName, tpl);
+                        return tpl;
+                    });
+            }
+        }).state('Branches-of-Gulf-Companies', {
+            url: "/Branches-of-Gulf-Companies",
+            cache: false,
+            controller: 'mainController',
+            nativeTransitions: {
+                "type": "flip",
+                "direction": "up"
+            },
+            templateProvider: function ($http, $templateCache, $rootScope) {
+                $rootScope.SlidePage = false;
+                var templateName = 'templates/ar/Branches-of-Gulf-Companies.html';
+                if ($rootScope.appLang === "en") {
+                    templateName = 'templates/en/Branches-of-Gulf-Companies.html';
+                }
+                var tpl = $templateCache.get(templateName);
+                if (tpl) {
+                    return tpl;
+                }
+                return $http
+                    .get(templateName)
+                    .then(function (response) {
+                        tpl = response.data;
+                        $templateCache.put(templateName, tpl);
+                        return tpl;
+                    });
+            }
+        }).state('Branches-of-foreign-Companies', {
+            url: "/Branches-of-foreign-Companies",
+            cache: false,
+            controller: 'mainController',
+            nativeTransitions: {
+                "type": "flip",
+                "direction": "up"
+            },
+            templateProvider: function ($http, $templateCache, $rootScope) {
+                $rootScope.SlidePage = false;
+                var templateName = 'templates/ar/Branches-of-foreign-Companies.html';
+                if ($rootScope.appLang === "en") {
+                    templateName = 'templates/en/Branches-of-foreign-Companies.html';
+                }
+                var tpl = $templateCache.get(templateName);
+                if (tpl) {
+                    return tpl;
+                }
+                return $http
+                    .get(templateName)
+                    .then(function (response) {
+                        tpl = response.data;
+                        $templateCache.put(templateName, tpl);
+                        return tpl;
+                    });
+            }
+        }).state('Branches-of-companies-from-Another-Emirate', {
+            url: "/Branches-of-companies-from-Another-Emirate",
+            cache: false,
+            controller: 'mainController',
+            nativeTransitions: {
+                "type": "flip",
+                "direction": "up"
+            },
+            templateProvider: function ($http, $templateCache, $rootScope) {
+                $rootScope.SlidePage = false;
+                var templateName = 'templates/ar/Branches-of-companies-from-Another-Emirate.html';
+                if ($rootScope.appLang === "en") {
+                    templateName = 'templates/en/Branches-of-companies-from-Another-Emirate.html';
+                }
+                var tpl = $templateCache.get(templateName);
+                if (tpl) {
+                    return tpl;
+                }
+                return $http
+                    .get(templateName)
+                    .then(function (response) {
+                        tpl = response.data;
+                        $templateCache.put(templateName, tpl);
+                        return tpl;
+                    });
+            }
+        }).state('The-establishment-of-institutions-branch-actions', {
+            url: "/The-establishment-of-institutions-branch-actions",
+            cache: false,
+            controller: 'mainController',
+            nativeTransitions: {
+                "type": "flip",
+                "direction": "up"
+            },
+            templateProvider: function ($http, $templateCache, $rootScope) {
+                $rootScope.SlidePage = false;
+                var templateName = 'templates/ar/The-establishment-of-institutions-branch-actions.html';
+                if ($rootScope.appLang === "en") {
+                    templateName = 'templates/en/The-establishment-of-institutions-branch-actions.html';
+                }
+                var tpl = $templateCache.get(templateName);
+                if (tpl) {
+                    return tpl;
+                }
+                return $http
+                    .get(templateName)
+                    .then(function (response) {
+                        tpl = response.data;
+                        $templateCache.put(templateName, tpl);
+                        return tpl;
+                    });
+            }
+        }).state('IndividualInstitution_renew', {
+            url: "/IndividualInstitution_renew",
+            cache: false,
+            controller: 'mainController',
+            nativeTransitions: {
+                "type": "flip",
+                "direction": "up"
+            },
+            templateProvider: function ($http, $templateCache, $rootScope) {
+                $rootScope.SlidePage = false;
+                var templateName = 'templates/ar/IndividualInstitution_renew.html';
+                if ($rootScope.appLang === "en") {
+                    templateName = 'templates/en/IndividualInstitution_renew.html';
+                }
+                var tpl = $templateCache.get(templateName);
+                if (tpl) {
+                    return tpl;
+                }
+                return $http
+
+                    .get(templateName)
+                    .then(function (response) {
+                        tpl = response.data;
+                        $templateCache.put(templateName, tpl);
+                        return tpl;
+                    });
+            }
+        }).state('Company-with-limited-liability_renew', {
+            url: "/Company-with-limited-liability_renew",
+            cache: false,
+            controller: 'mainController',
+            nativeTransitions: {
+                "type": "flip",
+                "direction": "up"
+            },
+            templateProvider: function ($http, $templateCache, $rootScope) {
+                $rootScope.SlidePage = false;
+                var templateName = 'templates/ar/Company-with-limited-liability_renew.html';
+                if ($rootScope.appLang === "en") {
+                    templateName = 'templates/en/Company-with-limited-liability_renew.html';
+                }
+                var tpl = $templateCache.get(templateName);
+                if (tpl) {
+                    return tpl;
+                }
+                return $http
+                    .get(templateName)
+                    .then(function (response) {
+                        tpl = response.data;
+                        $templateCache.put(templateName, tpl);
+                        return tpl;
+                    });
+            }
+        }).state('Corporate-solidarity_renew', {
+            url: "/Corporate-solidarity_renew",
+            cache: false,
+            controller: 'mainController',
+            nativeTransitions: {
+                "type": "flip",
+                "direction": "up"
+            },
+            templateProvider: function ($http, $templateCache, $rootScope) {
+                $rootScope.SlidePage = false;
+                var templateName = 'templates/ar/Corporate-solidarity_renew.html';
+                if ($rootScope.appLang === "en") {
+                    templateName = 'templates/en/Corporate-solidarity_renew.html';
+                }
+                var tpl = $templateCache.get(templateName);
+                if (tpl) {
+                    return tpl;
+                }
+                return $http
+                    .get(templateName)
+                    .then(function (response) {
+                        tpl = response.data;
+                        $templateCache.put(templateName, tpl);
+                        return tpl;
+                    });
+            }
+        }).state('Civil-Works-Companies_renew', {
+            url: "/Civil-Works-Companies_renew",
+            cache: false,
+            controller: 'mainController',
+            nativeTransitions: {
+                "type": "flip",
+                "direction": "up"
+            },
+            templateProvider: function ($http, $templateCache, $rootScope) {
+                $rootScope.SlidePage = false;
+                var templateName = 'templates/ar/Civil-Works-Companies_renew.html';
+                if ($rootScope.appLang === "en") {
+                    templateName = 'templates/en/Civil-Works-Companies_renew.html';
+                }
+                var tpl = $templateCache.get(templateName);
+                if (tpl) {
+                    return tpl;
+                }
+                return $http
+                    .get(templateName)
+                    .then(function (response) {
+                        tpl = response.data;
+                        $templateCache.put(templateName, tpl);
+                        return tpl;
+                    });
+            }
+        }).state('Private-joint-StockCompanies_renew', {
+            url: "/Private-joint-StockCompanies_renew",
+            cache: false,
+            controller: 'mainController',
+            nativeTransitions: {
+                "type": "flip",
+                "direction": "up"
+            },
+            templateProvider: function ($http, $templateCache, $rootScope) {
+                $rootScope.SlidePage = false;
+                var templateName = 'templates/ar/Private-joint-StockCompanies_renew.html';
+                if ($rootScope.appLang === "en") {
+                    templateName = 'templates/en/Private-joint-StockCompanies_renew.html';
+                }
+                var tpl = $templateCache.get(templateName);
+                if (tpl) {
+                    return tpl;
+                }
+                return $http
+                    .get(templateName)
+                    .then(function (response) {
+                        tpl = response.data;
+                        $templateCache.put(templateName, tpl);
+                        return tpl;
+                    });
+            }
+        }).state('Public-joint-StockCompanies_renew', {
+            url: "/Public-joint-StockCompanies_renew",
+            cache: false,
+            controller: 'mainController',
+            nativeTransitions: {
+                "type": "flip",
+                "direction": "up"
+            },
+            templateProvider: function ($http, $templateCache, $rootScope) {
+                $rootScope.SlidePage = false;
+                var templateName = 'templates/ar/Public-joint-StockCompanies_renew.html';
+                if ($rootScope.appLang === "en") {
+                    templateName = 'templates/en/Public-joint-StockCompanies_renew.html';
+                }
+                var tpl = $templateCache.get(templateName);
+                if (tpl) {
+                    return tpl;
+                }
+                return $http
+                    .get(templateName)
+                    .then(function (response) {
+                        tpl = response.data;
+                        $templateCache.put(templateName, tpl);
+                        return tpl;
+                    });
+            }
+        }).state('Branches-of-Gulf-Companies_renew', {
+            url: "/Branches-of-Gulf-Companies_renew",
+            cache: false,
+            controller: 'mainController',
+            nativeTransitions: {
+                "type": "flip",
+                "direction": "up"
+            },
+            templateProvider: function ($http, $templateCache, $rootScope) {
+                $rootScope.SlidePage = false;
+                var templateName = 'templates/ar/Branches-of-Gulf-Companies_renew.html';
+                if ($rootScope.appLang === "en") {
+                    templateName = 'templates/en/Branches-of-Gulf-Companies_renew.html';
+                }
+                var tpl = $templateCache.get(templateName);
+                if (tpl) {
+                    return tpl;
+                }
+                return $http
+                    .get(templateName)
+                    .then(function (response) {
+                        tpl = response.data;
+                        $templateCache.put(templateName, tpl);
+                        return tpl;
+                    });
+            }
+        }).state('Branches-of-foreign-Companies_renew', {
+            url: "/Branches-of-foreign-Companies_renew",
+            cache: false,
+            controller: 'mainController',
+            nativeTransitions: {
+                "type": "flip",
+                "direction": "up"
+            },
+            templateProvider: function ($http, $templateCache, $rootScope) {
+                $rootScope.SlidePage = false;
+                var templateName = 'templates/ar/Branches-of-foreign-Companies_renew.html';
+                if ($rootScope.appLang === "en") {
+                    templateName = 'templates/en/Branches-of-foreign-Companies_renew.html';
+                }
+                var tpl = $templateCache.get(templateName);
+                if (tpl) {
+                    return tpl;
+                }
+                return $http
+                    .get(templateName)
+                    .then(function (response) {
+                        tpl = response.data;
+                        $templateCache.put(templateName, tpl);
+                        return tpl;
+                    });
+            }
+        }).state('Branches-of-companies-from-Another-Emirate_renew', {
+            url: "/Branches-of-companies-from-Another-Emirate_renew",
+            cache: false,
+            controller: 'mainController',
+            nativeTransitions: {
+                "type": "flip",
+                "direction": "up"
+            },
+            templateProvider: function ($http, $templateCache, $rootScope) {
+                $rootScope.SlidePage = false;
+                var templateName = 'templates/ar/Branches-of-companies-from-Another-Emirate_renew.html';
+                if ($rootScope.appLang === "en") {
+                    templateName = 'templates/en/Branches-of-companies-from-Another-Emirate_renew.html';
+                }
+                var tpl = $templateCache.get(templateName);
+                if (tpl) {
+                    return tpl;
+                }
+                return $http
+                    .get(templateName)
+                    .then(function (response) {
+                        tpl = response.data;
+                        $templateCache.put(templateName, tpl);
+                        return tpl;
+                    });
+            }
+        }).state('The-establishment-of-institutions-branch-actions_renew', {
+            url: "/The-establishment-of-institutions-branch-actions_renew",
+            cache: false,
+            controller: 'mainController',
+            nativeTransitions: {
+                "type": "flip",
+                "direction": "up"
+            },
+            templateProvider: function ($http, $templateCache, $rootScope) {
+                $rootScope.SlidePage = false;
+                var templateName = 'templates/ar/The-establishment-of-institutions-branch-actions_renew.html';
+                if ($rootScope.appLang === "en") {
+                    templateName = 'templates/en/The-establishment-of-institutions-branch-actions_renew.html';
+                }
+                var tpl = $templateCache.get(templateName);
+                if (tpl) {
+                    return tpl;
+                }
+                return $http
+                    .get(templateName)
+                    .then(function (response) {
+                        tpl = response.data;
+                        $templateCache.put(templateName, tpl);
+                        return tpl;
+                    });
+            }
+        }).state('Cancel-branches-of-institutions', {
+            url: "/Cancel-branches-of-institutions",
+            cache: false,
+            controller: 'mainController',
+            nativeTransitions: {
+                "type": "flip",
+                "direction": "up"
+            },
+            templateProvider: function ($http, $templateCache, $rootScope) {
+                $rootScope.SlidePage = false;
+                var templateName = 'templates/ar/Cancel-branches-of-institutions.html';
+                if ($rootScope.appLang === "en") {
+                    templateName = 'templates/en/Cancel-branches-of-institutions.html';
+                }
+                var tpl = $templateCache.get(templateName);
+                if (tpl) {
+                    return tpl;
+                }
+                return $http
+                    .get(templateName)
+                    .then(function (response) {
+                        tpl = response.data;
+                        $templateCache.put(templateName, tpl);
+                        return tpl;
+                    });
+            }
+        }).state('Cancel-businesses-licenses', {
+            url: "/Cancel-businesses-licenses",
+            cache: false,
+            controller: 'mainController',
+            nativeTransitions: {
+                "type": "flip",
+                "direction": "up"
+            },
+            templateProvider: function ($http, $templateCache, $rootScope) {
+                $rootScope.SlidePage = false;
+                var templateName = 'templates/ar/Cancel-businesses-licenses.html';
+                if ($rootScope.appLang === "en") {
+                    templateName = 'templates/en/Cancel-businesses-licenses.html';
+                }
+                var tpl = $templateCache.get(templateName);
+                if (tpl) {
+                    return tpl;
+                }
+                return $http
+                    .get(templateName)
+                    .then(function (response) {
+                        tpl = response.data;
+                        $templateCache.put(templateName, tpl);
+                        return tpl;
+                    });
+            }
+        }).state('Cancel-enterprise-licenses', {
+            url: "/Cancel-enterprise-licenses",
+            cache: false,
+            controller: 'mainController',
+            nativeTransitions: {
+                "type": "flip",
+                "direction": "up"
+            },
+            templateProvider: function ($http, $templateCache, $rootScope) {
+                $rootScope.SlidePage = false;
+                var templateName = 'templates/ar/Cancel-enterprise-licenses.html';
+                if ($rootScope.appLang === "en") {
+                    templateName = 'templates/en/Cancel-enterprise-licenses.html';
+                }
+                var tpl = $templateCache.get(templateName);
+                if (tpl) {
+                    return tpl;
+                }
+                return $http
+                    .get(templateName)
+                    .then(function (response) {
+                        tpl = response.data;
+                        $templateCache.put(templateName, tpl);
+                        return tpl;
+                    });
+            }
+        }).state('Cancel-companies-licenses', {
+            url: "/Cancel-companies-licenses",
+            cache: false,
+            controller: 'mainController',
+            nativeTransitions: {
+                "type": "flip",
+                "direction": "up"
+            },
+            templateProvider: function ($http, $templateCache, $rootScope) {
+                $rootScope.SlidePage = false;
+                var templateName = 'templates/ar/Cancel-companies-licenses.html';
+                if ($rootScope.appLang === "en") {
+                    templateName = 'templates/en/Cancel-companies-licenses.html';
                 }
                 var tpl = $templateCache.get(templateName);
                 if (tpl) {
