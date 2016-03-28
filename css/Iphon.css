@@ -17,7 +17,7 @@
     display: block;
     width: 100%;
     top: 0;
-    height: 17px;
+    height: 20px;
     background-color: #896D32;
 }
 .pane, .view {
@@ -54,7 +54,7 @@
     height: inherit !important;
     margin-top: -50px !important;
     padding-top: 0px !important;
-    padding-bottom: 100px !important;
+    padding-bottom: 120px !important;
     -webkit-overflow-scrolling: touch;
   	overflow-y: scroll;
 }
