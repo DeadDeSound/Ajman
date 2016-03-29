@@ -12,6 +12,7 @@ serv.service("NewsService", function ($http, $q, $ionicPopup) {
         'ReadNotification': [],
         'EnableNotification':false,
         'Vote_SendAnswer':[],
+        'Vote_GetAnswer':[],
         'replace': function (str, find, replace) {
             return str.replace(new RegExp(escapeRegExp(find), 'g'), replace);
         }
@@ -127,6 +128,26 @@ serv.service("NewsService", function ($http, $q, $ionicPopup) {
                     var NewArray = JSON.parse(x2);
                     self.Vote_SendAnswer = NewArray;
                     console.log(self.Vote_SendAnswer);
+                    d.resolve();
+                })
+                .error(function error(msg) {
+                    console.log(msg);
+                    d.reject();
+                });
+            return d.promise;
+        }, 'LoadVote_GetAnswers': function (QuestionId) {
+            var d = $q.defer();
+            $http.get('http://ded.sdg.ae/_MobFiles/AjmanDED_MobService.asmx/Vote_GetAnswers?QuestionId='+QuestionId)
+                .success(function success(data) {
+
+                    console.log('http://ded.sdg.ae/_MobFiles/AjmanDED_MobService.asmx/Vote_GetAnswers?QuestionId='+QuestionId);
+                    var x2 = data.replace("<?xml version=\"1.0\" encoding=\"utf-8\"?>", "");
+                    x2 = x2.replace("<string xmlns=\"http://AjmanDED-MobData.org/\">", "");
+                    x2 = x2.replace("</string>", "");
+
+                    var NewArray = JSON.parse(x2);
+                    self.Vote_GetAnswer = NewArray;
+                    console.log(self.Vote_GetAnswer);
                     d.resolve();
                 })
                 .error(function error(msg) {
