@@ -1,79 +1,120 @@
-<ion-view view-title="اجراءات تأسيس المنشأت الفردية" dir="rtl">
+<ion-view view-title="The procedures to incorporate  a limited liability company ">
     <ion-content class="content" onscroll="false">
-        <!--<a ui-sref="details">التفاصيل</a>-->
         <div class="Wrapper animated03 fadeInRightBig">
-            <h3>وصف الخدمة  :</h3>
+            <h3>Service Description</h3>
             <p>
-                الحصول على ترخيص بإنشاء مؤسسة فردية
+                obtaining a license to establish a limited liability company
             </p>
-            <h3>وقت تقديم الخدمة  :</h3>
+            <h3>Time of service</h3>
             <p>
-                خلال أوقات الدوام الرسمي لمراكز الخدمة
+                During the official working hours of service centers
             </p>
-            <h3>المستفيد من الخدمة :</h3>
+            <h3>The beneficiary of the service</h3>
             <p>
-                شركات / مؤسسات
+                companies / organizations
             </p>
 
 
+
+
+            <div ng-model="expandmeGeneral">
+                <div ng-click="expandmeGeneral=!expandmeGeneral">
+                    <h3 class="CollapsTitle animated fadeInRightBig"><i class="ion-ios-arrow-down"></i> Documents required for obtaining new licenses in general</h3>
+                </div>
+            </div>
+            <div ng-show="expandmeGeneral" class="fadeInRightBig">
+                <div class="Page-Inner-Padding-Top"></div>
+                <p>
+                    1. Copy of the identity card and family book for locals (khulasat Quaid).<br />
+                    2. Copy of the passport of the license owners.<br />
+                    3. Complete the registration and the commercial license form, available at the website of the department and in the service centers.<br />
+                    4. Copy of the passport page of residence or a visit visa for non-GCC citizens.<br />
+                    5. No objection letter from the sponsor for exercising commercial activity –applicable for non-GCC citizens.<br />
+
+                    6. No objection letter to perform trading activities from the department of  courts for those under 21 years old.<br />
+                    7. Approval of other government agencies on the required activity in case it is needed.<br />
+
+                    <h4>Note: After obtaining the initial approval and reserving the trade name: receipt of the initial approval and all documents previously submitted the following documents must be provided : -</h4>
+
+
+                    8. Copy of the certificate for attesting tenancy contract  issued by the Department of Municipality and Planning .<br />
+                    9. Memorandum of Association duly attested applicable to  all companies .<br />
+                    10. Services agent appointment contract duly attested  applicable for professional and civil companies 100% owned by residents who are not GCC nationals which require a local services agent from the United Arab Emirates.<br />
+                    11. Any other external approvals required for the activity to be practiced.
+
+                </p>
+            </div>
 
             <div ng-model="expandme">
                 <div ng-click="expandme=!expandme">
-                    <h3 class="CollapsTitle animated fadeInRightBig"><i class="ion-ios-arrow-down"></i>  المستندات المطلوبة للحصول على الخدمة :</h3>
+                    <h3 class="CollapsTitle animated fadeInRightBig"><i class="ion-ios-arrow-down"></i> Documents required for the service</h3>
                 </div>
             </div>
             <div ng-show="expandme" class="fadeInRightBig">
-                <p>1.	طلب الترخيص</p>
-                <p>2.	الهوية الأصلية مع صورة منها.</p>
-                <p>3.	صورة الجواز</p>
-                <p>4.	لمواطني دول الخليج يتطلب صورة الجواز فقط</p>
-                <p>5.	صورة عن رخصة المركز الرئيسي سارية المفعول + صورة من عقد التأسيس وملحقاته</p>
+                <p>
+                    • Copy of valid identity card for locals .<br />
+                    • Copy of the passport of local or GCC owner's and the same with residence page for expatriate owners.<br />
+                    • NOC from the previous company from the  concerned Chamber of Commerce.<br />
+                    • If the investor  desire to transfer residence he must obtain the prior approval of the passports department , if transfer  of residence is not required he must provide the undertaking form approved by the department.<br />
+                    • Provide the memorandum of association certified by a notary public and the receipt e-Dirham from the Ministry of Economy .<br />
+                    • Copy of the passport of the license holders .<br />
+                    • Copy of a valid attested lease contract or copy the ownership deed of the property.<br />
+                    • If the partnership is between GCC  or local citizens or between themselves shares percentages not required if there is  a resident partner the shares of the local partner must not be less than 51% .<br />
+                    • Complete the registration and the commercial license form , available at the website of the department and in the service centers.<br />
+                    • Copy of the residence page or visit visa for  non GCC citizens.<br />
+                    • NOC letter from the sponsor for non GCC residents to engage in commercial activity.<br />
+                    • NOC letter from the department of residency and foreigners affairs for expatriate partners .<br />
+                    • A letter from the court to exercise trade for any person less than 21 years old.<br />
+                    • Educational degrees and practical experience for obtaining consulting licenses of various kinds.<br />
+                    • Board of Directors' resolution to enter into a new partnership (in the event that the partner is a company registered  either within the country or abroad, that resolution  shall be certified by the embassies of the UAE and the Ministry of Foreign Affairs and legally translated into Arabic.<br />
+                    • NOC  letter from the former sponsor of partners for non-citizens approved by the Chamber of Commerce or notary public .<br />
+                    • Plans for the shop + lease contract  or title deed + warehouse lease contract if applicable (please refer to the inspection department to check the suitability of the site to exercise the required  activity before leasing).
+
+                </p>
             </div>
 
-            <div ng-model="expandme1">
-                <div ng-click="expandme1=!expandme1">
-                    <h3 class="CollapsTitle animated fadeInRightBig"><i class="ion-ios-arrow-down"></i> الموافقات والاعتمادات المطلوبة من جهات خارجية</h3>
-                </div>
-            </div>
-            <div ng-show="expandme1" class="fadeInRightBig">
-                <p>1.	تصديق عقد إيجار مستودع (إن وجد) من بلدية عجمان.</p>
-                <p>2.	موافقة الدفاع المدني</p>
-                <p>3.	موافقة من شركة إيمز (على المناطق الصناعية وجزء من النعيمية).</p>
-                <p>4.	توفير مخطط لموقع المحل + عقد إيجار أو سند الملكية (يرجى التأكد من مدى ملائمة الموقع لممارسة النشاط بواسطة قسم التفتيش قبل الاستئجار).</p>
-                
-            </div>
 
-
-
-            <div ng-model="expandme2">
-                <div ng-click="expandme2=!expandme2">
-                    <h3 class="CollapsTitle animated fadeInRightBig"><i class="ion-ios-arrow-down"></i> النماذج المتعلقة بطلب الخدمة:</h3>
-                </div>
-            </div>
-            <div ng-show="expandme2" class="fadeInRightBig">
-                <p>طلب ترخيص  EA-1-1-F1</p>
-            </div>
-
-            <div ng-model="expandme3">
-                <div ng-click="expandme3=!expandme3">
-                    <h3 class="CollapsTitle animated fadeInRightBig"><i class="ion-ios-arrow-down"></i> القسم المعني بتقديم الخدمة:</h3>
-                </div>
-            </div>
-            <div ng-show="expandme3" class="fadeInRightBig">
-                <p>قسم التراخيص الاقتصادية</p>
-            </div>
-            
 
             <div ng-model="expandme4">
                 <div ng-click="expandme4=!expandme4">
-                    <h3 class="CollapsTitle animated fadeInRightBig"><i class="ion-ios-arrow-down"></i> خطوات تقديم الخدمة:</h3>
+                    <h3 class="CollapsTitle animated fadeInRightBig"><i class="ion-ios-arrow-down"></i> Steps to be followed </h3>
                 </div>
             </div>
             <div ng-show="expandme4" class="fadeInRightBig">
-                <p>1.	تعبئة نموذج طلب الترخيص</p>
-                <p>2.	إرفاق المستندات المطلوبة</p>
-                <p>3.	الحصول على الموافقة من إدارة الرقابة</p>
-                <p>4.	حجز إسم تجاري</p>
+                <p>
+                    1. Fill in the license application form<br />
+                    2. Attach the required documents<br />
+                    3. Get approval from the control and inspection section<br />
+                    4. Reserve for trade name<br />
+                    5. The provision of external approvals<br />
+                    6. Approve validity of documents from the consulting counter<br />
+                    7. Payment of fees<br />
+                    8. Receipt of the license
+
+                </p>
+
+            </div>
+
+
+
+            <div ng-model="expandme5">
+                <div ng-click="expandme5=!expandme5">
+                    <h3 class="CollapsTitle animated fadeInRightBig"><i class="ion-ios-arrow-down"></i> Approvals and attestations required from other entities</h3>
+                </div>
+            </div>
+            <div ng-show="expandme5" class="fadeInRightBig">
+                <p>
+                    • Attest the lease contract from the municipality.<br />
+                    • Approval of civil defense.<br />
+                    • Ames company approval (for industrial  areas and part of Nuaimiya)<br />
+                    • Approval of government agencies based on  activity type ( list attached ).
+
+                </p>
+
+                <h4>Forms for requesting the service</h4>
+                <p>license application EA-1-1-F1 </p>
+                <h4>The concerned department to provide the service</h4>
+                <p>Economic licenses section </p>
 
             </div>
 
