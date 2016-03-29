@@ -85,6 +85,7 @@ app.controller('mainController', function ($scope,
         console.log("home");
         $state.go('home')
     };
+
     $scope.shareSocial = function () {
         $cordovaSocialSharing.share("Ajman", "Ajaman DED", "http://www.ajmanded.ae");
     };
@@ -212,7 +213,7 @@ app.controller('mainController', function ($scope,
 });
 
 
-app.controller('splashController', function ($scope, $state, $rootScope, $timeout, $ionicViewService, $ionicHistory) {
+app.controller('splashController', function ($scope, $state, $rootScope, $timeout, $ionicViewService, $ionicHistory,$window) {
 
     $scope.setAr = function () {
         localStorage.setItem("lang", "ar");
@@ -221,7 +222,7 @@ app.controller('splashController', function ($scope, $state, $rootScope, $timeou
         });
         $ionicViewService.clearHistory();
         console.log("home");
-        $state.go('home')
+        $state.go('home');
     };
 
     $scope.setEn = function () {
@@ -231,7 +232,7 @@ app.controller('splashController', function ($scope, $state, $rootScope, $timeou
         });
         $ionicViewService.clearHistory();
         console.log("home");
-        $state.go('home')
+        $state.go('home');
     };
 
     $scope.StartSplash = function () {
@@ -248,12 +249,17 @@ app.controller('splashController', function ($scope, $state, $rootScope, $timeou
                 $state.go('home')
             }, 8000);
         }
-    }
+    };
 
     $scope.StartSplash();
 
 
 });
+
+
+
+
+
 app.controller('SlideBoxCtrl', function ($scope, $state, $ionicSlideBoxDelegate) {
 
 
