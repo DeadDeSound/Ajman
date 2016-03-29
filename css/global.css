@@ -367,7 +367,7 @@ input[type=submit]:hover,
 }
 .IFrame{
     width: 100%;
-    
+    height: 100vh;
     position: absolute;
     right: 0;
     bottom: 85px;
@@ -419,10 +419,11 @@ h3.HappenessInnerTitle {
 {
     display: block;
     margin: 0 auto;
-    width: 5em;
-    height: 5em;
+    width: 100%;
+    min-height: 5em;
     background-image: url(../img/icon/face1.png);
-    background-size: cover;
+    background-size: 100%;
+    background-repeat: no-repeat;
 }
 .Happeness-face1-Light
 {
@@ -433,10 +434,11 @@ h3.HappenessInnerTitle {
 {
     display: block;
     margin: 0 auto;
-    width: 5em;
-    height: 5em;
+    width: 100%;
+    min-height: 5em;
     background-image: url(../img/icon/face2.png);
-    background-size: cover;
+    background-size: 100%;
+    background-repeat: no-repeat;
 }
 .Happeness-face2-Light
 {
@@ -447,10 +449,11 @@ h3.HappenessInnerTitle {
 {
     display: block;
     margin: 0 auto;
-    width: 5em;
-    height: 5em;
+    width: 100%;
+    min-height: 5em;
     background-image: url(../img/icon/face3.png);
-    background-size: cover;
+    background-size: 100%;
+    background-repeat: no-repeat;
 }
 .Happeness-face3-Light
 {

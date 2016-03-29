@@ -202,6 +202,7 @@
 .popup-head {
     background: #c8cbcb !important;
     color: #000000 !important;
+    height: initial;
 }
 
 /* title text */
