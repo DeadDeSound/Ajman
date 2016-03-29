@@ -5,6 +5,229 @@
 
 var app = angular.module('mainController', []);
 
+app.controller('homeCtrl', function ($scope) {
+    var elem = document.getElementById("C-container");
+
+    var kcRotateDial = function (elem) {
+        var output = {};
+        //Preventing elem to being selected on IE
+        if (document.all && !window.opera) elem.setAttribute("unselectable", "on");
+        //Public Properties
+        output.rad = 0;
+        output.deg = 0;
+        output.per = 0;
+        output.fullRad = 0;
+        output.fullDeg = 0;
+        output.fullPer = 0;
+        output.spin = 0;
+        output.clock = false;
+        //Private properties
+        var drag = false;
+        var pos = [];
+        var size = [];
+        var axis = [];
+        var cursor = [];
+        var rad = 0;
+        var lastRad = 0;
+        var lastPer = 0;
+        var lastFullRad = 0;
+        var maxRad = 6.283185307179586;
+        var maxDeg = 360;
+        var maxPer = 100;
+        var Dx = [];
+        var Dy = [];
+        var dummy;
+        //Public Methods
+        output.onchange = function () {
+        };
+        //Private Methods
+        function preventDefault(e) {
+            //prevent event's default action
+            if (window.event) e = window.event;
+            if (e.preventDefault) {
+                e.preventDefault()
+            } else {
+                e.returnValue = false
+            }
+            ;
+        }
+
+        function getPos(elem) {
+            //get the position [left,top] relative to whole document
+            var tmp = elem;
+            var left = tmp.offsetLeft;
+            var top = tmp.offsetTop;
+            while (tmp = tmp.offsetParent) left += tmp.offsetLeft;
+            tmp = elem;
+            while (tmp = tmp.offsetParent) top += tmp.offsetTop;
+            return [left, top];
+        }
+
+        function getSize(elem) {
+            //return the size [width,height] of the element
+            return [elem.offsetWidth, elem.offsetHeight];
+        }
+
+        function getAxis(elem) {
+            //return the center point [left,top] of the element
+            return [getPos(elem)[0] + getSize(elem)[0] / 2, getPos(elem)[1] + getSize(elem)[1] / 2];
+        }
+
+        function getCursorPos(e) {
+            //return the cursor's position [x,y]
+            var cursorPos;
+            if (window.event) e = window.event;
+            if (e.clientX) cursorPos = [e.clientX, e.clientY];
+            if (e.pageX) cursorPos = [e.pageX, e.pageY];
+            try {
+                if (e.targetTouches[0]) cursorPos = [e.targetTouches[0].pageX, e.targetTouches[0].pageY];
+            } catch (err) {
+            }
+            ;
+            return cursorPos;
+        }
+
+        function getAngle(e) {
+            //getting rotation angle by Arc Tangent 2
+            var rad;
+            pos = getPos(elem);
+            size = getSize(elem);
+            axis = getAxis(elem);
+            cursor = getCursorPos(e);
+            try {
+                rad = Math.atan2(cursor[1] - axis[1], cursor[0] - axis[0])
+            } catch (err) {
+            }
+            ;
+            //correct the 90° of difference starting from the Y axis of the element
+            rad += maxRad / 4;
+            //transform opposite angle negative value, to possitive
+            if (rad < 0) rad += maxRad;
+            return rad;
+        }
+
+        function setDrag(e, bool) {
+            //set or unset the drag flag
+            if (bool) {
+                preventDefault(e);
+                rad = getAngle(e);
+                drag = true;
+            } else {
+                drag = false;
+            }
+        }
+
+        function rotate(e) {
+            //Rotate the element
+            if (drag) {
+                //setting control variables
+                var cursorRad;
+                var relativeRad;
+                cursorRad = getAngle(e);
+                relativeRad = cursorRad - rad;
+                var rotationRad = lastRad + relativeRad;
+                if (isNaN(rotationRad)) rotationRad = lastRad;
+                if (rotationRad < 0) rotationRad = maxRad;
+                if (rotationRad > maxRad) rotationRad = 0;
+
+                rad = cursorRad;
+
+                //applying rotation to element
+                elem.style.transform = "rotate(" + rotationRad + "rad)";
+                elem.style.MozTransform = "rotate(" + rotationRad + "rad)";
+                elem.style.WebkitTransform = "rotate(" + rotationRad + "rad)";
+                elem.style.OTransform = "rotate(" + rotationRad + "rad)";
+                elem.style.MsTransform = "rotate(" + rotationRad + "rad)";
+
+                //rotation Matrix for IExplorer
+                var iecos = Math.cos(cursorRad);
+                var iesin = Math.sin(cursorRad);
+                Dx[0] = -(size[0] / 2) * iecos + (size[1] / 2) * iesin + (size[0] / 2);
+                Dx[1] = -(size[0] / 2) * iesin - (size[1] / 2) * iecos + (size[1] / 2);
+                elem.style.filter = "progid:DXImageTransform.Microsoft.Matrix(M11=" + iecos + ", M12=" + -iesin + ", M21=" + iesin + ", M22=" + iecos + ", Dx=" + Dx[0] + ", Dy=" + Dx[1] + ", SizingMethod=auto expand)";
+                elem.style.msFilter = "progid:DXImageTransform.Microsoft.Matrix(M11=" + iecos + ", M12=" + -iesin + ", M21=" + iesin + ", M22=" + iecos + ", Dx=" + Dx[0] + ", Dy=" + Dx[1] + ", SizingMethod=auto expand)";
+
+                //assigning values to public properties
+                output.rad = rotationRad;
+                output.deg = maxDeg * output.rad / (2 * Math.PI);
+                output.per = (output.rad * maxPer) / maxRad;
+
+                if ((lastPer <= 100 && lastPer >= 60) && (output.per >= 0 && output.per <= 30)) output.spin++;
+                if ((lastPer <= 30 && lastPer >= 0) && (output.per >= 60 && output.per <= 100)) output.spin--;
+
+                output.fullRad = output.rad + (maxRad * output.spin);
+                output.fullDeg = output.deg + (maxDeg * output.spin);
+                output.fullPer = output.per + (maxPer * output.spin);
+
+                if (lastFullRad < output.fullRad) output.clock = true;
+                if (lastFullRad > output.fullRad) output.clock = false;
+
+                lastRad = rotationRad;
+                lastPer = output.per;
+                lastFullRad = output.fullRad;
+                output.onchange();
+            }
+        }
+
+        //Listen events
+        if (elem.attachEvent) {
+
+            elem.attachEvent('onmousedown', function () {
+                setDrag(0, true)
+            });
+            document.attachEvent('onmouseup', function () {
+                setDrag(0, false)
+            });
+            document.attachEvent('onmousemove', function () {
+                rotate(0)
+            });
+
+        } else if (elem.addEventListener) {
+
+            elem.addEventListener('mousedown', function (e) {
+                setDrag(e, true)
+            });
+            document.addEventListener('mouseup', function (e) {
+                setDrag(e, false)
+            });
+            document.addEventListener('mousemove', function (e) {
+                rotate(e)
+            });
+
+            try {
+                elem.addEventListener('touchstart', function (e) {
+                    setDrag(e, true);
+                })
+            } catch (err) {
+            }
+            try {
+                document.addEventListener('touchend', function (e) {
+                    setDrag(e, false);
+                })
+            } catch (err) {
+            }
+            try {
+                document.addEventListener('touchmove', function (e) {
+                    rotate(e)
+                })
+            } catch (err) {
+            }
+
+        }
+
+        //Fixing black box issue on IE9
+        dummy = document.createElement("div");
+        dummy.innerHTML = '<!--[if gte IE 9]><br /><![endif]-->';
+        if (dummy.getElementsByTagName("br").length == 1) elem.style.filter = "none";
+        delete dummy;
+
+        //Output
+        return output;
+    };
+
+    var dial = kcRotateDial(elem);
+});
+
 app.controller('mainController', function ($scope,
                                            $rootScope,
                                            $stateParams,
@@ -25,10 +248,17 @@ app.controller('mainController', function ($scope,
     $scope.subBarShow = false;
     var rotationSnap = 45;
     //Draggable.create("#homeFooter", {type: "y", bounds: "#homeFooterContainer", throwProps: true});
-    Draggable.create("#C-container", {
-        type: "rotation",
-        throwProps: true
-    });
+    //Draggable.create("#C-container", {
+    //    type: "rotation",
+    //    throwProps: true,
+    //
+    //
+    //    onClick:function() {
+    //console.log("x");
+    //         $scope.callAlert();
+    //}
+    //});
+    //
 
 
     $scope.GoToNotification = function () {
@@ -38,7 +268,6 @@ app.controller('mainController', function ($scope,
             $state.go('notification');
         }
     };
-
 
 
     $scope.model = NewsService;
@@ -91,12 +320,8 @@ app.controller('mainController', function ($scope,
     };
 
     $scope.callAlert = function () {
-
-
-//        document.location.href = 'tel:80055';
-
-
-        //       A confirm dialog
+        //document.location.href = 'tel:80055';
+        //A confirm dialog
         var confirmPopup = $ionicPopup.confirm({
             title: '80055',
             template: '',
@@ -104,7 +329,6 @@ app.controller('mainController', function ($scope,
             //buttons: [
             //    {
             //        text: 'cancel'
-            //
             //    },
             //    {
             //        text: 'OK',
@@ -126,6 +350,28 @@ app.controller('mainController', function ($scope,
         });
     };
 
+    //$scope.happinessClick = function(){
+    //    if ( $('#happy1').hasClass('Happeness-face1') ){
+    //        $('#happy1').className = "Happeness-face1-Light";
+    //        $('#happy2').className = "Happeness-face1";
+    //        $('#happy3').className = "Happeness-face1";
+    //    }
+    //
+    //    if ( $('#happy2').hasClass('Happeness-face1') ){
+    //        $('#happy2').className = "Happeness-face1-Light";
+    //        $('#happy1').className = "Happeness-face1";
+    //        $('#happy3').className = "Happeness-face1";
+    //    }
+    //
+    //
+    //    if ( $('#happy3').hasClass('Happeness-face1') ){
+    //        $('#happy3').className = "Happeness-face1-Light";
+    //        $('#happy1').className = "Happeness-face1";
+    //        $('#happy3').className = "Happeness-face1";
+    //    }
+    //
+    //};
+
 
     $scope.callAlert2 = function () {
 
@@ -136,7 +382,7 @@ app.controller('mainController', function ($scope,
         //       A confirm dialog
         var confirmPopup = $ionicPopup.confirm({
             title: '',
-            templateUrl: 'templates/ar/Messages2.html',
+            templateUrl: 'templates/MessageMain.html',
             cssClass: 'custom-popup',
             //buttons: [
             //    {
@@ -163,27 +409,33 @@ app.controller('mainController', function ($scope,
     };
 
 
-
-
     $scope.Answer1 = function (id) {
-
-        NewsService.LoadVote_SendAnswer(1,1,id);
+        document.getElementById("happy1").className = "Happeness-face1";
+        document.getElementById("happy2").className = "Happeness-face1-Light";
+        document.getElementById("happy3").className = "Happeness-face1-Light";
+        NewsService.LoadVote_SendAnswer(1, 1, id);
         console.log("Answer 1 ");
+        console.log(document.getElementById("happy1").className);
 
     };
     $scope.Answer2 = function (id) {
-
-        NewsService.LoadVote_SendAnswer(1,1,id);
+        document.getElementById("happy2").className = "Happeness-face1";
+        document.getElementById("happy1").className = "Happeness-face1-Light";
+        document.getElementById("happy3").className = "Happeness-face1-Light";
+        NewsService.LoadVote_SendAnswer(1, 1, id);
         console.log("Answer 2 ");
+        console.log(document.getElementById("happy2").className);
 
     };
     $scope.Answer3 = function (id) {
-
-        NewsService.LoadVote_SendAnswer(1,1,id);
+        document.getElementById("happy3").className = "Happeness-face1";
+        document.getElementById("happy1").className = "Happeness-face1-Light";
+        document.getElementById("happy2").className = "Happeness-face1-Light";
+        NewsService.LoadVote_SendAnswer(1, 1, id);
         console.log("Answer 3 ");
+        console.log(document.getElementById("happy3").className);
 
     };
-
 
 
     $scope.nextSlide = function () {
@@ -213,7 +465,7 @@ app.controller('mainController', function ($scope,
 });
 
 
-app.controller('splashController', function ($scope, $state, $rootScope, $timeout, $ionicViewService, $ionicHistory,$window) {
+app.controller('splashController', function ($scope, $state, $rootScope, $timeout, $ionicViewService, $ionicHistory, $window) {
 
     $scope.setAr = function () {
         localStorage.setItem("lang", "ar");
@@ -236,7 +488,7 @@ app.controller('splashController', function ($scope, $state, $rootScope, $timeou
     };
 
     $scope.StartSplash = function () {
-        if (localStorage.getItem("lang") == "NA") {
+        if (localStorage.getItem("lang") === "NA") {
             $timeout(function () {
                 $state.go('splash2')
             }, 8000);
@@ -253,11 +505,7 @@ app.controller('splashController', function ($scope, $state, $rootScope, $timeou
 
     $scope.StartSplash();
 
-
 });
-
-
-
 
 
 app.controller('SlideBoxCtrl', function ($scope, $state, $ionicSlideBoxDelegate) {
@@ -358,6 +606,21 @@ function ($scope, NewsService, $state) {
 
 });
 
+
+app.controller("messageCtrl", /**
+ * Home Page Controller
+ */
+function ($scope) {
+    $scope.getMessage = function () {
+        if (localStorage.getItem("lang") === "en") {
+            return "templates/en/Messages2.html"
+        } else {
+            return "templates/ar/Messages2.html"
+        }
+
+    };
+
+});
 
 
 

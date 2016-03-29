@@ -427,7 +427,13 @@ h3.HappenessInnerTitle {
 }
 .Happeness-face1-Light
 {
+    display: block;
+    margin: 0 auto;
+    width: 100%;
+    min-height: 5em;
     background-image: url(../img/icon/face1-Light.png);
+    background-size: 100%;
+    background-repeat: no-repeat;
 }
 
 .Happeness-face2

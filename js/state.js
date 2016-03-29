@@ -50,7 +50,7 @@ app.config(function ($stateProvider, $urlRouterProvider, $ionicConfigProvider) {
             url: "/home",
             cache: false,
             historyRoot: true,
-            controller: 'mainController',
+            controller: 'homeCtrl',
             nativeTransitions: {
                 "type": "flip",
                 "direction": "up"
@@ -58,7 +58,7 @@ app.config(function ($stateProvider, $urlRouterProvider, $ionicConfigProvider) {
             templateProvider: function ($http, $templateCache, $rootScope) {
                 $rootScope.SlidePage = false;
                 var templateName = 'templates/ar/homePage.html';
-                if ($rootScope.appLang === "en") {
+                if (localStorage.getItem("lang") === "en") {
                     templateName = 'templates/en/homePage.html';
                 }
                 var tpl = $templateCache.get(templateName);
@@ -84,7 +84,7 @@ app.config(function ($stateProvider, $urlRouterProvider, $ionicConfigProvider) {
             templateProvider: function ($http, $templateCache, $rootScope) {
                 $rootScope.SlidePage = false;
                 var templateName = 'templates/ar/AboutUs.html';
-                if ($rootScope.appLang === "en") {
+                if (localStorage.getItem("lang") === "en") {
                     templateName = 'templates/en/AboutUs.html';
                 }
                 var tpl = $templateCache.get(templateName);
@@ -110,7 +110,7 @@ app.config(function ($stateProvider, $urlRouterProvider, $ionicConfigProvider) {
             templateProvider: function ($http, $templateCache, $rootScope) {
                 $rootScope.SlidePage = false;
                 var templateName = 'templates/ar/ChairmanWord.html';
-                if ($rootScope.appLang === "en") {
+                if (localStorage.getItem("lang") === "en") {
                     templateName = 'templates/en/ChairmanWord.html';
                 }
                 var tpl = $templateCache.get(templateName);
@@ -136,7 +136,7 @@ app.config(function ($stateProvider, $urlRouterProvider, $ionicConfigProvider) {
             templateProvider: function ($http, $templateCache, $rootScope) {
                 $rootScope.SlidePage = false;
                 var templateName = 'templates/ar/objective.html';
-                if ($rootScope.appLang === "en") {
+                if (localStorage.getItem("lang") === "en") {
                     templateName = 'templates/en/objective.html';
                 }
                 var tpl = $templateCache.get(templateName);
@@ -162,7 +162,7 @@ app.config(function ($stateProvider, $urlRouterProvider, $ionicConfigProvider) {
             templateProvider: function ($http, $templateCache, $rootScope) {
                 $rootScope.SlidePage = false;
                 var templateName = 'templates/ar/Regulations.html';
-                if ($rootScope.appLang === "en") {
+                if (localStorage.getItem("lang") === "en") {
                     templateName = 'templates/en/Regulations.html';
                 }
                 var tpl = $templateCache.get(templateName);
@@ -188,7 +188,7 @@ app.config(function ($stateProvider, $urlRouterProvider, $ionicConfigProvider) {
             templateProvider: function ($http, $templateCache, $rootScope) {
                 $rootScope.SlidePage = false;
                 var templateName = 'templates/ar/legislation.html';
-                if ($rootScope.appLang === "en") {
+                if (localStorage.getItem("lang") === "en") {
                     templateName = 'templates/en/legislation.html';
                 }
                 var tpl = $templateCache.get(templateName);
@@ -214,7 +214,7 @@ app.config(function ($stateProvider, $urlRouterProvider, $ionicConfigProvider) {
             templateProvider: function ($http, $templateCache, $rootScope) {
                 $rootScope.SlidePage = false;
                 var templateName = 'templates/ar/Investment.html';
-                if ($rootScope.appLang === "en") {
+                if (localStorage.getItem("lang") === "en") {
                     templateName = 'templates/en/Investment.html';
                 }
                 var tpl = $templateCache.get(templateName);
@@ -240,7 +240,7 @@ app.config(function ($stateProvider, $urlRouterProvider, $ionicConfigProvider) {
             templateProvider: function ($http, $templateCache, $rootScope) {
                 $rootScope.SlidePage = false;
                 var templateName = 'templates/ar/Statistics.html';
-                if ($rootScope.appLang === "en") {
+                if (localStorage.getItem("lang") === "en") {
                     templateName = 'templates/en/Statistics.html';
                 }
                 var tpl = $templateCache.get(templateName);
@@ -266,7 +266,7 @@ app.config(function ($stateProvider, $urlRouterProvider, $ionicConfigProvider) {
             templateProvider: function ($http, $templateCache, $rootScope) {
                 $rootScope.SlidePage = false;
                 var templateName = 'templates/ar/annual_report.html';
-                if ($rootScope.appLang === "en") {
+                if (localStorage.getItem("lang") === "en") {
                     templateName = 'templates/en/annual_report.html';
                 }
                 var tpl = $templateCache.get(templateName);
@@ -292,7 +292,7 @@ app.config(function ($stateProvider, $urlRouterProvider, $ionicConfigProvider) {
             templateProvider: function ($http, $templateCache, $rootScope) {
                 $rootScope.SlidePage = false;
                 var templateName = 'templates/ar/QueryingLicense.html';
-                if ($rootScope.appLang === "en") {
+                if (localStorage.getItem("lang") === "en") {
                     templateName = 'templates/en/QueryingLicense.html';
                 }
                 var tpl = $templateCache.get(templateName);
@@ -318,7 +318,7 @@ app.config(function ($stateProvider, $urlRouterProvider, $ionicConfigProvider) {
             templateProvider: function ($http, $templateCache, $rootScope) {
                 $rootScope.SlidePage = false;
                 var templateName = 'templates/ar/LicenseRenewal.html';
-                if ($rootScope.appLang === "en") {
+                if (localStorage.getItem("lang") === "en") {
                     templateName = 'templates/en/LicenseRenewal.html';
                 }
                 var tpl = $templateCache.get(templateName);
@@ -344,7 +344,7 @@ app.config(function ($stateProvider, $urlRouterProvider, $ionicConfigProvider) {
             templateProvider: function ($http, $templateCache, $rootScope) {
                 $rootScope.SlidePage = false;
                 var templateName = 'templates/ar/activitiesGuide.html';
-                if ($rootScope.appLang === "en") {
+                if (localStorage.getItem("lang") === "en") {
                     templateName = 'templates/en/activitiesGuide.html';
                 }
                 var tpl = $templateCache.get(templateName);
@@ -370,7 +370,7 @@ app.config(function ($stateProvider, $urlRouterProvider, $ionicConfigProvider) {
             templateProvider: function ($http, $templateCache, $rootScope) {
                 $rootScope.SlidePage = false;
                 var templateName = 'templates/ar/irregularitiesList.html';
-                if ($rootScope.appLang === "en") {
+                if (localStorage.getItem("lang") === "en") {
                     templateName = 'templates/en/irregularitiesList.html';
                 }
                 var tpl = $templateCache.get(templateName);
@@ -396,7 +396,7 @@ app.config(function ($stateProvider, $urlRouterProvider, $ionicConfigProvider) {
             templateProvider: function ($http, $templateCache, $rootScope) {
                 $rootScope.SlidePage = false;
                 var templateName = 'templates/ar/knowUs.html';
-                if ($rootScope.appLang === "en") {
+                if (localStorage.getItem("lang") === "en") {
                     templateName = 'templates/en/knowUs.html';
                 }
                 var tpl = $templateCache.get(templateName);
@@ -422,7 +422,7 @@ app.config(function ($stateProvider, $urlRouterProvider, $ionicConfigProvider) {
             templateProvider: function ($http, $templateCache, $rootScope) {
                 $rootScope.SlidePage = false;
                 var templateName = 'templates/ar/departmentObjectives.html';
-                if ($rootScope.appLang === "en") {
+                if (localStorage.getItem("lang") === "en") {
                     templateName = 'templates/en/departmentObjectives.html';
                 }
                 var tpl = $templateCache.get(templateName);
@@ -448,7 +448,7 @@ app.config(function ($stateProvider, $urlRouterProvider, $ionicConfigProvider) {
             templateProvider: function ($http, $templateCache, $rootScope) {
                 $rootScope.SlidePage = false;
                 var templateName = 'templates/ar/Suggestion.html';
-                if ($rootScope.appLang === "en") {
+                if (localStorage.getItem("lang") === "en") {
                     templateName = 'templates/en/Suggestion.html';
                 }
                 var tpl = $templateCache.get(templateName);
@@ -474,7 +474,7 @@ app.config(function ($stateProvider, $urlRouterProvider, $ionicConfigProvider) {
             templateProvider: function ($http, $templateCache, $rootScope) {
                 $rootScope.SlidePage = false;
                 var templateName = 'templates/ar/ComplainsAndSuggestion.html';
-                if ($rootScope.appLang === "en") {
+                if (localStorage.getItem("lang") === "en") {
                     templateName = 'templates/en/ComplainsAndSuggestion.html';
                 }
                 var tpl = $templateCache.get(templateName);
@@ -500,7 +500,7 @@ app.config(function ($stateProvider, $urlRouterProvider, $ionicConfigProvider) {
             templateProvider: function ($http, $templateCache, $rootScope) {
                 $rootScope.SlidePage = false;
                 var templateName = 'templates/ar/ContactUs.html';
-                if ($rootScope.appLang === "en") {
+                if (localStorage.getItem("lang") === "en") {
                     templateName = 'templates/en/ContactUs.html';
                 }
                 var tpl = $templateCache.get(templateName);
@@ -526,7 +526,7 @@ app.config(function ($stateProvider, $urlRouterProvider, $ionicConfigProvider) {
             templateProvider: function ($http, $templateCache, $rootScope) {
                 $rootScope.SlidePage = false;
                 var templateName = 'templates/ar/CustomerManual.html';
-                if ($rootScope.appLang === "en") {
+                if (localStorage.getItem("lang") === "en") {
                     templateName = 'templates/en/CustomerManual.html';
                 }
                 var tpl = $templateCache.get(templateName);
@@ -552,7 +552,7 @@ app.config(function ($stateProvider, $urlRouterProvider, $ionicConfigProvider) {
             templateProvider: function ($http, $templateCache, $rootScope) {
                 $rootScope.SlidePage = false;
                 var templateName = 'templates/ar/MediaServices.html';
-                if ($rootScope.appLang === "en") {
+                if (localStorage.getItem("lang") === "en") {
                     templateName = 'templates/en/MediaServices.html';
                 }
                 var tpl = $templateCache.get(templateName);
@@ -578,7 +578,7 @@ app.config(function ($stateProvider, $urlRouterProvider, $ionicConfigProvider) {
             templateProvider: function ($http, $templateCache, $rootScope) {
                 $rootScope.SlidePage = false;
                 var templateName = 'templates/ar/MediaCenter.html';
-                if ($rootScope.appLang === "en") {
+                if (localStorage.getItem("lang") === "en") {
                     templateName = 'templates/en/MediaCenter.html';
                 }
                 var tpl = $templateCache.get(templateName);
@@ -604,7 +604,7 @@ app.config(function ($stateProvider, $urlRouterProvider, $ionicConfigProvider) {
             templateProvider: function ($http, $templateCache, $rootScope) {
                 $rootScope.SlidePage = false;
                 var templateName = 'templates/ar/Messages.html';
-                if ($rootScope.appLang === "en") {
+                if (localStorage.getItem("lang") === "en") {
                     templateName = 'templates/en/Messages.html';
                 }
                 var tpl = $templateCache.get(templateName);
@@ -630,7 +630,7 @@ app.config(function ($stateProvider, $urlRouterProvider, $ionicConfigProvider) {
             templateProvider: function ($http, $templateCache, $rootScope) {
                 $rootScope.SlidePage = false;
                 var templateName = 'templates/ar/Notifications.html';
-                if ($rootScope.appLang === "en") {
+                if (localStorage.getItem("lang") === "en") {
                     templateName = 'templates/en/Notifications.html';
                 }
                 var tpl = $templateCache.get(templateName);
@@ -656,7 +656,7 @@ app.config(function ($stateProvider, $urlRouterProvider, $ionicConfigProvider) {
             templateProvider: function ($http, $templateCache, $rootScope) {
                 $rootScope.SlidePage = false;
                 var templateName = 'templates/ar/Registration.html';
-                if ($rootScope.appLang === "en") {
+                if (localStorage.getItem("lang") === "en") {
                     templateName = 'templates/en/Registration.html';
                 }
                 var tpl = $templateCache.get(templateName);
@@ -682,7 +682,7 @@ app.config(function ($stateProvider, $urlRouterProvider, $ionicConfigProvider) {
             templateProvider: function ($http, $templateCache, $rootScope) {
                 $rootScope.SlidePage = false;
                 var templateName = 'templates/ar/Services.html';
-                if ($rootScope.appLang === "en") {
+                if (localStorage.getItem("lang") === "en") {
                     templateName = 'templates/en/Services.html';
                 }
                 var tpl = $templateCache.get(templateName);
@@ -708,7 +708,7 @@ app.config(function ($stateProvider, $urlRouterProvider, $ionicConfigProvider) {
             templateProvider: function ($http, $templateCache, $rootScope) {
                 $rootScope.SlidePage = false;
                 var templateName = 'templates/ar/issuancePermit.html';
-                if ($rootScope.appLang === "en") {
+                if (localStorage.getItem("lang") === "en") {
                     templateName = 'templates/en/issuancePermit.html';
                 }
                 var tpl = $templateCache.get(templateName);
@@ -734,7 +734,7 @@ app.config(function ($stateProvider, $urlRouterProvider, $ionicConfigProvider) {
             templateProvider: function ($http, $templateCache, $rootScope) {
                 $rootScope.SlidePage = false;
                 var templateName = 'templates/ar/cancelCompany.html';
-                if ($rootScope.appLang === "en") {
+                if (localStorage.getItem("lang") === "en") {
                     templateName = 'templates/en/cancelCompany.html';
                 }
                 var tpl = $templateCache.get(templateName);
@@ -760,7 +760,7 @@ app.config(function ($stateProvider, $urlRouterProvider, $ionicConfigProvider) {
             templateProvider: function ($http, $templateCache, $rootScope) {
                 $rootScope.SlidePage = false;
                 var templateName = 'templates/ar/cancelBusinessCompany.html';
-                if ($rootScope.appLang === "en") {
+                if (localStorage.getItem("lang") === "en") {
                     templateName = 'templates/en/cancelBusinessCompany.html';
                 }
                 var tpl = $templateCache.get(templateName);
@@ -786,7 +786,7 @@ app.config(function ($stateProvider, $urlRouterProvider, $ionicConfigProvider) {
             templateProvider: function ($http, $templateCache, $rootScope) {
                 $rootScope.SlidePage = false;
                 var templateName = 'templates/ar/AwarenessMessage.html';
-                if ($rootScope.appLang === "en") {
+                if (localStorage.getItem("lang") === "en") {
                     templateName = 'templates/en/AwarenessMessage.html';
                 }
                 var tpl = $templateCache.get(templateName);
@@ -812,7 +812,7 @@ app.config(function ($stateProvider, $urlRouterProvider, $ionicConfigProvider) {
             templateProvider: function ($http, $templateCache, $rootScope) {
                 $rootScope.SlidePage = false;
                 var templateName = 'templates/ar/GeneralRequirements.html';
-                if ($rootScope.appLang === "en") {
+                if (localStorage.getItem("lang") === "en") {
                     templateName = 'templates/en/GeneralRequirements.html';
                 }
                 var tpl = $templateCache.get(templateName);
@@ -838,7 +838,7 @@ app.config(function ($stateProvider, $urlRouterProvider, $ionicConfigProvider) {
             templateProvider: function ($http, $templateCache, $rootScope) {
                 $rootScope.SlidePage = false;
                 var templateName = 'templates/ar/SpecialRequirements.html';
-                if ($rootScope.appLang === "en") {
+                if (localStorage.getItem("lang") === "en") {
                     templateName = 'templates/en/SpecialRequirements.html';
                 }
                 var tpl = $templateCache.get(templateName);
@@ -864,7 +864,7 @@ app.config(function ($stateProvider, $urlRouterProvider, $ionicConfigProvider) {
             templateProvider: function ($http, $templateCache, $rootScope) {
                 $rootScope.SlidePage = false;
                 var templateName = 'templates/ar/OnlineServices.html';
-                if ($rootScope.appLang === "en") {
+                if (localStorage.getItem("lang") === "en") {
                     templateName = 'templates/en/OnlineServices.html';
                 }
                 var tpl = $templateCache.get(templateName);
@@ -890,7 +890,7 @@ app.config(function ($stateProvider, $urlRouterProvider, $ionicConfigProvider) {
             templateProvider: function ($http, $templateCache, $rootScope) {
                 $rootScope.SlidePage = false;
                 var templateName = 'templates/ar/servicesGuide.html';
-                if ($rootScope.appLang === "en") {
+                if (localStorage.getItem("lang") === "en") {
                     templateName = 'templates/en/servicesGuide.html';
                 }
                 var tpl = $templateCache.get(templateName);
@@ -916,7 +916,7 @@ app.config(function ($stateProvider, $urlRouterProvider, $ionicConfigProvider) {
             templateProvider: function ($http, $templateCache, $rootScope) {
                 $rootScope.SlidePage = false;
                 var templateName = 'templates/ar/createPermit.html';
-                if ($rootScope.appLang === "en") {
+                if (localStorage.getItem("lang") === "en") {
                     templateName = 'templates/en/createPermit.html';
                 }
                 var tpl = $templateCache.get(templateName);
@@ -942,7 +942,7 @@ app.config(function ($stateProvider, $urlRouterProvider, $ionicConfigProvider) {
             templateProvider: function ($http, $templateCache, $rootScope) {
                 $rootScope.SlidePage = false;
                 var templateName = 'templates/ar/renewPermit.html';
-                if ($rootScope.appLang === "en") {
+                if (localStorage.getItem("lang") === "en") {
                     templateName = 'templates/en/renewPermit.html';
                 }
                 var tpl = $templateCache.get(templateName);
@@ -968,7 +968,7 @@ app.config(function ($stateProvider, $urlRouterProvider, $ionicConfigProvider) {
             templateProvider: function ($http, $templateCache, $rootScope) {
                 $rootScope.SlidePage = false;
                 var templateName = 'templates/ar/editPermit.html';
-                if ($rootScope.appLang === "en") {
+                if (localStorage.getItem("lang") === "en") {
                     templateName = 'templates/en/editPermit.html';
                 }
                 var tpl = $templateCache.get(templateName);
@@ -994,7 +994,7 @@ app.config(function ($stateProvider, $urlRouterProvider, $ionicConfigProvider) {
             templateProvider: function ($http, $templateCache, $rootScope) {
                 $rootScope.SlidePage = false;
                 var templateName = 'templates/ar/cancelPermit.html';
-                if ($rootScope.appLang === "en") {
+                if (localStorage.getItem("lang") === "en") {
                     templateName = 'templates/en/cancelPermit.html';
                 }
                 var tpl = $templateCache.get(templateName);
@@ -1020,7 +1020,7 @@ app.config(function ($stateProvider, $urlRouterProvider, $ionicConfigProvider) {
             templateProvider: function ($http, $templateCache, $rootScope) {
                 $rootScope.SlidePage = false;
                 var templateName = 'templates/ar/legalForms.html';
-                if ($rootScope.appLang === "en") {
+                if (localStorage.getItem("lang") === "en") {
                     templateName = 'templates/en/legalForms.html';
                 }
                 var tpl = $templateCache.get(templateName);
@@ -1046,7 +1046,7 @@ app.config(function ($stateProvider, $urlRouterProvider, $ionicConfigProvider) {
             templateProvider: function ($http, $templateCache, $rootScope) {
                 $rootScope.SlidePage = false;
                 var templateName = 'templates/ar/details.html';
-                if ($rootScope.appLang === "en") {
+                if (localStorage.getItem("lang") === "en") {
                     templateName = 'templates/en/details.html';
                 }
                 var tpl = $templateCache.get(templateName);
@@ -1072,7 +1072,7 @@ app.config(function ($stateProvider, $urlRouterProvider, $ionicConfigProvider) {
             templateProvider: function ($http, $templateCache, $rootScope) {
                 $rootScope.SlidePage = false;
                 var templateName = 'templates/ar/eRegistration.html';
-                if ($rootScope.appLang === "en") {
+                if (localStorage.getItem("lang") === "en") {
                     templateName = 'templates/en/eRegistration.html';
                 }
                 var tpl = $templateCache.get(templateName);
@@ -1098,7 +1098,7 @@ app.config(function ($stateProvider, $urlRouterProvider, $ionicConfigProvider) {
             templateProvider: function ($http, $templateCache, $rootScope) {
                 $rootScope.SlidePage = false;
                 var templateName = 'templates/ar/Enquiry.html';
-                if ($rootScope.appLang === "en") {
+                if (localStorage.getItem("lang") === "en") {
                     templateName = 'templates/en/Enquiry.html';
                 }
                 var tpl = $templateCache.get(templateName);
@@ -1124,7 +1124,7 @@ app.config(function ($stateProvider, $urlRouterProvider, $ionicConfigProvider) {
             templateProvider: function ($http, $templateCache, $rootScope) {
                 $rootScope.SlidePage = false;
                 var templateName = 'templates/ar/renewal.html';
-                if ($rootScope.appLang === "en") {
+                if (localStorage.getItem("lang") === "en") {
                     templateName = 'templates/en/renewal.html';
                 }
                 var tpl = $templateCache.get(templateName);
@@ -1150,7 +1150,7 @@ app.config(function ($stateProvider, $urlRouterProvider, $ionicConfigProvider) {
             templateProvider: function ($http, $templateCache, $rootScope) {
                 $rootScope.SlidePage = true;
                 var templateName = 'templates/ar/SlideTest.html';
-                if ($rootScope.appLang === "en") {
+                if (localStorage.getItem("lang") === "en") {
                     templateName = 'templates/en/SlideTest.html';
                 }
                 var tpl = $templateCache.get(templateName);
@@ -1176,7 +1176,7 @@ app.config(function ($stateProvider, $urlRouterProvider, $ionicConfigProvider) {
             templateProvider: function ($http, $templateCache, $rootScope) {
                 $rootScope.SlidePage = false;
                 var templateName = 'templates/ar/MediaCenterDetails.html';
-                if ($rootScope.appLang === "en") {
+                if (localStorage.getItem("lang") === "en") {
                     templateName = 'templates/en/MediaCenterDetails.html';
                 }
                 var tpl = $templateCache.get(templateName);
@@ -1202,7 +1202,7 @@ app.config(function ($stateProvider, $urlRouterProvider, $ionicConfigProvider) {
             templateProvider: function ($http, $templateCache, $rootScope) {
                 $rootScope.SlidePage = false;
                 var templateName = 'templates/ar/IndividualInstitution.html';
-                if ($rootScope.appLang === "en") {
+                if (localStorage.getItem("lang") === "en") {
                     templateName = 'templates/en/IndividualInstitution.html';
                 }
                 var tpl = $templateCache.get(templateName);
@@ -1229,7 +1229,7 @@ app.config(function ($stateProvider, $urlRouterProvider, $ionicConfigProvider) {
             templateProvider: function ($http, $templateCache, $rootScope) {
                 $rootScope.SlidePage = false;
                 var templateName = 'templates/ar/Company-with-limited-liability.html';
-                if ($rootScope.appLang === "en") {
+                if (localStorage.getItem("lang") === "en") {
                     templateName = 'templates/en/Company-with-limited-liability.html';
                 }
                 var tpl = $templateCache.get(templateName);
@@ -1255,7 +1255,7 @@ app.config(function ($stateProvider, $urlRouterProvider, $ionicConfigProvider) {
             templateProvider: function ($http, $templateCache, $rootScope) {
                 $rootScope.SlidePage = false;
                 var templateName = 'templates/ar/Corporate-solidarity.html';
-                if ($rootScope.appLang === "en") {
+                if (localStorage.getItem("lang") === "en") {
                     templateName = 'templates/en/Corporate-solidarity.html';
                 }
                 var tpl = $templateCache.get(templateName);
@@ -1281,7 +1281,7 @@ app.config(function ($stateProvider, $urlRouterProvider, $ionicConfigProvider) {
             templateProvider: function ($http, $templateCache, $rootScope) {
                 $rootScope.SlidePage = false;
                 var templateName = 'templates/ar/Civil-Works-Companies.html';
-                if ($rootScope.appLang === "en") {
+                if (localStorage.getItem("lang") === "en") {
                     templateName = 'templates/en/Civil-Works-Companies.html';
                 }
                 var tpl = $templateCache.get(templateName);
@@ -1307,7 +1307,7 @@ app.config(function ($stateProvider, $urlRouterProvider, $ionicConfigProvider) {
             templateProvider: function ($http, $templateCache, $rootScope) {
                 $rootScope.SlidePage = false;
                 var templateName = 'templates/ar/Private-joint-StockCompanies.html';
-                if ($rootScope.appLang === "en") {
+                if (localStorage.getItem("lang") === "en") {
                     templateName = 'templates/en/Private-joint-StockCompanies.html';
                 }
                 var tpl = $templateCache.get(templateName);
@@ -1333,7 +1333,7 @@ app.config(function ($stateProvider, $urlRouterProvider, $ionicConfigProvider) {
             templateProvider: function ($http, $templateCache, $rootScope) {
                 $rootScope.SlidePage = false;
                 var templateName = 'templates/ar/Public-joint-StockCompanies.html';
-                if ($rootScope.appLang === "en") {
+                if (localStorage.getItem("lang") === "en") {
                     templateName = 'templates/en/Public-joint-StockCompanies.html';
                 }
                 var tpl = $templateCache.get(templateName);
@@ -1359,7 +1359,7 @@ app.config(function ($stateProvider, $urlRouterProvider, $ionicConfigProvider) {
             templateProvider: function ($http, $templateCache, $rootScope) {
                 $rootScope.SlidePage = false;
                 var templateName = 'templates/ar/Branches-of-Gulf-Companies.html';
-                if ($rootScope.appLang === "en") {
+                if (localStorage.getItem("lang") === "en") {
                     templateName = 'templates/en/Branches-of-Gulf-Companies.html';
                 }
                 var tpl = $templateCache.get(templateName);
@@ -1385,7 +1385,7 @@ app.config(function ($stateProvider, $urlRouterProvider, $ionicConfigProvider) {
             templateProvider: function ($http, $templateCache, $rootScope) {
                 $rootScope.SlidePage = false;
                 var templateName = 'templates/ar/Branches-of-foreign-Companies.html';
-                if ($rootScope.appLang === "en") {
+                if (localStorage.getItem("lang") === "en") {
                     templateName = 'templates/en/Branches-of-foreign-Companies.html';
                 }
                 var tpl = $templateCache.get(templateName);
@@ -1411,7 +1411,7 @@ app.config(function ($stateProvider, $urlRouterProvider, $ionicConfigProvider) {
             templateProvider: function ($http, $templateCache, $rootScope) {
                 $rootScope.SlidePage = false;
                 var templateName = 'templates/ar/Branches-of-companies-from-Another-Emirate.html';
-                if ($rootScope.appLang === "en") {
+                if (localStorage.getItem("lang") === "en") {
                     templateName = 'templates/en/Branches-of-companies-from-Another-Emirate.html';
                 }
                 var tpl = $templateCache.get(templateName);
@@ -1437,7 +1437,7 @@ app.config(function ($stateProvider, $urlRouterProvider, $ionicConfigProvider) {
             templateProvider: function ($http, $templateCache, $rootScope) {
                 $rootScope.SlidePage = false;
                 var templateName = 'templates/ar/The-establishment-of-institutions-branch-actions.html';
-                if ($rootScope.appLang === "en") {
+                if (localStorage.getItem("lang") === "en") {
                     templateName = 'templates/en/The-establishment-of-institutions-branch-actions.html';
                 }
                 var tpl = $templateCache.get(templateName);
@@ -1463,7 +1463,7 @@ app.config(function ($stateProvider, $urlRouterProvider, $ionicConfigProvider) {
             templateProvider: function ($http, $templateCache, $rootScope) {
                 $rootScope.SlidePage = false;
                 var templateName = 'templates/ar/IndividualInstitution_renew.html';
-                if ($rootScope.appLang === "en") {
+                if (localStorage.getItem("lang") === "en") {
                     templateName = 'templates/en/IndividualInstitution_renew.html';
                 }
                 var tpl = $templateCache.get(templateName);
@@ -1490,7 +1490,7 @@ app.config(function ($stateProvider, $urlRouterProvider, $ionicConfigProvider) {
             templateProvider: function ($http, $templateCache, $rootScope) {
                 $rootScope.SlidePage = false;
                 var templateName = 'templates/ar/Company-with-limited-liability_renew.html';
-                if ($rootScope.appLang === "en") {
+                if (localStorage.getItem("lang") === "en") {
                     templateName = 'templates/en/Company-with-limited-liability_renew.html';
                 }
                 var tpl = $templateCache.get(templateName);
@@ -1516,7 +1516,7 @@ app.config(function ($stateProvider, $urlRouterProvider, $ionicConfigProvider) {
             templateProvider: function ($http, $templateCache, $rootScope) {
                 $rootScope.SlidePage = false;
                 var templateName = 'templates/ar/Corporate-solidarity_renew.html';
-                if ($rootScope.appLang === "en") {
+                if (localStorage.getItem("lang") === "en") {
                     templateName = 'templates/en/Corporate-solidarity_renew.html';
                 }
                 var tpl = $templateCache.get(templateName);
@@ -1542,7 +1542,7 @@ app.config(function ($stateProvider, $urlRouterProvider, $ionicConfigProvider) {
             templateProvider: function ($http, $templateCache, $rootScope) {
                 $rootScope.SlidePage = false;
                 var templateName = 'templates/ar/Civil-Works-Companies_renew.html';
-                if ($rootScope.appLang === "en") {
+                if (localStorage.getItem("lang") === "en") {
                     templateName = 'templates/en/Civil-Works-Companies_renew.html';
                 }
                 var tpl = $templateCache.get(templateName);
@@ -1568,7 +1568,7 @@ app.config(function ($stateProvider, $urlRouterProvider, $ionicConfigProvider) {
             templateProvider: function ($http, $templateCache, $rootScope) {
                 $rootScope.SlidePage = false;
                 var templateName = 'templates/ar/Private-joint-StockCompanies_renew.html';
-                if ($rootScope.appLang === "en") {
+                if (localStorage.getItem("lang") === "en") {
                     templateName = 'templates/en/Private-joint-StockCompanies_renew.html';
                 }
                 var tpl = $templateCache.get(templateName);
@@ -1594,7 +1594,7 @@ app.config(function ($stateProvider, $urlRouterProvider, $ionicConfigProvider) {
             templateProvider: function ($http, $templateCache, $rootScope) {
                 $rootScope.SlidePage = false;
                 var templateName = 'templates/ar/Public-joint-StockCompanies_renew.html';
-                if ($rootScope.appLang === "en") {
+                if (localStorage.getItem("lang") === "en") {
                     templateName = 'templates/en/Public-joint-StockCompanies_renew.html';
                 }
                 var tpl = $templateCache.get(templateName);
@@ -1620,7 +1620,7 @@ app.config(function ($stateProvider, $urlRouterProvider, $ionicConfigProvider) {
             templateProvider: function ($http, $templateCache, $rootScope) {
                 $rootScope.SlidePage = false;
                 var templateName = 'templates/ar/Branches-of-Gulf-Companies_renew.html';
-                if ($rootScope.appLang === "en") {
+                if (localStorage.getItem("lang") === "en") {
                     templateName = 'templates/en/Branches-of-Gulf-Companies_renew.html';
                 }
                 var tpl = $templateCache.get(templateName);
@@ -1646,7 +1646,7 @@ app.config(function ($stateProvider, $urlRouterProvider, $ionicConfigProvider) {
             templateProvider: function ($http, $templateCache, $rootScope) {
                 $rootScope.SlidePage = false;
                 var templateName = 'templates/ar/Branches-of-foreign-Companies_renew.html';
-                if ($rootScope.appLang === "en") {
+                if (localStorage.getItem("lang") === "en") {
                     templateName = 'templates/en/Branches-of-foreign-Companies_renew.html';
                 }
                 var tpl = $templateCache.get(templateName);
@@ -1672,7 +1672,7 @@ app.config(function ($stateProvider, $urlRouterProvider, $ionicConfigProvider) {
             templateProvider: function ($http, $templateCache, $rootScope) {
                 $rootScope.SlidePage = false;
                 var templateName = 'templates/ar/Branches-of-companies-from-Another-Emirate_renew.html';
-                if ($rootScope.appLang === "en") {
+                if (localStorage.getItem("lang") === "en") {
                     templateName = 'templates/en/Branches-of-companies-from-Another-Emirate_renew.html';
                 }
                 var tpl = $templateCache.get(templateName);
@@ -1698,7 +1698,7 @@ app.config(function ($stateProvider, $urlRouterProvider, $ionicConfigProvider) {
             templateProvider: function ($http, $templateCache, $rootScope) {
                 $rootScope.SlidePage = false;
                 var templateName = 'templates/ar/The-establishment-of-institutions-branch-actions_renew.html';
-                if ($rootScope.appLang === "en") {
+                if (localStorage.getItem("lang") === "en") {
                     templateName = 'templates/en/The-establishment-of-institutions-branch-actions_renew.html';
                 }
                 var tpl = $templateCache.get(templateName);
@@ -1724,7 +1724,7 @@ app.config(function ($stateProvider, $urlRouterProvider, $ionicConfigProvider) {
             templateProvider: function ($http, $templateCache, $rootScope) {
                 $rootScope.SlidePage = false;
                 var templateName = 'templates/ar/Cancel-branches-of-institutions.html';
-                if ($rootScope.appLang === "en") {
+                if (localStorage.getItem("lang") === "en") {
                     templateName = 'templates/en/Cancel-branches-of-institutions.html';
                 }
                 var tpl = $templateCache.get(templateName);
@@ -1750,7 +1750,7 @@ app.config(function ($stateProvider, $urlRouterProvider, $ionicConfigProvider) {
             templateProvider: function ($http, $templateCache, $rootScope) {
                 $rootScope.SlidePage = false;
                 var templateName = 'templates/ar/Cancel-businesses-licenses.html';
-                if ($rootScope.appLang === "en") {
+                if (localStorage.getItem("lang") === "en") {
                     templateName = 'templates/en/Cancel-businesses-licenses.html';
                 }
                 var tpl = $templateCache.get(templateName);
@@ -1776,7 +1776,7 @@ app.config(function ($stateProvider, $urlRouterProvider, $ionicConfigProvider) {
             templateProvider: function ($http, $templateCache, $rootScope) {
                 $rootScope.SlidePage = false;
                 var templateName = 'templates/ar/Cancel-enterprise-licenses.html';
-                if ($rootScope.appLang === "en") {
+                if (localStorage.getItem("lang") === "en") {
                     templateName = 'templates/en/Cancel-enterprise-licenses.html';
                 }
                 var tpl = $templateCache.get(templateName);
@@ -1802,7 +1802,7 @@ app.config(function ($stateProvider, $urlRouterProvider, $ionicConfigProvider) {
             templateProvider: function ($http, $templateCache, $rootScope) {
                 $rootScope.SlidePage = false;
                 var templateName = 'templates/ar/Cancel-companies-licenses.html';
-                if ($rootScope.appLang === "en") {
+                if (localStorage.getItem("lang") === "en") {
                     templateName = 'templates/en/Cancel-companies-licenses.html';
                 }
                 var tpl = $templateCache.get(templateName);
