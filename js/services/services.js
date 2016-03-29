@@ -11,6 +11,7 @@ serv.service("NewsService", function ($http, $q, $ionicPopup) {
         'No_Notification': 0,
         'ReadNotification': [],
         'EnableNotification':false,
+        'Vote_SendAnswer':[],
         'replace': function (str, find, replace) {
             return str.replace(new RegExp(escapeRegExp(find), 'g'), replace);
         }
@@ -75,8 +76,6 @@ serv.service("NewsService", function ($http, $q, $ionicPopup) {
                     console.log(self.Notifications);
                     console.log("Length : " + self.Notifications.length);
 
-                //    console.log("index 0" + self.Notifications[0]);
-
                     if (self.Notifications[0] === null) {
                         console.log(" null");
                         self.No_Notification = 0;
@@ -85,15 +84,6 @@ serv.service("NewsService", function ($http, $q, $ionicPopup) {
                         self.EnableNotification=true
                         self.No_Notification = self.Notifications.length
                     }
-
-                    //if (x2 == "null") {
-                    //    console.log("inside x2 null");
-                    //       self.No_Notification = 0;
-                    //} else {
-                    //    console.log("inside x2 not  null");
-                    //     self.No_Notification = self.Notifications.length;
-                    //
-                    //}
 
 
                     d.resolve();
@@ -117,6 +107,26 @@ serv.service("NewsService", function ($http, $q, $ionicPopup) {
                     console.log(self.ReadNotification);
                     //  console.log(self.Notifications.length);
                     // self.No_Notification=self.Notifications.length;
+                    d.resolve();
+                })
+                .error(function error(msg) {
+                    console.log(msg);
+                    d.reject();
+                });
+            return d.promise;
+        }, 'LoadVote_SendAnswer': function (Account_ID , QuestionId , AnswerId ) {
+            var d = $q.defer();
+            $http.get('http://ded.sdg.ae/_MobFiles/AjmanDED_MobService.asmx/Vote_SendAnswer?AccountID='+Account_ID+'&QuestionId='+QuestionId+'&AnswerId='+AnswerId)
+                .success(function success(data) {
+
+                    console.log('http://ded.sdg.ae/_MobFiles/AjmanDED_MobService.asmx/Vote_SendAnswer?AccountID='+Account_ID+'&QuestionId='+QuestionId+'&AnswerId='+AnswerId);
+                    var x2 = data.replace("<?xml version=\"1.0\" encoding=\"utf-8\"?>", "");
+                    x2 = x2.replace("<string xmlns=\"http://AjmanDED-MobData.org/\">", "");
+                    x2 = x2.replace("</string>", "");
+
+                    var NewArray = JSON.parse(x2);
+                    self.Vote_SendAnswer = NewArray;
+                    console.log(self.Vote_SendAnswer);
                     d.resolve();
                 })
                 .error(function error(msg) {

@@ -162,6 +162,29 @@ app.controller('mainController', function ($scope,
     };
 
 
+
+
+    $scope.Answer1 = function (id) {
+
+        NewsService.LoadVote_SendAnswer(1,1,id);
+        console.log("Answer 1 ");
+
+    };
+    $scope.Answer2 = function (id) {
+
+        NewsService.LoadVote_SendAnswer(1,1,id);
+        console.log("Answer 2 ");
+
+    };
+    $scope.Answer3 = function (id) {
+
+        NewsService.LoadVote_SendAnswer(1,1,id);
+        console.log("Answer 3 ");
+
+    };
+
+
+
     $scope.nextSlide = function () {
         $ionicSlideBoxDelegate.enableSlide(true);
         $ionicSlideBoxDelegate.next();
