@@ -261,6 +261,17 @@ app.controller('mainController', function ($scope,
     //
 
 
+    $scope.CloseSlide = function () {
+
+        $ionicHistory.nextViewOptions({
+            historyRoot: true
+        });
+        $ionicViewService.clearHistory();
+        console.log("home");
+        $state.go('home')
+    };
+
+
     $scope.GoToNotification = function () {
 
         if (NewsService.EnableNotification) {

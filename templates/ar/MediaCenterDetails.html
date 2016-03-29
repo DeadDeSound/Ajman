@@ -9,24 +9,19 @@
             <div class="Page-Inner-Padding-Top"></div>
             <ion-list>
 
-                <ion-item ng-repeat="item in model.Article" class="No-Item"
-                          ng-click="sendData({{item.NewsID}})">
 
+                <div class="TAC animated03 fadeInRightBig">
+                    <img src="http://ded.sdg.ae/Ufiles/News/{{ model.Article.NewsImage}}   "/>
+                </div>
+                <h1 class="animated04 fadeInRightBig">{{ model.Article.NewsDate}}</h1>
 
-                    <div class="TAC animated03 fadeInRightBig">
-                        <img src="http://ded.sdg.ae/Ufiles/News/{{item.NewsImage}}   "/>
-                    </div>
-                    <h1 class="animated04 fadeInRightBig">{{item.NewsDate}}</h1>
+                <h2 class="Inner animated05 fadeInRightBig">{{ model.Article.NewsTitle}}</h2>
 
-                    <h2 class="Inner animated05 fadeInRightBig">{{item.NewsTitle}}</h2>
+                <p class="animated06 fadeInRightBig">{{ model.Article.NewsDetails}}</p>
 
-                    <p class="animated06 fadeInRightBig">{{item.NewsDetails}}</p>
+                <hr/>
+                <br/>
 
-                    <hr/>
-                    <br/>
-
-
-                </ion-item>
             </ion-list>
 
         </div>

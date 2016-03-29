@@ -1,18 +1,60 @@
+<!--<head>-->
+<!--<meta charset="utf-8">-->
+<!--</head>-->
+<!--<ion-view ng-controller="SlideBoxCtrl">-->
+<!--<ion-slide-box on-slide-changed="slideChanged(index)">-->
+<!--<ion-slide>-->
+<!--<div class="box blue" style="margin-top: 50%">-->
+<!--<button ng-click="next()">Next slide!</button>-->
+<!--</div>-->
+<!--</ion-slide>-->
+<!--<ion-slide>-->
+<!--<div class="box red">-->
+<!--Slide 2!-->
+<!--</div>-->
+<!--</ion-slide>-->
+<!--</ion-slide-box>-->
+<!--</ion-view>-->
+
+
 <head>
     <meta charset="utf-8">
 </head>
-<ion-view>
-  <ion-slide-box>
-    <ion-slide>
-      <div class="box blue">
-        <button ng-click="nextSlide()">Next slide!</button>
-      </div>
-    </ion-slide>
-    <ion-slide>
-      <div class="box red">
-        Slide 2!
-      </div>
-    </ion-slide>
-  </ion-slide-box>
-</ion-view>
 
+
+<ion-nav-view></ion-nav-view>
+
+
+<ion-view hide-nav-bar="true"
+<ion-nav-buttons side="left">
+</ion-nav-buttons>
+<ion-nav-buttons side="right">
+</ion-nav-buttons>
+<ion-slide-box on-slide-changed="slideChanged(index)" style="height: 100vh">
+
+    <ion-slide>
+        <div style="width:100%; height:100vh">
+            <img ng-click="CloseSlide()" src="img/close-button.png" style="height: 10vh; width: 10%">
+            <img src="img/slideA.png" style="width:100%; height:90vh">
+
+
+        </div>
+    </ion-slide>
+
+    <ion-slide>
+        <div style="width:100%; height:100vh">
+            <img ng-click="CloseSlide()" src="img/close-button.png" style="height: 10vh; width: 10%">
+            <img src="img/slideB.png" style="width:100%; height:90vh">
+
+        </div>
+    </ion-slide>
+
+    <ion-slide>
+        <div style="width:100%; height:100vh">
+            <img ng-click="CloseSlide()" src="img/close-button.png" style="height: 10vh; width: 10%">
+            <img src="img/slideC.png" style="width:100%; height:90vh">
+
+        </div>
+    </ion-slide>
+
+</ion-slide-box>
