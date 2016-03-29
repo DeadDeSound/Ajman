@@ -1,6 +1,6 @@
 ﻿body {
     direction: ltr;
-    font-family: 'Helvetica Neue';
+    font-family: Helvetica;
     font-size: .9em;
     height: 100vh;
     position: relative;
@@ -363,6 +363,11 @@ input[type=submit]:hover,
   background-color: #303436; }
 
 .IFrame-Wrapper{
+    /*padding-bottom: 150px;*/
+}
+.IFrame{
+    width: 100%;
+    
     position: absolute;
     right: 0;
     bottom: 85px;
@@ -371,14 +376,7 @@ input[type=submit]:hover,
     -webkit-overflow-scrolling: touch;
     overflow-y: scroll;
     z-index: 99999;
-        display: block;
-    /*padding-bottom: 150px;*/
-}
-.IFrame{
-    height: 100%;
-    width: 100%;
-    -webkit-overflow-scrolling: touch;
-    overflow: scroll;
+    display: block;
 }
 
 .height1em{    height: 1em;}
@@ -401,6 +399,62 @@ input[type=submit]:hover,
 .item-complex .item-content, .item-radio .item-content {
     padding: .4em;
      background-color: rgba(255,255,255,0);
+}
+
+/**/
+.SideCollapsMenu-En .tab-title
+{
+    font-size: 1.2em !important;
+}
+
+
+/**/
+h3.HappenessInnerTitle {
+    color: #FFF;
+    background-color: #896d32;
+    padding: .4em 1em;
+}
+
+.Happeness-face1
+{
+    display: block;
+    margin: 0 auto;
+    width: 5em;
+    height: 5em;
+    background-image: url(../img/icon/face1.png);
+    background-size: cover;
+}
+.Happeness-face1-Light
+{
+    background-image: url(../img/icon/face1-Light.png);
+}
+
+.Happeness-face2
+{
+    display: block;
+    margin: 0 auto;
+    width: 5em;
+    height: 5em;
+    background-image: url(../img/icon/face2.png);
+    background-size: cover;
+}
+.Happeness-face2-Light
+{
+    background-image: url(../img/icon/face2-Light.png);
+}
+
+.Happeness-face3
+{
+    display: block;
+    margin: 0 auto;
+    width: 5em;
+    height: 5em;
+    background-image: url(../img/icon/face3.png);
+    background-size: cover;
+}
+.Happeness-face3-Light
+{
+    background-image: url(../img/icon/face3-Light.png);
 }
 
 
