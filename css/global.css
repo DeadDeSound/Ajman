@@ -358,15 +358,15 @@ input[type=submit]:hover,
   background-color: #303436; }
 
 .IFrame-Wrapper{
-        position: fixed;
-    height: 100vh;
+    position: absolute;
     right: 0;
-    bottom: 0;
+    bottom: 85px;
     left: 0;
     top: 20px;
     -webkit-overflow-scrolling: touch;
     overflow-y: scroll;
-    padding-bottom: 150px;
+    z-index: 99999;
+    /*padding-bottom: 150px;*/
 }
 .IFrame{
     height: 100%;
