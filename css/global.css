@@ -17,6 +17,13 @@
 .Page-Inner-Padding-Top {
     padding-top: 1em;
 }
+.FFTahoma{font-family: Tahoma;}
+.FFHelvtca{font-family: Helvetica;}
+
+.FZ-9{font-size: .9em;}
+.FZ1-1{font-size: 1.1em;}
+.FZ1-2{font-size: 1.2em;}
+
 
 .Left {
     float: left
@@ -29,6 +36,8 @@
 .Clear {
     clear: both
 }
+
+.OneLine{white-space: nowrap}
 
 .TAC {
     text-align: center;
@@ -310,7 +319,10 @@ ul.VerticalList01 li {
 .popup-body {
     text-align: center;
 }
-
+.popup-body {
+    padding: .4em;
+    overflow: auto;
+}
 .popup-body span {
     text-align: center;
     font-weight: bold;
@@ -394,26 +406,6 @@ input[type=submit]:hover,
     background-color: #303436;
 }
 
-.IFrame-Wrapper {
-    position: relative;
-    height: 100vh;
-    display: block;
-}
-
-.IFrame {
-    width: 100%;
-    height: 100vh;
-    position: absolute;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    top: 0;
-    -webkit-overflow-scrolling: touch;
-    overflow: auto;
-    z-index: 99999;
-    display: block;
-}
-
 .height1em {
     height: 1em;
 }
@@ -454,60 +446,66 @@ h3.HappenessInnerTitle {
     display: block;
     margin: 0 auto;
     width: 100%;
-    min-height: 5em;
+    min-height: 4em;
     background-image: url(../img/icon/face1.png);
-    background-size: 100%;
+    background-size: 75%;
     background-repeat: no-repeat;
+    background-position: center;
 }
 
 .Happeness-face1-Light {
     display: block;
     margin: 0 auto;
     width: 100%;
-    min-height: 5em;
+    min-height: 4em;
     background-image: url(../img/icon/face1-Light.png);
-    background-size: 100%;
+    background-size: 75%;
     background-repeat: no-repeat;
+    background-position: center;
 }
 
 .Happeness-face2 {
     display: block;
     margin: 0 auto;
     width: 100%;
-    min-height: 5em;
+    min-height: 4em;
     background-image: url(../img/icon/face2.png);
-    background-size: 100%;
+    background-size: 75%;
     background-repeat: no-repeat;
+    background-position: center;
 }
 
 .Happeness-face2-Light {
     display: block;
     margin: 0 auto;
     width: 100%;
-    min-height: 5em;
+    min-height: 4em;
     background-image: url(../img/icon/face2-Light.png);
-    background-size: 100%;
+    background-size: 75%;
     background-repeat: no-repeat;
+    background-position: center;
 }
 
 .Happeness-face3 {
     display: block;
     margin: 0 auto;
     width: 100%;
-    min-height: 5em;
+    min-height: 4em;
     background-image: url(../img/icon/face3.png);
-    background-size: 100%;
+    background-size: 75%;
     background-repeat: no-repeat;
+    background-position: center;
 }
 
 .Happeness-face3-Light {
     display: block;
     margin: 0 auto;
     width: 100%;
-    min-height: 5em;
+    min-height: 4em;
     background-image: url(../img/icon/face3-Light.png);
-    background-size: 100%;
+    background-size: 75%;
     background-repeat: no-repeat;
+    background-position: center;
 }
 
 /**/
@@ -518,4 +516,35 @@ h3.HappenessInnerTitle {
 .tab-item {
     font-family: Helvetica;
     opacity: 0.7;
+}
+
+
+
+
+
+
+.Wrapper-Iframe {
+    height: 80vh !important;
+    position: relative;
+    display: block;
+    padding-top: 0px !important;
+    padding-bottom: 0 !important;
+    -webkit-overflow-scrolling: touch;
+    overflow-y: scroll;
+}
+.IFrame-Wrapper {
+}
+
+.IFrame {
+    width: 100%;
+    height: 90vh;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    top: 0;
+    -webkit-overflow-scrolling: touch;
+    overflow: auto;
+    z-index: 99999;
+    display: block;
 }
