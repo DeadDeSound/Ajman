@@ -593,6 +593,7 @@ function ($scope, NewsService, $state) {
 });
 
 
+
 app.controller("messageCtrl", /**
  * Home Page Controller
  */
