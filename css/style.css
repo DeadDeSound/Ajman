@@ -34,17 +34,17 @@
 
 
 .Circle-Left{
-    left: -8em
+    left: -9em
 }
 
 .circle-container {
     position: relative;
-    width: 23em;
-    height: 21em;
+    width: 29em;
+    height: 29em;
     padding: 0; /*= 2em * 1.4 (2em = half the width of an img, 1.4 = sqrt(2))*/
     /*border: dashed 5px;*/
     border-radius: 50%;
-    margin: 3em auto;
+    margin: 0 auto;
 }
 
 .circle-container a {
