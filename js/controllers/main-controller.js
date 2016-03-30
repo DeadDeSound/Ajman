@@ -9,7 +9,7 @@ app.controller('homeCtrl', function ($scope) {
 
     var currentPlatformVersion = ionic.Platform.version();
     //var mainVersion = currentPlatformVersion.split('.')[0];
-    console.log("Version"+currentPlatformVersion);
+    console.log("Version" + currentPlatformVersion);
     if (ionic.Platform.isAndroid()) {
         if (currentPlatformVersion >= 6 || currentPlatformVersion === 4.4) {
             var elem = document.getElementById("C-container");
@@ -221,11 +221,11 @@ app.controller('homeCtrl', function ($scope) {
             };
             var dial = kcRotateDial(elem);
         } else {
-        Draggable.create("#C-container", {
-            type: "rotation",
-            throwProps: true
-        });
-    }
+            Draggable.create("#C-container", {
+                type: "rotation",
+                throwProps: true
+            });
+        }
     } else {
         Draggable.create("#C-container", {
             type: "rotation",
@@ -299,6 +299,38 @@ app.controller('mainController', function ($scope,
         }
 
     };
+
+    $scope.GetAnnualReport = function () {
+
+        if (ionic.Platform.isAndroid()) {
+
+            if (localStorage.getItem("lang") === "en") {
+
+                return "templates/en/annual_report_android_en.html"
+            } else {
+                return "templates/ar/annual_report_android_ar.html"
+            }
+
+        } else {
+
+              if (localStorage.getItem("lang") === "en") {
+
+                return "templates/en/annual_report_ios_en.html"
+            } else {
+                return "templates/ar/annual_report_ios_ar.html"
+            }
+        }
+
+
+        if (localStorage.getItem("lang") === "en") {
+
+            return "templates/en/sideMenu.html"
+        } else {
+            return "templates/ar/sideMenu.html"
+        }
+
+    };
+
 
     $scope.toggleMenu = function () {
         $ionicSideMenuDelegate.toggleRight();
@@ -597,7 +629,6 @@ function ($scope, NewsService, $state) {
     }
 
 });
-
 
 
 app.controller("messageCtrl", /**
