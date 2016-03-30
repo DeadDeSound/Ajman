@@ -9,8 +9,9 @@ app.controller('homeCtrl', function ($scope) {
 
     var currentPlatformVersion = ionic.Platform.version();
     //var mainVersion = currentPlatformVersion.split('.')[0];
+    console.log("Version"+currentPlatformVersion);
     if (ionic.Platform.isAndroid()) {
-        if (currentPlatformVersion >= 6 || currentPlatformVersion >= 4) {
+        if (currentPlatformVersion >= 6 || currentPlatformVersion === 4.4) {
             var elem = document.getElementById("C-container");
             var kcRotateDial = function (elem) {
                 var output = {};
@@ -219,7 +220,12 @@ app.controller('homeCtrl', function ($scope) {
                 return output;
             };
             var dial = kcRotateDial(elem);
-        }
+        } else {
+        Draggable.create("#C-container", {
+            type: "rotation",
+            throwProps: true
+        });
+    }
     } else {
         Draggable.create("#C-container", {
             type: "rotation",
