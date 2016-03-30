@@ -10,6 +10,20 @@
     background-color: #9c8560; 
     padding-top: 1em;
     color: #FFF;
+    opacity: .7;
+}
+.tabs-icon-top > .tabs .tab-item, 
+.tabs-icon-top.tabs .tab-item, 
+.tabs-icon-bottom > .tabs .tab-item, 
+.tabs-icon-bottom.tabs .tab-item {
+    font-size: 10px;
+    line-height: 14px;
+    opacity: .7;
+}
+.tabs-top.tabs-striped .tab-item.tab-item-active, 
+.tabs-top.tabs-striped .tab-item.active, 
+.tabs-top.tabs-striped .tab-item.activated {
+    opacity: 1 !important;
 }
 .SideCollapsMenu .tabs {
     height: 75px;
@@ -268,8 +282,8 @@
 
     -webkit-transition: all 0.5s; /* Safari 3.1 to 6.0 */
     transition: all 0.5s;
-}
- 
+}*/
+ /*
 .RightMenuTaps label span {
     display: inline-block;
     padding: 0;
