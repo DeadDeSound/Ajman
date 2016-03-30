@@ -436,26 +436,26 @@ app.controller('mainController', function ($scope,
 
     $scope.Answer1 = function (id) {
         document.getElementById("happy1").className = "Happeness-face1";
-        document.getElementById("happy2").className = "Happeness-face1-Light";
-        document.getElementById("happy3").className = "Happeness-face1-Light";
+        document.getElementById("happy2").className = "Happeness-face2-Light";
+        document.getElementById("happy3").className = "Happeness-face3-Light";
         NewsService.LoadVote_SendAnswer(1, 1, id);
         console.log("Answer 1 ");
         console.log(document.getElementById("happy1").className);
 
     };
     $scope.Answer2 = function (id) {
-        document.getElementById("happy2").className = "Happeness-face1";
+        document.getElementById("happy2").className = "Happeness-face2";
         document.getElementById("happy1").className = "Happeness-face1-Light";
-        document.getElementById("happy3").className = "Happeness-face1-Light";
+        document.getElementById("happy3").className = "Happeness-face3-Light";
         NewsService.LoadVote_SendAnswer(1, 1, id);
         console.log("Answer 2 ");
         console.log(document.getElementById("happy2").className);
 
     };
     $scope.Answer3 = function (id) {
-        document.getElementById("happy3").className = "Happeness-face1";
+        document.getElementById("happy3").className = "Happeness-face3";
         document.getElementById("happy1").className = "Happeness-face1-Light";
-        document.getElementById("happy2").className = "Happeness-face1-Light";
+        document.getElementById("happy2").className = "Happeness-face2-Light";
         NewsService.LoadVote_SendAnswer(1, 1, id);
         console.log("Answer 3 ");
         console.log(document.getElementById("happy3").className);
