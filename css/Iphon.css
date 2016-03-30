@@ -50,24 +50,6 @@
     top: -75px !important
 }
 
-.Wrapper {
-    height: inherit !important;
-    margin-top: -50px !important;
-    padding-top: 0px !important;
-    padding-bottom: 120px !important;
-    -webkit-overflow-scrolling: touch;
-  	overflow-y: scroll;
-}
-
-.Wrapper-Iframe {
-    height: 100vh !important;
-    /* margin-top: -50px !important; */
-    padding-top: 0px !important;
-    padding-bottom: 120px !important;
-    -webkit-overflow-scrolling: touch;
-    overflow-y: scroll;
-}
-
 .NewHeader {
     top: 0px;
 }
@@ -75,6 +57,7 @@
 /* HOME CIRCLE */
 
 .Circle-Left {
+    top: 3em;
     left: -7.5em !important
 }
 
@@ -182,3 +165,28 @@
 /**/
 
 
+.Wrapper {
+    height: inherit !important;
+    margin-top: -50px !important;
+    padding-top: 0px !important;
+    padding-bottom: 120px !important;
+    -webkit-overflow-scrolling: touch;
+  	overflow-y: scroll;
+}
+
+.Wrapper-Iframe {
+    height: 100vh !important;
+    /* margin-top: -50px !important; */
+    padding-top: 0px !important;
+    padding-bottom: 0 !important;
+    -webkit-overflow-scrolling: touch;
+    overflow-y: scroll;
+}
+
+.IFrame {
+    top: -2em;
+    -webkit-overflow-scrolling: touch;
+    overflow: auto;
+    z-index: 99999;
+    display: block;
+}
