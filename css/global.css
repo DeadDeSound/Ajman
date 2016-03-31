@@ -450,7 +450,7 @@ h3.HappenessInnerTitle {
     background-image: url(../img/icon/face1.png);
     background-size: 75%;
     background-repeat: no-repeat;
-    background-position: center;
+    background-position: center bottom;
 }
 
 .Happeness-face1-Light {
@@ -461,7 +461,7 @@ h3.HappenessInnerTitle {
     background-image: url(../img/icon/face1-Light.png);
     background-size: 75%;
     background-repeat: no-repeat;
-    background-position: center;
+    background-position: center bottom;
 }
 
 .Happeness-face2 {
@@ -472,7 +472,7 @@ h3.HappenessInnerTitle {
     background-image: url(../img/icon/face2.png);
     background-size: 75%;
     background-repeat: no-repeat;
-    background-position: center;
+    background-position: center bottom;
 }
 
 .Happeness-face2-Light {
@@ -483,7 +483,7 @@ h3.HappenessInnerTitle {
     background-image: url(../img/icon/face2-Light.png);
     background-size: 75%;
     background-repeat: no-repeat;
-    background-position: center;
+    background-position: center bottom;
 }
 
 .Happeness-face3 {
@@ -494,7 +494,7 @@ h3.HappenessInnerTitle {
     background-image: url(../img/icon/face3.png);
     background-size: 75%;
     background-repeat: no-repeat;
-    background-position: center;
+    background-position: center bottom;
 }
 
 .Happeness-face3-Light {
@@ -505,7 +505,7 @@ h3.HappenessInnerTitle {
     background-image: url(../img/icon/face3-Light.png);
     background-size: 75%;
     background-repeat: no-repeat;
-    background-position: center;
+    background-position: center bottom;
 }
 
 /**/
