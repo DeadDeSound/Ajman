@@ -17,8 +17,6 @@ app.constant("CONFIG", "ar");
 app.run(function ($rootScope) {
     if (localStorage.getItem("lang") !== "ar" && localStorage.getItem("lang") !== "en") {
         localStorage.setItem("lang", "NA");
-    } else {
-        $rootScope.appLang = localStorage.getItem("lang");
     }
     $rootScope.SlidePage = false;
     $rootScope.iosCSS = "";

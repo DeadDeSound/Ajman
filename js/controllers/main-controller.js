@@ -248,7 +248,7 @@ app.controller('mainController', function ($scope,
                                            $window, NewsService, $ionicPlatform, $cordovaDevice) {
 
 
-    $stateParams.locale = $rootScope.appLang;
+    $stateParams.locale = localStorage.getItem("lang");
     $scope.title = 'Ajamn';
     $scope.expandme = false;
     console.log("'app.controllers'");
@@ -538,21 +538,19 @@ app.controller('splashController', function ($scope, $state, $rootScope, $timeou
 
     $scope.StartSplash = function () {
         if (localStorage.getItem("lang") === "NA") {
-            $timeout(function () {
                 $state.go('splash2')
-            }, 8000);
         } else {
-            $timeout(function () {
                 $ionicHistory.nextViewOptions({
                     historyRoot: true
                 });
                 $ionicViewService.clearHistory();
                 $state.go('home')
-            }, 8000);
         }
     };
 
-    $scope.StartSplash();
+    $timeout(function () {
+        $scope.StartSplash();
+    }, 8000);
 
 });
 
