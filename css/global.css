@@ -105,9 +105,9 @@ h2 {
 h3 {
     font-size: 1.1em;
 }
-
 h4 {
     font-size: 1.0em;
+    line-height: 2.2em;
 }
 
 h5 {
@@ -410,25 +410,6 @@ input[type=submit]:hover,
     height: 1em;
 }
 
-/**/
-.Wrapper .item {
-    border-color: #ddd;
-    background-color: rgba(255, 255, 255, 0);
-    color: #444;
-    position: relative;
-    z-index: 2;
-    display: block;
-    margin: -1px;
-    padding: 16px;
-    border-width: 0;
-    border-style: solid;
-    font-size: 12px;
-}
-
-.item-complex .item-content, .item-radio .item-content {
-    padding: .4em;
-    background-color: rgba(255, 255, 255, 0);
-}
 
 /**/
 .SideCollapsMenu-En .tab-title {
@@ -547,4 +528,47 @@ h3.HappenessInnerTitle {
     overflow: auto;
     z-index: 99999;
     display: block;
+}
+
+
+.item, 
+.item h1, 
+.item h2, 
+.item h3, 
+.item h4, 
+.item h5, 
+.item h6, 
+.item p, 
+.item-content, 
+.item-content h1, 
+.item-content h2, 
+.item-content h3, 
+.item-content h4, 
+.item-content h5, 
+.item-content h6, 
+.item-content p
+{
+    white-space: normal;
+    line-height: 1.6em;
+}
+
+
+/**/
+.Wrapper .item {
+    border-color: #ddd;
+    background-color: rgba(255, 255, 255, 0);
+    color: #444;
+    position: relative;
+    z-index: 2;
+    display: block;
+    margin: -1px;
+    padding: .4em;
+    border-width: 0;
+    border-style: solid;
+    font-size: 12px;
+}
+
+.item-complex .item-content, .item-radio .item-content {
+    padding: .4em;
+    background-color: rgba(255, 255, 255, 0);
 }
