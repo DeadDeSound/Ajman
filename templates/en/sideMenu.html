@@ -1,19 +1,19 @@
 ﻿<style>
-    
-.SideCollapsMenu .tab-title
-{
-    font-family: Helvetica;
-    font-size: 1.4em;
-    color: #FFF;
-}
-.MainMenu li a {
-    display: block;
-    padding: .8em 1.4em .8em 0;
-    margin: 0;
-    color: #333;
-    font-size: 1.0em;
-    font-family: Helvetica;
-}
+
+    .SideCollapsMenu .tab-title {
+        font-family: Helvetica;
+        font-size: 1.4em;
+        color: #FFF;
+    }
+
+    .MainMenu li a {
+        display: block;
+        padding: .8em 1.4em .8em 0;
+        margin: 0;
+        color: #333;
+        font-size: 1.0em;
+        font-family: Helvetica;
+    }
 </style>
 <ion-view class="SideCollapsMenu SideCollapsMenu-En">
     <ion-tabs class="tabs-light tabs-icon-top tabs-top">
@@ -40,8 +40,8 @@
                     <ion-content class="has-tabs-top has-header padding">
                         <div class="MainMenu animated01010 fadeInRightBig">
                             <ul>
-                                <li ng-click="closeMenu()"><a ui-sref="Enquiry">License Inquiry</a></li>
-                                <li ng-click="closeMenu()"><a ui-sref="renewal">License Renewal</a></li>
+                                <li ng-click="closeMenu()"><a ui-sref="QueryingLicense">License Inquiry</a></li>
+                                <li ng-click="closeMenu()"><a ui-sref="LicenseRenewal">License Renewal</a></li>
                                 <li ng-click="closeMenu()"><a ui-sref="manual">Customer Manual</a></li>
                                 <li ng-click="closeMenu()"><a ui-sref="MediaServices">Our Services</a></li>
                                 <li ng-click="closeMenu()"><a ui-sref="servicesGuide">Services Guide</a></li>
@@ -49,7 +49,7 @@
                                 <li ng-click="closeMenu()"><a ui-sref="irregularitiesList">Irregularities List</a></li>
                             </ul>
                         </div>
-                        
+
                     </ion-content>
                     <ion-pane>
             </ion-tab>
@@ -63,7 +63,6 @@
                                 <li ng-click="closeMenu()"><a ui-sref="regulations">Laws & Regulations</a></li>
                                 <li ng-click="closeMenu()"><a ui-sref="annual_report">Annual Report</a></li>
                                 <li ng-click="changeLang()"><a>اللغة العربية</a></li>
-
 
 
                                 <!--<li ng-click="closeMenu()"><h2 ui-sref="statistics">Statistics</h2></li>

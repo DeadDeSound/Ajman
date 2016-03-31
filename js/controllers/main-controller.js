@@ -245,7 +245,8 @@ app.controller('mainController', function ($scope,
                                            $cordovaSocialSharing,
                                            $ionicPopup,
                                            $ionicSlideBoxDelegate,
-                                           $window, NewsService) {
+                                           $window, NewsService, $ionicPlatform, $cordovaDevice) {
+
 
     $stateParams.locale = $rootScope.appLang;
     $scope.title = 'Ajamn';
@@ -265,6 +266,14 @@ app.controller('mainController', function ($scope,
     //}
     //});
     //
+
+    //$ionicPlatform.ready(function () {
+    //
+    //    var uuid = $cordovaDevice.getUUID();
+    //
+    //    $scope.callAlertWithVariable(uuid);
+    //
+    //});
 
 
     $scope.CloseSlide = function () {
@@ -313,7 +322,7 @@ app.controller('mainController', function ($scope,
 
         } else {
 
-              if (localStorage.getItem("lang") === "en") {
+            if (localStorage.getItem("lang") === "en") {
 
                 return "templates/en/annual_report_ios_en.html"
             } else {
@@ -367,6 +376,39 @@ app.controller('mainController', function ($scope,
     $scope.shareSocial = function () {
         $cordovaSocialSharing.share("Ajman", "Ajaman DED", "http://www.ajmanded.ae");
     };
+
+
+    $scope.callAlertWithVariable = function (x) {
+        //document.location.href = 'tel:80055';
+        //A confirm dialog
+        var confirmPopup = $ionicPopup.confirm({
+            title: x,
+            template: x,
+            cssClass: 'custom-popup'
+            //buttons: [
+            //    {
+            //        text: 'cancel'
+            //    },
+            //    {
+            //        text: 'OK',
+            //        type: 'button-positive',
+            //        onTap: function (e) {
+            //          document.location.href = 'tel:80055';
+            //        }
+            //    }
+            //]
+        });
+
+        confirmPopup.then(function (res) {
+            if (res) {
+                document.location.href = 'tel:80055';
+                console.log('Yes');
+            } else {
+                console.log('No');
+            }
+        });
+    };
+
 
     $scope.callAlert = function () {
         //document.location.href = 'tel:80055';
