@@ -15,27 +15,29 @@ var app = angular.module('app', [
 app.constant("CONFIG", "ar");
 
 app.run(function ($rootScope) {
-    if(localStorage.getItem("lang") !== "ar" && localStorage.getItem("lang") !== "en"){
+    if (localStorage.getItem("lang") !== "ar" && localStorage.getItem("lang") !== "en") {
         localStorage.setItem("lang", "NA");
-    }else{
+    } else {
         $rootScope.appLang = localStorage.getItem("lang");
     }
     $rootScope.SlidePage = false;
     $rootScope.iosCSS = "";
+
+
 });
 
 
-
-app.run(function ($ionicPlatform, $cordovaStatusbar, $rootScope, $window,$ionicPopup) {
+app.run(function ($ionicPlatform, $cordovaStatusbar, $rootScope, $window, $ionicPopup, $cordovaDevice) {
     console.log("IOS CSS 1 : " + $rootScope.iosCSS);
-        if (!ionic.Platform.is('android')) {
-            //$window.location.reload(true);
-            $rootScope.iosCSS = "Iphon";
-            console.log("IOS CSS 2 " + $rootScope.iosCSS);
-        }
+    if (!ionic.Platform.is('android')) {
+        //$window.location.reload(true);
+        $rootScope.iosCSS = "Iphon";
+        console.log("IOS CSS 2 " + $rootScope.iosCSS);
+    }
     $ionicPlatform.ready(function () {
 
 
+        localStorage.setItem("Device_ID", $cordovaDevice.getUUID());
 
 
         if (window.cordova && window.cordova.plugins.Keyboard) {

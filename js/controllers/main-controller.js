@@ -266,7 +266,6 @@ app.controller('mainController', function ($scope,
     //}
     //});
     //
-
     //$ionicPlatform.ready(function () {
     //
     //    var uuid = $cordovaDevice.getUUID();
@@ -297,7 +296,7 @@ app.controller('mainController', function ($scope,
 
 
     $scope.model = NewsService;
-    NewsService.LoadNotification(4);
+    NewsService.LoadNotification(11);
 
 
     $scope.getInclude = function () {
@@ -378,36 +377,36 @@ app.controller('mainController', function ($scope,
     };
 
 
-    $scope.callAlertWithVariable = function (x) {
-        //document.location.href = 'tel:80055';
-        //A confirm dialog
-        var confirmPopup = $ionicPopup.confirm({
-            title: x,
-            template: x,
-            cssClass: 'custom-popup'
-            //buttons: [
-            //    {
-            //        text: 'cancel'
-            //    },
-            //    {
-            //        text: 'OK',
-            //        type: 'button-positive',
-            //        onTap: function (e) {
-            //          document.location.href = 'tel:80055';
-            //        }
-            //    }
-            //]
-        });
-
-        confirmPopup.then(function (res) {
-            if (res) {
-                document.location.href = 'tel:80055';
-                console.log('Yes');
-            } else {
-                console.log('No');
-            }
-        });
-    };
+    //$scope.callAlertWithVariable = function (x) {
+    //    //document.location.href = 'tel:80055';
+    //    //A confirm dialog
+    //    var confirmPopup = $ionicPopup.confirm({
+    //        title: x,
+    //        template: x,
+    //        cssClass: 'custom-popup'
+    //        //buttons: [
+    //        //    {
+    //        //        text: 'cancel'
+    //        //    },
+    //        //    {
+    //        //        text: 'OK',
+    //        //        type: 'button-positive',
+    //        //        onTap: function (e) {
+    //        //          document.location.href = 'tel:80055';
+    //        //        }
+    //        //    }
+    //        //]
+    //    });
+    //
+    //    confirmPopup.then(function (res) {
+    //        if (res) {
+    //            document.location.href = 'tel:80055';
+    //            console.log('Yes');
+    //        } else {
+    //            console.log('No');
+    //        }
+    //    });
+    //};
 
 
     $scope.callAlert = function () {
@@ -646,7 +645,7 @@ function ($scope, NewsService, $state) {
 
         for (i = 0; i < $scope.model.Notifications.length; i++) {
 
-            NewsService.LoadReadNotification(4, $scope.model.Notifications[i].NotificationID);
+            NewsService.LoadReadNotification(11, $scope.model.Notifications[i].NotificationID);
             console.log("ID : ", $scope.model.Notifications[i].NotificationID);
 
         }
