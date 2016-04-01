@@ -475,6 +475,44 @@ app.controller('mainController', function ($scope,
     };
 
 
+
+    $scope.callAlert3 = function () {
+        //document.location.href = 'tel:80055';
+        //A confirm dialog
+
+        var name =   localStorage.getItem("Device_Model");
+        var confirmPopup = $ionicPopup.confirm({
+            title: name,
+            template: '',
+            cssClass: 'custom-popup'
+            //buttons: [
+            //    {
+            //        text: 'cancel'
+            //    },
+            //    {
+            //        text: 'OK',
+            //        type: 'button-positive',
+            //        onTap: function (e) {
+            //          document.location.href = 'tel:80055';
+            //        }
+            //    }
+            //]
+        });
+
+        confirmPopup.then(function (res) {
+            if (res) {
+                document.location.href = 'tel:80055';
+                console.log('Yes');
+            } else {
+                console.log('No');
+            }
+        });
+    };
+
+
+
+
+
     $scope.Answer1 = function (id) {
         document.getElementById("happy1").className = "Happeness-face1";
         document.getElementById("happy2").className = "Happeness-face2-Light";

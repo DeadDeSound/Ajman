@@ -20,6 +20,7 @@ app.run(function ($rootScope) {
     }
     $rootScope.SlidePage = false;
     $rootScope.iosCSS = "";
+    $rootScope.iosCSS2 = "";
 
 
 });
@@ -31,12 +32,20 @@ app.run(function ($ionicPlatform, $cordovaStatusbar, $rootScope, $window, $ionic
         //$window.location.reload(true);
         $rootScope.iosCSS = "Iphon";
         console.log("IOS CSS 2 " + $rootScope.iosCSS);
+
+        //
+        //if(localStorage.getItem("Device_Model")=="Iphone 5"){
+        //     $rootScope.iosCSS2 = "Iphone5";
+        //}
+
+
     }
     $ionicPlatform.ready(function () {
 
 
         localStorage.setItem("Device_ID", $cordovaDevice.getUUID());
-
+        $cordovaDevice.getModel();
+        localStorage.setItem("Device_Model", $cordovaDevice.getModel());
 
         if (window.cordova && window.cordova.plugins.Keyboard) {
             // Hide the accessory bar by default (remove this to show the accessory bar above the keyboard
