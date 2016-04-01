@@ -343,3 +343,11 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e7d8b9', end
 {
     width: 33%
 }
+
+.MaxLine3
+{
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+}

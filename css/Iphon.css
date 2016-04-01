@@ -10,7 +10,9 @@
 }
 
 /**/
-
+.Banner {
+    padding-top: .8em;
+}
 .Status-Bar-Home
 {
     position: absolute;
@@ -165,14 +167,16 @@
 /**/
 
 
+
 .Wrapper {
     height: inherit !important;
     margin-top: -50px !important;
     padding-top: 0px !important;
-    padding-bottom: 140px !important;
+    padding-bottom: 170px !important;
     -webkit-overflow-scrolling: touch;
   	overflow-y: scroll;
 }
+
 
 .Wrapper-Iframe {
     height: 80vh !important;
@@ -189,4 +193,20 @@
     z-index: 99999;
     display: block;
 }
+
+/**/
+.iFrameion-content div.scroll 
+{
+   height: 90% !important;
+   -webkit-overflow-scrolling: touch !important;
+   overflow: scroll !important;
+   position: absolute;
+   top: 0px;
+}
+.webPage
+{
+   width: 100%;
+   height: 100%;
+}
+/**/
 

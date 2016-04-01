@@ -8,8 +8,7 @@
             <div class="Page-Inner-Padding-Top"></div>
             <ion-list>
 
-                <ion-item ng-repeat="Article in model.NewsArticles" class="No-Item"
-                         ui-sref="MediaCenterDetails({ id: {{Article.NewsID}} })">
+                <ion-item ng-repeat="Article in model.NewsArticles" class="No-Item" ui-sref="MediaCenterDetails({ id: {{Article.NewsID}} })">
 
                     <div class="TAC animated03 fadeInRightBig">
                         <img src="http://ded.sdg.ae/Ufiles/News/{{Article.NewsImage}}   "/>
@@ -18,7 +17,7 @@
 
                     <h2 class="Inner animated05 fadeInRightBig">{{Article.NewsTitleEn}}</h2>
 
-                    <p class="animated06 fadeInRightBig">{{Article.NewsDetailsEn}}</p>
+                    <p class="animated06 fadeInRightBig MaxLine3">{{Article.NewsDetailsEn}}</p>
 
                     <hr/>
 
