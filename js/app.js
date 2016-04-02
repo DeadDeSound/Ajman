@@ -34,12 +34,11 @@ app.run(function ($ionicPlatform, $cordovaStatusbar, $rootScope, $window, $ionic
         console.log("IOS CSS 2 " + $rootScope.iosCSS);
 
         //localStorage.setItem("Device_Model","iPhone8.1");
-        localStorage.setItem("Device_Model", $cordovaDevice.getModel());
 
         var Device_Model = localStorage.getItem("Device_Model");
         console.log("Model" + Device_Model);
 
-        if (Device_Model != "iPhone6.2" && Device_Model != "iPhone6.1") {
+        if (Device_Model != "iPhone6.2" && Device_Model != "iPhone6.1" && Device_Model != "null" && Device_Model != "") {
 
             $rootScope.iosCSS2 = "Iphon6";
         }
@@ -50,6 +49,8 @@ app.run(function ($ionicPlatform, $cordovaStatusbar, $rootScope, $window, $ionic
 
 
         localStorage.setItem("Device_ID", $cordovaDevice.getUUID());
+        $cordovaDevice.getModel();
+        localStorage.setItem("Device_Model", $cordovaDevice.getModel());
 
 
         if (window.cordova && window.cordova.plugins.Keyboard) {
