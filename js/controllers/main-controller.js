@@ -1,4 +1,3 @@
-
 /**
  * Created by fantom on 2/18/16.
  */
@@ -448,8 +447,10 @@ app.controller('mainController', function ($scope,
                 {
                     text: BtnOK,
                     type: 'button-positive',
-                    onTap: document.location.href = 'tel:80055',
-
+                    onTap: function (e) {
+                        document.location.href = 'tel:80055';
+                        console.log("INside CAll")
+                    }
 
 
                 }
@@ -457,8 +458,8 @@ app.controller('mainController', function ($scope,
         });
 
         confirmPopup.then(function (res) {
-            if (res) {
-                document.location.href = 'tel:80055';
+            if (res==BtnOK) {
+               // document.location.href = 'tel:80055';
                 console.log('Yes');
             } else {
                 console.log('No');
@@ -735,7 +736,7 @@ function ($scope) {
 
     };
 
-});
+})
 
 
 app.controller("CallController", /**
