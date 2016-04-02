@@ -34,7 +34,7 @@ app.run(function ($ionicPlatform, $cordovaStatusbar, $rootScope, $window, $ionic
         console.log("IOS CSS 2 " + $rootScope.iosCSS);
 
 
-        if (localStorage.getItem("Device_Model") =="iPhone8.1" && !localStorage.getItem("Device_Model") =="iPhone6.2" ){
+        if (localStorage.getItem("Device_Model") =="iPhone8.1"){
             $rootScope.iosCSS2 = "Iphon6";
         }
 
