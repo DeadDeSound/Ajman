@@ -476,6 +476,7 @@ app.controller('mainController', function ($scope,
 
 
 
+
     $scope.callAlert3 = function () {
         //document.location.href = 'tel:80055';
         //A confirm dialog
