@@ -150,6 +150,15 @@ p {
     font-family: 'Helvetica Neue';
 }
 
+.Comment
+{
+    color: red
+}
+.Note
+{
+    color: #547993
+}
+
 li {
     list-style: none;
 }
@@ -204,7 +213,6 @@ th {
     padding: 10px 9px;
     /*font-weight: 700;*/
     color: #272727;
-    text-align: right;
 }
 
 /*tbody tr:nth-child(2n+1) td {
@@ -316,21 +324,6 @@ ul.VerticalList01 li {
 .button.button-positive {
     background-color: #896d32;
 }
-
-.popup-body {
-    text-align: center;
-}
-.popup-body {
-    padding: .4em;
-    overflow: auto;
-}
-.popup-body span {
-    text-align: center;
-    font-weight: bold;
-    font-size: 1.2em;
-    color: #333;
-}
-
 /**/
 .MapsTapsWrapper {
     position: relative;
