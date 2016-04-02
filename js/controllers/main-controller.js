@@ -1,3 +1,4 @@
+
 /**
  * Created by fantom on 2/18/16.
  */
@@ -446,7 +447,11 @@ app.controller('mainController', function ($scope,
                 },
                 {
                     text: BtnOK,
-                    type: 'button-positive'
+                    type: 'button-positive',
+                    onTap: function (e) {
+                        document.location.href = 'tel:80055';
+                        console.log('Yes');
+                    }
 
                 }
             ]

@@ -34,7 +34,7 @@ app.run(function ($ionicPlatform, $cordovaStatusbar, $rootScope, $window, $ionic
         console.log("IOS CSS 2 " + $rootScope.iosCSS);
 
         //localStorage.setItem("Device_Model","iPhone8.1");
-
+        localStorage.setItem("Device_Model", "");
         var Device_Model = localStorage.getItem("Device_Model");
         console.log("Model" + Device_Model);
 
