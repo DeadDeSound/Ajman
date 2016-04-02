@@ -448,10 +448,9 @@ app.controller('mainController', function ($scope,
                 {
                     text: BtnOK,
                     type: 'button-positive',
-                    onTap: function (e) {
-                        document.location.href = 'tel:80055';
-                        console.log('Yes');
-                    }
+                    onTap: document.location.href = 'tel:80055',
+
+
 
                 }
             ]
