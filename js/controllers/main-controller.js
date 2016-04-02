@@ -408,26 +408,48 @@ app.controller('mainController', function ($scope,
     //    });
     //};
 
+    function UnicodeAlert() {
+        var str;
+        str = document.getElementById('inputElement').value;
+        alert(str.replace(/&#(\d+);/g));
+        return false;
+    }
+
 
     $scope.callAlert = function () {
         //document.location.href = 'tel:80055';
         //A confirm dialog
+
+
+        if (localStorage.getItem("lang") === "en") {
+
+            var Title = "Call Customer Service";
+            var BtnOK = "Ok";
+            var BtnCancel = "Cancel";
+        } else {
+            var Title = "الإتصال بخدمة العملاء";
+            var BtnOK = "موافق";
+            var BtnCancel = "إلغاء";
+
+        }
+
+
         var confirmPopup = $ionicPopup.confirm({
-            title: '80055',
-            template: '',
-            cssClass: 'custom-popup'
-            //buttons: [
-            //    {
-            //        text: 'cancel'
-            //    },
-            //    {
-            //        text: 'OK',
-            //        type: 'button-positive',
-            //        onTap: function (e) {
-            //          document.location.href = 'tel:80055';
-            //        }
-            //    }
-            //]
+
+
+            title: Title,
+            templateUrl: 'templates/CallTemplateMain.html',
+            cssClass: 'custom-popup',
+            buttons: [
+                {
+                    text: BtnCancel
+                },
+                {
+                    text: BtnOK,
+                    type: 'button-positive'
+
+                }
+            ]
         });
 
         confirmPopup.then(function (res) {
@@ -445,24 +467,32 @@ app.controller('mainController', function ($scope,
 //        document.location.href = 'tel:80055';
 
 
+        if (localStorage.getItem("lang") === "en") {
+
+            var Title = "How was your experience?"
+            var BtnOK = "Ok";
+            var BtnCancel = "Cancel";
+        } else {
+            var Title = "كيف كانت تجربتك؟";
+            var BtnOK = "موافق";
+            var BtnCancel = "إلغاء";
+        }
+
         //       A confirm dialog
         var confirmPopup = $ionicPopup.confirm({
-            title: '',
+            title: Title,
             templateUrl: 'templates/MessageMain.html',
-            cssClass: 'custom-popup'
-            //buttons: [
-            //    {
-            //        text: 'cancel'
-            //
-            //    },
-            //    {
-            //        text: 'OK',
-            //        type: 'button-positive',
-            //        onTap: function (e) {
-            //          document.location.href = 'tel:80055';
-            //        }
-            //    }
-            //]
+            cssClass: 'custom-popup',
+            buttons: [
+                {
+                    text: BtnCancel
+
+                },
+                {
+                    text: BtnOK,
+                    type: 'button-positive'
+                }
+            ]
         });
 
         confirmPopup.then(function (res) {
@@ -475,13 +505,11 @@ app.controller('mainController', function ($scope,
     };
 
 
-
-
     $scope.callAlert3 = function () {
         //document.location.href = 'tel:80055';
         //A confirm dialog
 
-        var name =   localStorage.getItem("Device_Model");
+        var name = localStorage.getItem("Device_Model");
         var naem2 = $rootScope.iosCSS2;
         var confirmPopup = $ionicPopup.confirm({
             title: name,
@@ -510,9 +538,6 @@ app.controller('mainController', function ($scope,
             }
         });
     };
-
-
-
 
 
     $scope.Answer1 = function (id) {
@@ -578,13 +603,13 @@ app.controller('splashController', function ($scope, $state, $rootScope, $timeou
 
     $scope.StartSplash = function () {
         if (localStorage.getItem("lang") === "NA") {
-                $state.go('splash2')
+            $state.go('splash2')
         } else {
-                $ionicHistory.nextViewOptions({
-                    historyRoot: true
-                });
-                $ionicViewService.clearHistory();
-                $state.go('home')
+            $ionicHistory.nextViewOptions({
+                historyRoot: true
+            });
+            $ionicViewService.clearHistory();
+            $state.go('home')
         }
     };
 
@@ -702,6 +727,22 @@ function ($scope) {
             return "templates/en/Messages2.html"
         } else {
             return "templates/ar/Messages2.html"
+        }
+
+    };
+
+})
+
+
+app.controller("CallController", /**
+ * Home Page Controller
+ */
+function ($scope) {
+    $scope.getMessage2 = function () {
+        if (localStorage.getItem("lang") === "en") {
+            return "templates/en/CallTemplate.html"
+        } else {
+            return "templates/ar/CallTemplate.html"
         }
 
     };
