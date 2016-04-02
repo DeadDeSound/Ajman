@@ -481,9 +481,10 @@ app.controller('mainController', function ($scope,
         //A confirm dialog
 
         var name =   localStorage.getItem("Device_Model");
+        var naem2 = $rootScope.iosCSS2;
         var confirmPopup = $ionicPopup.confirm({
             title: name,
-            template: '',
+            template: naem2,
             cssClass: 'custom-popup'
             //buttons: [
             //    {
