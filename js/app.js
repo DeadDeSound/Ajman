@@ -33,10 +33,10 @@ app.run(function ($ionicPlatform, $cordovaStatusbar, $rootScope, $window, $ionic
         $rootScope.iosCSS = "Iphon";
         console.log("IOS CSS 2 " + $rootScope.iosCSS);
 
-        //
-        //if(localStorage.getItem("Device_Model")=="Iphone 5"){
-        //     $rootScope.iosCSS2 = "Iphone5";
-        //}
+
+        if (localStorage.getItem("Device_Model") > 6.2 ){
+            $rootScope.iosCSS2 = "Iphon6";
+        }
 
 
     }
