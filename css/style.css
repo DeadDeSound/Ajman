@@ -32,59 +32,26 @@
     width: 24px;
 }
 
-
-/*.Circle-Left{*/
-    /*left: 45%;*/
-    /*top: 38%;*/
-/*}*/
-
-/*.circle-container {*/
-    /*position: relative;*/
-    /*width: 100%;*/
-    /*height: 100%;*/
-    /*padding: 0; /!*= 2em * 1.4 (2em = half the width of an img, 1.4 = sqrt(2))*!/*/
-    /*/!*border: dashed 5px;*!/*/
-    /*border-radius: 50%;*/
-    /*margin: 0 auto;*/
-/*}*/
-
-/*.circle-container a {*/
-    /*display: block;*/
-    /*overflow: hidden;*/
-    /*position: absolute;*/
-    /*top: 50%;*/
-    /*left: 50%;*/
-    /*width: 6em;*/
-    /*height: 6em;*/
-    /*margin: -3em; /!* 2em = 4em/2 *!/*/
-    /*/!* half the width *!/*/
-/*}*/
-
-/*.circle-container img {*/
-    /*display: block;*/
-    /*overflow: hidden;*/
-    /*position: absolute;*/
-    /*top: 10%;*/
-    /*left: 10%;*/
-    /*width: 36%;*/
-    /*height: auto;*/
-    /*margin: -50%; /!* 2em = 4em/2 *!/*/
-    /*/!* half the width *!/*/
-/*}*/
+.Circle-Flex{
+    height: 65%;
+    width: 100%;
+    display: flex;
+    vertical-align: middle;
+    text-align: center;
+}
 
 .Circle-Left{
-   left: -25%;
-    top: -10%;
+    left: -23%;
 }
 
 .circle-container {
     position: relative;
-    width: 90%;
-    height: 90%;
-    padding: 0; /*= 2e%m * 1.4 (2em = half the width of an img, 1.4 = sqrt(2))*/
+    width: 29em;
+    height: 29em;
+    padding: 0; /*= 2em * 1.4 (2em = half the width of an img, 1.4 = sqrt(2))*/
     /*border: dashed 5px;*/
     border-radius: 50%;
-    margin: 0 auto;
+    margin: auto;
 }
 
 .circle-container a {
@@ -93,81 +60,79 @@
     position: absolute;
     top: 50%;
     left: 50%;
-    width: 60%;
-    height: 60%;
-    margin: 0em; /* 2em = 4em/2 */
+    width: 6em;
+    height: 6em;
+    margin: -3em; /* 2em = 4em/2 */
     /* half the width */
 }
-/* ionic build ios */
+
 .circle-container img {
     display: block;
     overflow: hidden;
     position: absolute;
     top: 50%;
     left: 50%;
-    width: 43%;
-    height: auto;
-    margin: -24%; /* 2em = 4em/2 */
+    width: 8em;
+    height: 8em;
+    margin: -4.0em; /* 2em = 4em/2 */
     /* half the width */
 }
 
-
-
 .deg0 {
-    transform: rotate(0deg) translate(112%) rotate(-270deg);
-    -webkit-transform: rotate(0deg) translate(112%) rotate(-270deg);
-   -moz-transform: rotate(0deg) translate(112%) rotate(-270deg);
-   -o-transform: rotate(0deg) translate(112%) rotate(-270deg);
+    transform: rotate(0deg) translate(10em) rotate(-270deg);
+    -webkit-transform: rotate(0deg) translate(10em) rotate(-270deg);
+   -moz-transform: rotate(0deg) translate(10em) rotate(-270deg);
+   -o-transform: rotate(0deg) translate(10em) rotate(-270deg);
 }
 
 /* 12em = half the width of the wrapper */
 .deg45 {
-    transform: rotate(45deg) translate(112%) rotate(-270deg);
-    -webkit-transform: rotate(45deg) translate(112%) rotate(-270deg);
-   -moz-transform: rotate(45deg) translate(112%) rotate(-270deg);
-   -o-transform: rotate(45deg) translate(112%) rotate(-270deg);
+    transform: rotate(45deg) translate(10em) rotate(-270deg);
+    -webkit-transform: rotate(45deg) translate(10em) rotate(-270deg);
+   -moz-transform: rotate(45deg) translate(10em) rotate(-270deg);
+   -o-transform: rotate(45deg) translate(10em) rotate(-270deg);
 }
 
 .deg90 {
-    transform: rotate(90deg) translate(112%) rotate(-270deg);
-    -webkit-transform: rotate(90deg) translate(112%) rotate(-270deg);
-   -moz-transform: rotate(90deg) translate(112%) rotate(-270deg);
-   -o-transform: rotate(90deg) translate(112%) rotate(-270deg);
+    transform: rotate(90deg) translate(10em) rotate(-270deg);
+    -webkit-transform: rotate(90deg) translate(10em) rotate(-270deg);
+   -moz-transform: rotate(90deg) translate(10em) rotate(-270deg);
+   -o-transform: rotate(90deg) translate(10em) rotate(-270deg);
 }
 
 .deg135 {
-    transform: rotate(135deg) translate(112%) rotate(-270deg);
-    -webkit-transform: rotate(135deg) translate(112%) rotate(-270deg);
-   -moz-transform: rotate(135deg) translate(112%) rotate(-270deg);
-   -o-transform: rotate(135deg) translate(112%) rotate(-270deg);
+    transform: rotate(135deg) translate(10em) rotate(-270deg);
+    -webkit-transform: rotate(135deg) translate(10em) rotate(-270deg);
+   -moz-transform: rotate(135deg) translate(10em) rotate(-270deg);
+   -o-transform: rotate(135deg) translate(10em) rotate(-270deg);
 }
 
 .deg180 {
-    transform: rotate(180deg) translate(112%) rotate(-270deg);
-    -webkit-transform: rotate(180deg) translate(112%) rotate(-270deg);
-   -moz-transform: rotate(180deg) translate(112%) rotate(-270deg);
-   -o-transform: rotate(180deg) translate(112%) rotate(-270deg);
+    transform: rotate(180deg) translate(10em) rotate(-270deg);
+    -webkit-transform: rotate(180deg) translate(10em) rotate(-270deg);
+   -moz-transform: rotate(180deg) translate(10em) rotate(-270deg);
+   -o-transform: rotate(180deg) translate(10em) rotate(-270deg);
 }
 
 .deg225 {
-    transform: rotate(225deg) translate(112%) rotate(-270deg);
-    -webkit-transform: rotate(225deg) translate(112%) rotate(-270deg);
-   -moz-transform: rotate(225deg) translate(112%) rotate(-270deg);
-   -o-transform: rotate(225deg) translate(112%) rotate(-270deg);
+    transform: rotate(225deg) translate(10em) rotate(-270deg);
+    -webkit-transform: rotate(225deg) translate(10em) rotate(-270deg);
+   -moz-transform: rotate(225deg) translate(10em) rotate(-270deg);
+   -o-transform: rotate(225deg) translate(10em) rotate(-270deg);
 }
 
 .deg270 {
-    transform: rotate(270deg) translate(112%) rotate(-270deg);
-    -webkit-transform: rotate(270deg) translate(112%) rotate(-270deg);
-   -moz-transform: rotate(270deg) translate(112%) rotate(-270deg);
-   -o-transform: rotate(270deg) translate(112%) rotate(-270deg);
+    transform: rotate(270deg) translate(10em) rotate(-270deg);
+    -webkit-transform: rotate(270deg) translate(10em) rotate(-270deg);
+   -moz-transform: rotate(270deg) translate(10em) rotate(-270deg);
+   -o-transform: rotate(270deg) translate(10em) rotate(-270deg);
 }
 
 .deg315 {
-    transform: rotate(315deg) translate(112%) rotate(-270deg);
-    -webkit-transform: rotate(315deg) translate(112%) rotate(-270deg);
-   -moz-transform: rotate(315deg) translate(112%) rotate(-270deg);
-   -o-transform: rotate(315deg) translate(112%) rotate(-270deg);
+    transform: rotate(315deg) translate(10em) rotate(-270deg);
+    -webkit-transform: rotate(315deg) translate(10em) rotate(-270deg);
+   -moz-transform: rotate(315deg) translate(10em) rotate(-270deg);
+   -o-transform: rotate(315deg) translate(10em) rotate(-270deg);
 }
 
 
@@ -184,9 +149,27 @@
     text-indent: -2em;
     text-shadow: 0 0 .1em deeppink;
     transition: .7s; /* only works in Firefox */
-    content: attr(class) 'Â°';
+    content: attr(class) '°';
 }
 
+/*.circle-container a:hover:before {*/
+/*opacity: 1;*/
+/*}*/
+
+/* this is for showing the circle on which the images are placed */
+/*.circle-container:after {*/
+/*position: absolute;*/
+/*top: 2.8em; left: 2.8em;*/
+/*width: 24em; height: 24em;*/
+/*border: dashed 1px deeppink;*/
+/*border-radius: 50%;*/
+/*opacity: .3;*/
+/*pointer-events: none;*/
+/*content: '';*/
+/*}*/
+/*.circle-container:hover:after {*/
+/*opacity: 1;*/
+/*}*/
 
 .circle-container a:not(.center):after {
     position: absolute;
@@ -202,6 +185,20 @@
     content: '';
 }
 
+/*.circle-container:hover a:after {*/
+/*opacity: 1;*/
+/*}*/
+
+/*.circle-container a:hover:after {*/
+/*opacity: .3;*/
+/*}*/
+
+/*.custom-popup.popup-container .popup {*/
+    /*background-color: #896D32;*/
+    /*background-image: url(../img/pattern.jpg);*/
+    /*background-size: 30%;*/
+    /*background-repeat: repeat;*/
+/*}*/
 
 /* Container */
 .popup {
@@ -222,15 +219,27 @@
 
 /* popup body */
 .popup-body {
+    text-align: center;
+}
+.popup-body {
+    padding: .4em;
+    overflow: auto;
+}
+.popup-body span {
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.2em;
+}
+.popup-body {
   background: #f4f4f4 !important;
   color: #000000 !important;
-
-
 }
+
 
 /* buttons */
 .popup-buttons {
   height: 20px !important;
     background: #f1f4f4 !important;
 }
+
 
