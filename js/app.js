@@ -33,8 +33,14 @@ app.run(function ($ionicPlatform, $cordovaStatusbar, $rootScope, $window, $ionic
         $rootScope.iosCSS = "Iphon";
         console.log("IOS CSS 2 " + $rootScope.iosCSS);
 
+        //localStorage.setItem("Device_Model","iPhone8.1");
+        localStorage.setItem("Device_Model", $cordovaDevice.getModel());
 
-        if (localStorage.getItem("Device_Model") =="iPhone8.1"){
+        var Device_Model = localStorage.getItem("Device_Model");
+        console.log("Model" + Device_Model);
+
+        if (Device_Model != "iPhone6.2" && Device_Model != "iPhone6.1") {
+
             $rootScope.iosCSS2 = "Iphon6";
         }
 
@@ -45,7 +51,7 @@ app.run(function ($ionicPlatform, $cordovaStatusbar, $rootScope, $window, $ionic
 
         localStorage.setItem("Device_ID", $cordovaDevice.getUUID());
         $cordovaDevice.getModel();
-        localStorage.setItem("Device_Model", $cordovaDevice.getModel());
+
 
         if (window.cordova && window.cordova.plugins.Keyboard) {
             // Hide the accessory bar by default (remove this to show the accessory bar above the keyboard
