@@ -30,7 +30,7 @@
 }
 
 .popup-body {
-    height: 170px;
+    height: auto;
     padding:.4em;
 }
 
@@ -194,19 +194,5 @@
     display: block;
 }
 
-/**/
-.iFrameion-content div.scroll 
-{
-   height: 90% !important;
-   -webkit-overflow-scrolling: touch !important;
-   overflow: scroll !important;
-   position: absolute;
-   top: 0px;
-}
-.webPage
-{
-   width: 100%;
-   height: 100%;
-}
-/**/
+
 
