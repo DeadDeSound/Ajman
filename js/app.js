@@ -50,7 +50,6 @@ app.run(function ($ionicPlatform, $cordovaStatusbar, $rootScope, $window, $ionic
 
 
         localStorage.setItem("Device_ID", $cordovaDevice.getUUID());
-        $cordovaDevice.getModel();
 
 
         if (window.cordova && window.cordova.plugins.Keyboard) {
