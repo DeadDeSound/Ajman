@@ -372,8 +372,8 @@ app.controller('mainController', function ($scope,
                $state.go('home')
                };
                
-               var appTitle = "Ajman DED"
-               var appLink = "https://play.google.com/store/apps/details?id=com.ajman.ded.ae&hl=en"
+               var appTitle = "Ajman DED";
+               var appLink = "https://play.google.com/store/apps/details?id=com.ajman.ded.ae&hl=en";
                $scope.shareSocial = function () {
                $cordovaSocialSharing.share(appTitle, null, null, appLink);
                };
