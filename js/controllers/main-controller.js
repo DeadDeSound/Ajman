@@ -458,8 +458,9 @@ app.controller('mainController', function ($scope,
         });
 
         confirmPopup.then(function (res) {
-            if (res==BtnOK) {
-               // document.location.href = 'tel:80055';
+            if (res == BtnOK) {
+                // document.location.href = 'tel:80055';
+                document.location.href = 'tel:80055';
                 console.log('Yes');
             } else {
                 console.log('No');
