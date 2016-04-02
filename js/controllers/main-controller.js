@@ -449,7 +449,7 @@ app.controller('mainController', function ($scope,
                     type: 'button-positive',
                     onTap: function (e) {
                         document.location.href = 'tel:80055';
-                        console.log("INside CAll")
+                        console.log("Inside CAll Status")
                     }
 
 
@@ -461,9 +461,9 @@ app.controller('mainController', function ($scope,
             if (res == BtnOK) {
                 // document.location.href = 'tel:80055';
                 document.location.href = 'tel:80055';
-                console.log('Yes');
+                console.log(' CAll Status : Yes');
             } else {
-                console.log('No');
+                console.log('Call Status :  No');
             }
         });
     };
