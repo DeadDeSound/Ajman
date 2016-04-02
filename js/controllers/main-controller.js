@@ -373,7 +373,7 @@ app.controller('mainController', function ($scope,
     };
 
     $scope.shareSocial = function () {
-        $cordovaSocialSharing.share("Ajman", "Ajaman DED", "http://www.ajmanded.ae");
+        $cordovaSocialSharing.share("Ajman", "Ajaman DED", "https://play.google.com/store/apps/details?id=com.ajman.ded.ae&hl=en");
     };
 
 
