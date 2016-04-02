@@ -736,7 +736,7 @@ function ($scope) {
 
     };
 
-})
+});
 
 
 app.controller("CallController", /**
