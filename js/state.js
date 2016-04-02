@@ -1817,6 +1817,84 @@ app.config(function ($stateProvider, $urlRouterProvider, $ionicConfigProvider) {
                         return tpl;
                     });
             }
+        }).state('SpecialRequirements-Signboard', {
+            url: "/SpecialRequirements-Signboard",
+            cache: false,
+            controller: 'mainController',
+            nativeTransitions: {
+                "type": "flip",
+                "direction": "up"
+            },
+            templateProvider: function ($http, $templateCache, $rootScope) {
+                $rootScope.SlidePage = false;
+                var templateName = 'templates/ar/SpecialRequirements-Signboard.html';
+                if (localStorage.getItem("lang") === "en") {
+                    templateName = 'templates/en/SpecialRequirements-Signboard.html';
+                }
+                var tpl = $templateCache.get(templateName);
+                if (tpl) {
+                    return tpl;
+                }
+                return $http
+                    .get(templateName)
+                    .then(function (response) {
+                        tpl = response.data;
+                        $templateCache.put(templateName, tpl);
+                        return tpl;
+                    });
+            }
+        }).state('List-Of-Violation', {
+            url: "/List-Of-Violation",
+            cache: false,
+            controller: 'mainController',
+            nativeTransitions: {
+                "type": "flip",
+                "direction": "up"
+            },
+            templateProvider: function ($http, $templateCache, $rootScope) {
+                $rootScope.SlidePage = false;
+                var templateName = 'templates/ar/List-Of-Violation.html';
+                if (localStorage.getItem("lang") === "en") {
+                    templateName = 'templates/en/List-Of-Violation.html';
+                }
+                var tpl = $templateCache.get(templateName);
+                if (tpl) {
+                    return tpl;
+                }
+                return $http
+                    .get(templateName)
+                    .then(function (response) {
+                        tpl = response.data;
+                        $templateCache.put(templateName, tpl);
+                        return tpl;
+                    });
+            }
+        }).state('Federal-And-Local-Laws', {
+            url: "/Federal-And-Local-Laws",
+            cache: false,
+            controller: 'mainController',
+            nativeTransitions: {
+                "type": "flip",
+                "direction": "up"
+            },
+            templateProvider: function ($http, $templateCache, $rootScope) {
+                $rootScope.SlidePage = false;
+                var templateName = 'templates/ar/Federal-And-Local-Laws.html';
+                if (localStorage.getItem("lang") === "en") {
+                    templateName = 'templates/en/Federal-And-Local-Laws.html';
+                }
+                var tpl = $templateCache.get(templateName);
+                if (tpl) {
+                    return tpl;
+                }
+                return $http
+                    .get(templateName)
+                    .then(function (response) {
+                        tpl = response.data;
+                        $templateCache.put(templateName, tpl);
+                        return tpl;
+                    });
+            }
         });
 
     $urlRouterProvider.otherwise('/splash');
