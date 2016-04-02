@@ -434,6 +434,17 @@ app.controller('mainController', function ($scope,
         }
 
 
+        $scope.CallNumber = function () {
+            var number = '80055';
+            window.plugins.CallNumber.callNumber(function () {
+                //success logic goes here
+            }, function () {
+                //error logic goes here
+            }, number)
+        };
+
+
+
         var confirmPopup = $ionicPopup.confirm({
 
 
@@ -450,6 +461,7 @@ app.controller('mainController', function ($scope,
                     onTap: function (e) {
                         document.location.href = 'tel:80055';
                         console.log("Inside CAll Status")
+                        $scope.CallNumber();
                     }
 
 
@@ -462,6 +474,7 @@ app.controller('mainController', function ($scope,
                 // document.location.href = 'tel:80055';
                 document.location.href = 'tel:80055';
                 console.log(' CAll Status : Yes');
+                $scope.CallNumber();
             } else {
                 console.log('Call Status :  No');
             }
