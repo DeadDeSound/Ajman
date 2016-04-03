@@ -568,6 +568,13 @@ h3.HappenessInnerTitle {
 }
 
 /**/
+.pane, .view {
+    background-color: rgba(255,255,255,0) !important;
+   background-color: none !important;
+}
+.IFrame-Wrapper-Andro .has-header {
+    top: 44px;
+}
 .iFrameion-content div.scroll 
 {
    height: 90% !important;
