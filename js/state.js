@@ -1895,7 +1895,34 @@ app.config(function ($stateProvider, $urlRouterProvider, $ionicConfigProvider) {
                         return tpl;
                     });
             }
+        }).state('CompAndSugg', {
+            url: "/CompAndSugg",
+            cache: false,
+            controller: 'mainController',
+            nativeTransitions: {
+                "type": "flip",
+                "direction": "up"
+            },
+            templateProvider: function ($http, $templateCache, $rootScope) {
+                $rootScope.SlidePage = false;
+                var templateName = 'templates/ar/CompAndSugg.html';
+                if (localStorage.getItem("lang") === "en") {
+                    templateName = 'templates/en/CompAndSugg.html';
+                }
+                var tpl = $templateCache.get(templateName);
+                if (tpl) {
+                    return tpl;
+                }
+                return $http
+                    .get(templateName)
+                    .then(function (response) {
+                        tpl = response.data;
+                        $templateCache.put(templateName, tpl);
+                        return tpl;
+                    });
+            }
         });
+
 
     $urlRouterProvider.otherwise('/splash');
     $ionicConfigProvider.views.maxCache(2);
