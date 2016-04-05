@@ -878,6 +878,7 @@ app.config(function ($stateProvider, $urlRouterProvider, $ionicConfigProvider) {
                 $rootScope.SlidePage = false;
 
 
+
                    if (ionic.Platform.isAndroid()) {
                     var templateName = 'templates/ar/OnlineServices.html';
                     if (localStorage.getItem("lang") === "en") {
