@@ -876,10 +876,20 @@ app.config(function ($stateProvider, $urlRouterProvider, $ionicConfigProvider) {
             },
             templateProvider: function ($http, $templateCache, $rootScope) {
                 $rootScope.SlidePage = false;
-                var templateName = 'templates/ar/OnlineServices.html';
-                if (localStorage.getItem("lang") === "en") {
-                    templateName = 'templates/en/OnlineServices.html';
+
+
+                   if (ionic.Platform.isAndroid()) {
+                    var templateName = 'templates/ar/OnlineServices.html';
+                    if (localStorage.getItem("lang") === "en") {
+                        templateName = 'templates/en/OnlineServices.html';
+                    }
+                }else{
+                      var templateName = 'templates/ar/OnlineServices_Ios.html';
+                    if (localStorage.getItem("lang") === "en") {
+                        templateName = 'templates/en/OnlineServices_Ios.html';
+                    }
                 }
+
                 var tpl = $templateCache.get(templateName);
                 if (tpl) {
                     return tpl;
