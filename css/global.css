@@ -589,3 +589,19 @@ h3.HappenessInnerTitle {
    height: 100%;
 }
 /**/
+
+
+ul.Listdisc{}
+ul.Listdisc li {
+list-style: disc outside none;
+display: list-item;
+margin: .5em 2em;
+}
+
+ul.Listdecimal{}
+ul.Listdecimal li
+{
+list-style: decimal outside none;
+display: list-item;
+margin: .5em 2em;
+}
