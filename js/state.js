@@ -661,8 +661,8 @@ app.config(function ($stateProvider, $urlRouterProvider, $ionicConfigProvider) {
                     if (localStorage.getItem("lang") === "en") {
                         templateName = 'templates/en/Registration.html';
                     }
-                }else{
-                      var templateName = 'templates/ar/Registration_IOS.html';
+                } else {
+                    var templateName = 'templates/ar/Registration_IOS.html';
                     if (localStorage.getItem("lang") === "en") {
                         templateName = 'templates/en/Registration_IOS_En.html';
                     }
@@ -878,14 +878,13 @@ app.config(function ($stateProvider, $urlRouterProvider, $ionicConfigProvider) {
                 $rootScope.SlidePage = false;
 
 
-
-                   if (ionic.Platform.isAndroid()) {
+                if (ionic.Platform.isAndroid()) {
                     var templateName = 'templates/ar/OnlineServices.html';
                     if (localStorage.getItem("lang") === "en") {
                         templateName = 'templates/en/OnlineServices.html';
                     }
-                }else{
-                      var templateName = 'templates/ar/OnlineServices_Ios.html';
+                } else {
+                    var templateName = 'templates/ar/OnlineServices_Ios.html';
                     if (localStorage.getItem("lang") === "en") {
                         templateName = 'templates/en/OnlineServices_Ios.html';
                     }
@@ -1147,10 +1146,20 @@ app.config(function ($stateProvider, $urlRouterProvider, $ionicConfigProvider) {
             },
             templateProvider: function ($http, $templateCache, $rootScope) {
                 $rootScope.SlidePage = false;
-                var templateName = 'templates/ar/renewal.html';
-                if (localStorage.getItem("lang") === "en") {
-                    templateName = 'templates/en/renewal.html';
+
+                if (ionic.Platform.isAndroid()) {
+                    var templateName = 'templates/ar/renewal.html';
+                    if (localStorage.getItem("lang") === "en") {
+                        templateName = 'templates/en/renewal.html';
+                    }
+                } else {
+                    var templateName = 'templates/ar/renewal_IOS.html';
+                    if (localStorage.getItem("lang") === "en") {
+                        templateName = 'templates/en/renewal_IOS.html';
+                    }
                 }
+
+
                 var tpl = $templateCache.get(templateName);
                 if (tpl) {
                     return tpl;
