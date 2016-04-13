@@ -360,7 +360,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e7d8b9', end
 /**/
 .NextBtn
 {
-    display: block;
+    display: inline-block;
     text-align: center;
     padding: .5em 1em;
     background-color: #b6985a;
@@ -379,7 +379,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e7d8b9', end
 
 .NextBtn_Ar
 {
-    display: block;
+    display: inline-block;
     text-align: center;
     padding: .5em 1em;
     background-color: #b6985a;
