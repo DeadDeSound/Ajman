@@ -162,6 +162,7 @@ p {
 
 li {
     list-style: none;
+    font-size: .9em;
 }
 
 /*.platform-android .bar .title {
