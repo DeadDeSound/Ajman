@@ -276,7 +276,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e7d8b9', end
 .VerticalListBlock2 ul li
 {
     padding: .4em;
-    margin: .4em .4em;
+    margin: .4em .4em 0 .4em;
     display: block;
     text-align: center;
     position: relative;
@@ -290,9 +290,13 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e7d8b9', end
     position: relative;
     border: 1px solid #987b3f;
     border-radius: 100%;
-    width: 6em;
-    height: 6em;
+    width: 5.5em;
+    height: 5.5em;
     background-color: #FFF;
+}
+.VerticalListBlock2 ul li .icon img
+{
+    padding: .3em;
 }
 .VerticalListBlock2 ul li h2
 {
@@ -350,4 +354,44 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e7d8b9', end
     display: -webkit-box;
     -webkit-line-clamp: 3;
     -webkit-box-orient: vertical;
+}
+
+
+/**/
+.NextBtn
+{
+    display: block;
+    text-align: center;
+    padding: .5em 1em;
+    background-color: #b6985a;
+    border: 0;
+    border-radius: .4em;
+    position:absolute;
+    bottom: 1em;
+    left: 1em;
+    z-index: 9999;
+}
+.NextBtn a
+{
+    color: #FFF;
+    text-decoration: none;
+}
+
+.NextBtn_Ar
+{
+    display: block;
+    text-align: center;
+    padding: .5em 1em;
+    background-color: #b6985a;
+    border: 0;
+    border-radius: .4em;
+    position:absolute;
+    bottom: 1em;
+    right: 1em;
+    z-index: 9999;
+}
+.NextBtn_Ar a
+{
+    color: #FFF;
+    text-decoration: none;
 }
