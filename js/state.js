@@ -30,7 +30,7 @@ app.config(function ($stateProvider, $urlRouterProvider, $ionicConfigProvider) {
             }
         }).state('splash2', {
             url: '/splash2',
-            controller: 'splashController',
+            controller: 'splash2Controller',
             templateProvider: function ($http, $templateCache, $rootScope) {
                 $rootScope.SlidePage = true;
                 var templateName = 'templates/splash2.html';

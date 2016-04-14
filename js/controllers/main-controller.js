@@ -595,42 +595,52 @@ app.controller('mainController', function ($scope,
 
 app.controller('splashController', function ($scope, $state, $rootScope, $timeout, $ionicViewService, $ionicHistory, $window) {
 
-    $scope.setAr = function () {
-        localStorage.setItem("lang", "ar");
-        $ionicHistory.nextViewOptions({
-            historyRoot: true
-        });
-        $ionicViewService.clearHistory();
-        console.log("SlideTest");
-        $state.go('SlideTest');
-    };
-
-    $scope.setEn = function () {
-        localStorage.setItem("lang", "en");
-        $ionicHistory.nextViewOptions({
-            historyRoot: true
-        });
-        $ionicViewService.clearHistory();
-        console.log("SlideTest");
-        $state.go('SlideTest');
-    };
-
     $scope.StartSplash = function () {
         if (localStorage.getItem("lang") === "NA") {
+            console.log("if NA");
             $state.go('splash2')
         } else {
             $ionicHistory.nextViewOptions({
                 historyRoot: true
             });
             $ionicViewService.clearHistory();
+            console.log("if exist");
             $state.go('home')
         }
     };
 
     $timeout(function () {
+        console.log("if start Splash")
         $scope.StartSplash();
     }, 8000);
 
+});
+
+app.controller('splash2Controller', function ($scope, $state, $rootScope, $timeout, $ionicViewService, $ionicHistory, $window) {
+
+    $scope.setAr = function () {
+        localStorage.setItem("lang", "ar");
+        console.log("set Ar");
+        $ionicHistory.nextViewOptions({
+            historyRoot: true
+        });
+        $ionicViewService.clearHistory();
+        console.log("SlideTest");
+        console.log("go silde test");
+        $state.go('SlideTest');
+    };
+
+    $scope.setEn = function () {
+        console.log("set en");
+        localStorage.setItem("lang", "en");
+        $ionicHistory.nextViewOptions({
+            historyRoot: true
+        });
+        $ionicViewService.clearHistory();
+        console.log("SlideTest");
+        console.log("go slide test");
+        $state.go('SlideTest');
+    };
 });
 
 
