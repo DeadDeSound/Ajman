@@ -302,7 +302,7 @@ app.controller('mainController', function ($scope,
 
 
     $scope.model = NewsService;
-    NewsService.LoadNotification( localStorage.getItem("Device_ID"));
+    NewsService.LoadNotification(localStorage.getItem("Device_ID"));
 
 
     $scope.getInclude = function () {
@@ -378,8 +378,18 @@ app.controller('mainController', function ($scope,
         $state.go('home')
     };
 
+
+    if (ionic.Platform.isAndroid()) {
+        var appLink = "https://play.google.com/store/apps/details?id=com.ajman.ded.ae&hl=en";
+    } else {
+        var appLink = "https://itunes.apple.com/eg/app/ajman-ded/id1098206759?mt=8";
+
+    }
+
+
     var appTitle = "Ajman DED";
-    var appLink = "https://play.google.com/store/apps/details?id=com.ajman.ded.ae&hl=en";
+//    var appLink = "https://play.google.com/store/apps/details?id=com.ajman.ded.ae&hl=en";
+
     $scope.shareSocial = function () {
         $cordovaSocialSharing.share(appTitle, null, null, appLink);
     };
