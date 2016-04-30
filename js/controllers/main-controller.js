@@ -391,6 +391,7 @@ app.controller('mainController', function ($scope,
 //    var appLink = "https://play.google.com/store/apps/details?id=com.ajman.ded.ae&hl=en";
 
     $scope.shareSocial = function () {
+        console.log("App Link",appLink);
         $cordovaSocialSharing.share(appTitle, null, null, appLink);
     };
 
