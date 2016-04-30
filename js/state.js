@@ -1954,6 +1954,58 @@ app.config(function ($stateProvider, $urlRouterProvider, $ionicConfigProvider) {
                         return tpl;
                     });
             }
+        }).state('LegalAdvisor', {
+            url: "/LegalAdvisor",
+            cache: false,
+            controller: 'mainController',
+            nativeTransitions: {
+                "type": "flip",
+                "direction": "up"
+            },
+            templateProvider: function ($http, $templateCache, $rootScope) {
+                $rootScope.SlidePage = false;
+                var templateName = 'templates/ar/LegalAdvisor.html';
+                if (localStorage.getItem("lang") === "en") {
+                    templateName = 'templates/en/LegalAdvisor.html';
+                }
+                var tpl = $templateCache.get(templateName);
+                if (tpl) {
+                    return tpl;
+                }
+                return $http
+                    .get(templateName)
+                    .then(function (response) {
+                        tpl = response.data;
+                        $templateCache.put(templateName, tpl);
+                        return tpl;
+                    });
+            }
+        }).state('EconomicAdvisor', {
+            url: "/EconomicAdvisor",
+            cache: false,
+            controller: 'mainController',
+            nativeTransitions: {
+                "type": "flip",
+                "direction": "up"
+            },
+            templateProvider: function ($http, $templateCache, $rootScope) {
+                $rootScope.SlidePage = false;
+                var templateName = 'templates/ar/EconomicAdvisor.html';
+                if (localStorage.getItem("lang") === "en") {
+                    templateName = 'templates/en/EconomicAdvisor.html';
+                }
+                var tpl = $templateCache.get(templateName);
+                if (tpl) {
+                    return tpl;
+                }
+                return $http
+                    .get(templateName)
+                    .then(function (response) {
+                        tpl = response.data;
+                        $templateCache.put(templateName, tpl);
+                        return tpl;
+                    });
+            }
         });
 
 
