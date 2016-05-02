@@ -2006,6 +2006,32 @@ app.config(function ($stateProvider, $urlRouterProvider, $ionicConfigProvider) {
                         return tpl;
                     });
             }
+        }).state('CommercialPermits', {
+            url: "/CommercialPermits",
+            cache: false,
+            controller: 'mainController',
+            nativeTransitions: {
+                "type": "flip",
+                "direction": "up"
+            },
+            templateProvider: function ($http, $templateCache, $rootScope) {
+                $rootScope.SlidePage = false;
+                var templateName = 'templates/ar/CommercialPermits.html';
+                if (localStorage.getItem("lang") === "en") {
+                    templateName = 'templates/en/CommercialPermits.html';
+                }
+                var tpl = $templateCache.get(templateName);
+                if (tpl) {
+                    return tpl;
+                }
+                return $http
+                    .get(templateName)
+                    .then(function (response) {
+                        tpl = response.data;
+                        $templateCache.put(templateName, tpl);
+                        return tpl;
+                    });
+            }
         });
 
 
