@@ -569,7 +569,7 @@ app.controller('mainController', function ($scope,
         document.getElementById("happy1").className = "Happeness-face1";
         document.getElementById("happy2").className = "Happeness-face2-Light";
         document.getElementById("happy3").className = "Happeness-face3-Light";
-        NewsService.LoadVote_SendAnswer(1, 1, id);
+        NewsService.LoadVote_SendAnswer(localStorage.getItem("Device_ID"), 1, id);
         console.log("Answer 1 ");
         console.log(document.getElementById("happy1").className);
 
@@ -578,7 +578,7 @@ app.controller('mainController', function ($scope,
         document.getElementById("happy2").className = "Happeness-face2";
         document.getElementById("happy1").className = "Happeness-face1-Light";
         document.getElementById("happy3").className = "Happeness-face3-Light";
-        NewsService.LoadVote_SendAnswer(1, 1, id);
+        NewsService.LoadVote_SendAnswer(localStorage.getItem("Device_ID"), 1, id);
         console.log("Answer 2 ");
         console.log(document.getElementById("happy2").className);
 
@@ -587,7 +587,7 @@ app.controller('mainController', function ($scope,
         document.getElementById("happy3").className = "Happeness-face3";
         document.getElementById("happy1").className = "Happeness-face1-Light";
         document.getElementById("happy2").className = "Happeness-face2-Light";
-        NewsService.LoadVote_SendAnswer(1, 1, id);
+        NewsService.LoadVote_SendAnswer(localStorage.getItem("Device_ID"), 1, id);
         console.log("Answer 3 ");
         console.log(document.getElementById("happy3").className);
 
