@@ -243,3 +243,17 @@
 }
 
 
+/**/
+.circle-container-img
+{
+    width: 7em !important;
+    height: 7em !important;
+    margin: -3.5em !important;
+    display: block;
+    overflow: hidden;
+    position: absolute;
+        top: 50%;
+    left: 50%;
+    z-index: 999999
+
+}
