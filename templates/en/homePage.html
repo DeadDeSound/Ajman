@@ -21,8 +21,9 @@
         </div>
 
         <div class="Circle-Flex">
+
             <div class='circle-container Circle-Left animated04 rotateIn'>
-                <img src='img/home/en/home.png'>
+              <div ng-click="record()"> <img  src='img/home/en/home.png'> </div>
 
                 <div class='circle-container' id="C-container">
                     <img ui-sref="contact" class='deg0' src='img/home/en/contact.png'>
@@ -38,6 +39,7 @@
         </div>
 
         <div class="Home-Bottm-Logo animated04 fadeIn">
+            <h1>{{recognizedText}}</h1>
             <img src="img/ajmanlogo.png"/>
         </div>
     </ion-content>

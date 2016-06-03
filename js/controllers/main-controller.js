@@ -5,7 +5,7 @@
 
 var app = angular.module('mainController', []);
 
-app.controller('homeCtrl', function ($scope) {
+app.controller('homeCtrl', function ($scope, $state) {
 
     var currentPlatformVersion = ionic.Platform.version();
     //var mainVersion = currentPlatformVersion.split('.')[0];
@@ -232,6 +232,38 @@ app.controller('homeCtrl', function ($scope) {
             throwProps: true
         });
     }
+
+
+    $scope.recognizedText = '';
+    $scope.record = function () {
+        console.log("hello record");
+        var recognition = new SpeechRecognition();
+        recognition.onresult = function (event) {
+            if (event.results.length > 0) {
+                $scope.recognizedText = event.results[0][0].transcript;
+                $scope.$apply();
+
+
+                if ($scope.recognizedText == "online service" || $scope.recognizedText == "online services" ) {
+                    $state.go('OnlineServices');
+                }else if($scope.recognizedText == "contact" || $scope.recognizedText == "contact us"  || $scope.recognizedText == "contactos"  ){
+                    $state.go('contact');
+
+                }else if($scope.recognizedText == "about" || $scope.recognizedText == "about us"  || $scope.recognizedText == "about it" ){
+                    $state.go('about');
+
+                }else if($scope.recognizedText == "activities guide" || $scope.recognizedText == "activitie guide" || $scope.recognizedText == "activities"   ){
+                    $state.go('activitiesGuide');
+
+                }else if($scope.recognizedText == "services guide" || $scope.recognizedText == "service guide"  ){
+                    $state.go('servicesGuide');
+
+                }
+            }
+        };
+        recognition.start();
+    };
+
 });
 
 app.controller('mainController', function ($scope,
@@ -246,6 +278,9 @@ app.controller('mainController', function ($scope,
                                            $ionicPopup,
                                            $ionicSlideBoxDelegate,
                                            $window, NewsService, $ionicPlatform, $cordovaDevice) {
+
+
+
 
 
     $stateParams.locale = localStorage.getItem("lang");
@@ -391,7 +426,7 @@ app.controller('mainController', function ($scope,
 //    var appLink = "https://play.google.com/store/apps/details?id=com.ajman.ded.ae&hl=en";
 
     $scope.shareSocial = function () {
-        console.log("App Link",appLink);
+        console.log("App Link", appLink);
         $cordovaSocialSharing.share(appTitle, null, null, appLink);
     };
 
