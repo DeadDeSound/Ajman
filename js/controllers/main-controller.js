@@ -233,68 +233,69 @@ app.controller('homeCtrl', function ($scope, $ionicPopup, $state) {
         });
     }
 
-
-    $scope.VoicePopUpDialog = function () {
-        //document.location.href = 'tel:80055';
-        //A confirm dialog
-
-
-        if (localStorage.getItem("lang") === "en") {
-
-            var Title = "Voice Recognition";
-            var BtnOK = "Ok";
-            var BtnCancel = "Cancel";
-        } else {
-            var Title = "Voice Recognition";
-            var BtnOK = "Ok";
-            var BtnCancel = "Cancel";
-
-        }
-
-
-       var confirmPopup = $ionicPopup.alert({
-            title: Title,
+    $scope.myPopup;
+    $scope.showPopup = function () {
+        // An elaborate, custom popup
+        $scope.myPopup = $ionicPopup.alert({
             templateUrl: 'templates/VoiceRecognitionDialog.html',
-            cssClass: 'custom-popup'
+            title: 'Voice Recognition',
+            subTitle: 'Please speak the page',
+            scope: $scope
         });
-
-        $scope.closeDialog = function () {
-            confirmPopup.close();
-        }
-
 
     };
 
+    $scope.closeDialog = function () {
+        $scope.myPopup.close();
+    };
 
-    $scope.recognizedText = 'Speak Now';
+    $scope.VoiceReognitionCheckLang = function () {
+        if (localStorage.getItem("lang") === "en") {
+            return "templates/en/VoiceRecognitionTemplate.html"
+        } else {
+            return "templates/en/VoiceRecognitionTemplate.html"
+        }
+
+    };
+
+    $scope.VoicePopUpDialog = function () {
+        $scope.showPopup();
+    };
+
+
+    $scope.recognizedText = 'Click then Speak';
     $scope.record = function () {
-        console.log("hello record");
+        console.log("recording...");
+        $scope.recognizedText = 'recording...';
         var recognition = new SpeechRecognition();
         recognition.onresult = function (event) {
             if (event.results.length > 0) {
                 $scope.recognizedText = event.results[0][0].transcript;
+                //$scope.closeDialog();
                 $scope.$apply();
-
-
-                if ($scope.recognizedText == "online service" || $scope.recognizedText == "online services") {
+                if ($scope.recognizedText.indexOf("online") > -1) {
                     $state.go('OnlineServices');
-                } else if ($scope.recognizedText == "contact" || $scope.recognizedText == "contact us" || $scope.recognizedText == "contactos") {
+                    $scope.closeDialog();
+                } else if ($scope.recognizedText.indexOf("contact") > -1) {
                     $state.go('contact');
-
-                } else if ($scope.recognizedText == "about" || $scope.recognizedText == "about us" || $scope.recognizedText == "about it") {
+                    $scope.closeDialog();
+                } else if ($scope.recognizedText.indexOf("about") > -1) {
                     $state.go('about');
-
-                } else if ($scope.recognizedText == "activities guide" || $scope.recognizedText == "activitie guide" || $scope.recognizedText == "activities") {
+                    $scope.closeDialog();
+                } else if ($scope.recognizedText.indexOf("activit") > -1) {
                     $state.go('activitiesGuide');
-
-                } else if ($scope.recognizedText == "services guide" || $scope.recognizedText == "service guide") {
+                    $scope.closeDialog();
+                } else if ($scope.recognizedText.indexOf("servic") > -1) {
                     $state.go('servicesGuide');
-
-                }else if ($scope.recognizedText == "regulations" || $scope.recognizedText == "regulation") {
+                    $scope.closeDialog();
+                } else if ($scope.recognizedText.indexOf("regula") > -1) {
                     $state.go('regulations');
-
-                }else if ($scope.recognizedText == "investment" || $scope.recognizedText == "Invest in Ajman" || $scope.recognizedText == "Invest") {
+                    $scope.closeDialog();
+                } else if ($scope.recognizedText.indexOf("invest") > -1) {
                     $state.go('investment');
+                    $scope.closeDialog();
+                } else {
+                    $scope.recognizedText = "I'm Confused, What Page You Want?"
                 }
             }
         };
@@ -302,7 +303,8 @@ app.controller('homeCtrl', function ($scope, $ionicPopup, $state) {
     };
 
 
-});
+})
+;
 
 app.controller('mainController', function ($scope,
                                            $rootScope,
