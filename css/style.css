@@ -246,14 +246,38 @@
 /**/
 .circle-container-img
 {
-    width: 7em !important;
-    height: 7em !important;
-    margin: -3.5em !important;
+    width: 8em !important;
+    height: 8em !important;
+    margin: -4.0em !important;
     display: block;
-    overflow: hidden;
+    /*overflow: hidden;*/
     position: absolute;
         top: 50%;
     left: 50%;
     z-index: 999999
 
+}
+.circle-container-img img
+{
+    width: 8em !important;
+    height: 8em !important;
+}
+
+
+.VoiceRecognitionDialogImg
+{
+    display: block;
+    width: 100%;
+    text-align: center
+}
+.VoiceRecognitionDialogImg img
+{
+    width: 50%;
+}
+.VoiceRecognitionDialogImgtxt
+{
+    font-size: 1.4em;
+    color: #767676;
+    font-weight: normal;
+    padding: .4em
 }
