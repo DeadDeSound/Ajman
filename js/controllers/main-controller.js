@@ -5,7 +5,7 @@
 
 var app = angular.module('mainController', []);
 
-app.controller('homeCtrl', function ($scope, $state) {
+app.controller('homeCtrl', function ($scope, $ionicPopup, $state) {
 
     var currentPlatformVersion = ionic.Platform.version();
     //var mainVersion = currentPlatformVersion.split('.')[0];
@@ -234,7 +234,39 @@ app.controller('homeCtrl', function ($scope, $state) {
     }
 
 
-    $scope.recognizedText = '';
+    $scope.VoicePopUpDialog = function () {
+        //document.location.href = 'tel:80055';
+        //A confirm dialog
+
+
+        if (localStorage.getItem("lang") === "en") {
+
+            var Title = "Voice Recognition";
+            var BtnOK = "Ok";
+            var BtnCancel = "Cancel";
+        } else {
+            var Title = "Voice Recognition";
+            var BtnOK = "Ok";
+            var BtnCancel = "Cancel";
+
+        }
+
+
+       var confirmPopup = $ionicPopup.alert({
+            title: Title,
+            templateUrl: 'templates/VoiceRecognitionDialog.html',
+            cssClass: 'custom-popup'
+        });
+
+        $scope.closeDialog = function () {
+            confirmPopup.close();
+        }
+
+
+    };
+
+
+    $scope.recognizedText = 'Speak Now';
     $scope.record = function () {
         console.log("hello record");
         var recognition = new SpeechRecognition();
@@ -244,25 +276,31 @@ app.controller('homeCtrl', function ($scope, $state) {
                 $scope.$apply();
 
 
-                if ($scope.recognizedText == "online service" || $scope.recognizedText == "online services" ) {
+                if ($scope.recognizedText == "online service" || $scope.recognizedText == "online services") {
                     $state.go('OnlineServices');
-                }else if($scope.recognizedText == "contact" || $scope.recognizedText == "contact us"  || $scope.recognizedText == "contactos"  ){
+                } else if ($scope.recognizedText == "contact" || $scope.recognizedText == "contact us" || $scope.recognizedText == "contactos") {
                     $state.go('contact');
 
-                }else if($scope.recognizedText == "about" || $scope.recognizedText == "about us"  || $scope.recognizedText == "about it" ){
+                } else if ($scope.recognizedText == "about" || $scope.recognizedText == "about us" || $scope.recognizedText == "about it") {
                     $state.go('about');
 
-                }else if($scope.recognizedText == "activities guide" || $scope.recognizedText == "activitie guide" || $scope.recognizedText == "activities"   ){
+                } else if ($scope.recognizedText == "activities guide" || $scope.recognizedText == "activitie guide" || $scope.recognizedText == "activities") {
                     $state.go('activitiesGuide');
 
-                }else if($scope.recognizedText == "services guide" || $scope.recognizedText == "service guide"  ){
+                } else if ($scope.recognizedText == "services guide" || $scope.recognizedText == "service guide") {
                     $state.go('servicesGuide');
 
+                }else if ($scope.recognizedText == "regulations" || $scope.recognizedText == "regulation") {
+                    $state.go('regulations');
+
+                }else if ($scope.recognizedText == "investment" || $scope.recognizedText == "Invest in Ajman" || $scope.recognizedText == "Invest") {
+                    $state.go('investment');
                 }
             }
         };
         recognition.start();
     };
+
 
 });
 
@@ -278,9 +316,6 @@ app.controller('mainController', function ($scope,
                                            $ionicPopup,
                                            $ionicSlideBoxDelegate,
                                            $window, NewsService, $ionicPlatform, $cordovaDevice) {
-
-
-
 
 
     $stateParams.locale = localStorage.getItem("lang");
@@ -521,6 +556,8 @@ app.controller('mainController', function ($scope,
             }
         });
     };
+
+
     $scope.callAlert2 = function () {
 
 
@@ -820,4 +857,18 @@ function ($scope) {
 });
 
 
+app.controller("VoiceRecognitionController", /**
+ * Home Page Controller
+ */
+function ($scope, $state) {
+    $scope.VoiceReognitionCheckLang = function () {
+        if (localStorage.getItem("lang") === "en") {
+            return "templates/en/VoiceRecognitionTemplate.html"
+        } else {
+            return "templates/en/VoiceRecognitionTemplate.html"
+        }
 
+    };
+
+
+});

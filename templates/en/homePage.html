@@ -24,7 +24,7 @@
 
             <div class='circle-container Circle-Left animated04 rotateIn'>
 
-                <div ng-click="record()" class="circle-container-img"> <img src='img/home/en/home.png'> </div>
+                <div ng-click="VoicePopUpDialog()" class="circle-container-img"> <img src='img/home/en/home.png'> </div>
                 <div class='circle-container' id="C-container">
                     <img ui-sref="contact" class='deg0' src='img/home/en/contact.png'>
                     <img ui-sref="manual" class='deg45' src='img/home/en/guide.png'>
@@ -39,7 +39,7 @@
         </div>
 
         <div class="Home-Bottm-Logo animated04 fadeIn">
-            <h1>{{recognizedText}}</h1>
+            <h1 style="font-size: 2em;">{{recognizedText}}</h1>
             <img src="img/ajmanlogo.png"/>
         </div>
     </ion-content>
