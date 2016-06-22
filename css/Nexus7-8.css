@@ -1,0 +1,560 @@
+
+@media screen and (min-width: 600px) and (max-width: 799px)
+{
+
+
+
+/*SideCollapsMenu*/
+.SideCollapsMenu .tabs-icon-top > .tabs .tab-item, 
+.SideCollapsMenu .tabs-icon-top.tabs .tab-item, 
+.SideCollapsMenu .tabs-icon-bottom > .tabs .tab-item, 
+.SideCollapsMenu .tabs-icon-bottom.tabs .tab-item {
+    padding-top: 2.7em;
+}
+.SideCollapsMenu .tabs {
+    height: 100px;
+}
+
+/**/
+.Banner {
+    padding-top: .8em;
+}
+.Status-Bar-Home
+{
+    position: absolute;
+    display: block;
+    width: 100%;
+    top: 0;
+    height: 20px;
+    background-color: #896D32;
+}
+.pane, .view {
+    background-color: none;
+    background-image: url(../img/pattern.jpg);
+    background-size: 20%;
+    background-repeat: repeat;
+}
+
+.popup-body {
+    height: 170px;
+    padding:.4em;
+}
+
+.popup-body span {
+    /*height: 1.2em;
+    display: block;
+    line-height: 1.2em;*/
+    font-family: Tahoma !important;
+    font-size: .9em !important;
+    font-weight: normal !important;
+}
+
+.menu .pane, .menu .view, .menu {
+    background-color: #FFF;
+    background-image: none;
+}
+
+.SideCollapsMenu {
+    top: -75px !important
+}
+
+.NewHeader {
+    top: 0px;
+}
+
+/* HOME CIRCLE */
+
+.Circle-Left {
+    left: -20%;
+}
+.circle-container {
+    width: 53.5em !important;
+    height: 38.5em !important;
+}
+
+.circle-container img {
+    width: 10em !important;
+    max-width: 10em !important;
+    height: 10em !important;
+    margin: -5.0em !important; /* 2em = 4em/2 */
+    /* half the width */
+}
+
+.deg0 {
+    transform: rotate(0deg) translate(12em) rotate(-270deg) !important;
+}
+
+/* 12em = half the width of the wrapper */
+.deg45 {
+    transform: rotate(45deg) translate(12em) rotate(-270deg) !important;
+}
+
+.deg90 {
+    transform: rotate(90deg) translate(12em) rotate(-270deg) !important;
+}
+
+.deg135 {
+    transform: rotate(135deg) translate(12em) rotate(-270deg) !important;
+}
+
+.deg180 {
+    transform: rotate(180deg) translate(12em) rotate(-270deg) !important;
+}
+
+.deg225 {
+    transform: rotate(225deg) translate(12em) rotate(-270deg) !important;
+}
+
+.deg270 {
+    transform: rotate(270deg) translate(12em) rotate(-270deg) !important;
+}
+
+.deg315 {
+    transform: rotate(315deg) translate(12em) rotate(-270deg) !important;
+}
+
+.HorisontalListBlock2 ul li {
+    width: 40% !important;
+}
+
+
+
+.height1em{    height: 0 !important;}
+.platform-android .bar .title {font-size: .2em !important;}
+.my-back-button {width: 18px !important;}
+.my-menu-button {width: 20px !important;}
+
+
+
+/**/
+.MapsTapsWrapper {
+    position: relative !important;
+    height: 14em !important;
+}
+.MapsTapsWrapper .tabs-top > .tabs, .MapsTapsWrapper .tabs.tabs-top {
+    top: 0px !important;
+}
+
+.MapsTapsWrapper .pane, .MapsTapsWrapper .view {
+    position: absolute !important;
+    top: 0 !important;
+    right: 0 !important;
+    left: 0 !important;
+    width: 100% !important;
+    height: 15em !important;
+    background-color: none !important;
+    overflow: hidden !important;
+}
+
+.MapsTapsWrapper .tab-item-active
+{
+    color: #FFF !important;
+    background-color: #896d32 !important;
+}
+.MapsTapsWrapper .tab-item
+{
+    color: #FFF !important;
+    background-color: #b6985a !important;
+}
+.MapsTapsWrapper .padding 
+{
+    padding: 0 !important;
+}
+.MapsTapsWrapper .has-header 
+{
+    padding-top: 0px !important;
+}
+.MapsTapsWrapper .has-header img 
+{
+    max-width: initial !important;
+    height: 12em !important
+}
+/**/
+
+
+
+.Wrapper {
+    height: inherit !important;
+    margin-top: -50px !important;
+    padding-top: 0px !important;
+    padding-bottom: 170px !important;
+    -webkit-overflow-scrolling: touch;
+  	overflow-y: scroll;
+}
+
+
+.Wrapper-Iframe {
+    height: 80vh !important;
+    padding-top: 0px !important;
+    padding-bottom: 0 !important;
+    -webkit-overflow-scrolling: touch;
+    overflow-y: scroll;
+}
+
+.IFrame {
+    top: 0;
+    -webkit-overflow-scrolling: touch;
+    overflow: auto;
+    z-index: 99999;
+    display: block;
+}
+
+
+/**/
+.IFrame-Wrapper-Andro .has-header {
+    top: 0;
+}
+.iFrameion-content div.scroll 
+{
+   height: 90% !important;
+   -webkit-overflow-scrolling: touch !important;
+   overflow: scroll !important;
+   position: absolute;
+   top: 0px;
+}
+.webPage
+{
+   width: 100%;
+   height: 100%;
+}
+/**/
+.Home-Bottm-Logo {
+    bottom: 15%;
+}
+/**/
+
+.footerContainer {
+    height: 133px;
+}
+.BottomWrapper {
+    height: 9.3em;
+}
+.BottomWrapper ul {
+    margin: 4.2em 0 0 0;
+}
+.BottomWrapper ul li img {
+    height: 3.0em;
+}
+.BottomWrapper ul li.Home {
+    margin: -2.2em 0 0 0;
+}
+.BottomWrapper ul li span.AlertsNum {
+    padding: 4px 4px;
+    right: 35%;
+    font-size: 2.0em;
+}
+.BottomWrapper ul li.Home img {
+    width: 60%;
+}
+
+/**/
+
+.Happeness-Width-Table{
+    width: 100%;
+}
+
+.Happeness-face1 {
+    min-height: 7.5em;
+}
+
+.Happeness-face1-Light {
+    min-height: 7.5em;
+}
+
+.Happeness-face2 {
+    min-height: 7.5em;
+}
+
+.Happeness-face2-Light {
+    min-height: 7.5em;
+}
+
+.Happeness-face3 {
+    min-height: 7.5em;
+}
+
+.Happeness-face3-Light {
+    min-height: 7.5em;
+}
+
+}
+
+@media screen and (min-width: 800px)
+{
+
+
+
+/*SideCollapsMenu*/
+.SideCollapsMenu .tabs-icon-top > .tabs .tab-item, 
+.SideCollapsMenu .tabs-icon-top.tabs .tab-item, 
+.SideCollapsMenu .tabs-icon-bottom > .tabs .tab-item, 
+.SideCollapsMenu .tabs-icon-bottom.tabs .tab-item {
+    padding-top: 2.7em;
+}
+.SideCollapsMenu .tabs {
+    height: 100px;
+}
+
+/**/
+.Banner {
+    padding-top: .8em;
+}
+.Status-Bar-Home
+{
+    position: absolute;
+    display: block;
+    width: 100%;
+    top: 0;
+    height: 20px;
+    background-color: #896D32;
+}
+.pane, .view {
+    background-color: none;
+    background-image: url(../img/pattern.jpg);
+    background-size: 20%;
+    background-repeat: repeat;
+}
+
+.popup-body {
+    height: 170px;
+    padding:.4em;
+}
+
+.popup-body span {
+    /*height: 1.2em;
+    display: block;
+    line-height: 1.2em;*/
+    font-family: Tahoma !important;
+    font-size: .9em !important;
+    font-weight: normal !important;
+}
+
+.menu .pane, .menu .view, .menu {
+    background-color: #FFF;
+    background-image: none;
+}
+
+.SideCollapsMenu {
+    top: -75px !important
+}
+
+.NewHeader {
+    top: 0px;
+}
+
+/* HOME CIRCLE */
+
+.Circle-Left {
+    left: -34%;
+}
+.circle-container {
+    width: 53.5em !important;
+    height: 38.5em !important;
+}
+
+.circle-container img {
+    width: 12em !important;
+    max-width: 12em !important;
+    height: 12em !important;
+    margin: -6.0em !important; /* 2em = 4em/2 */
+    /* half the width */
+}
+
+.deg0 {
+    transform: rotate(0deg) translate(15em) rotate(-270deg) !important;
+}
+
+/* 12em = half the width of the wrapper */
+.deg45 {
+    transform: rotate(45deg) translate(15em) rotate(-270deg) !important;
+}
+
+.deg90 {
+    transform: rotate(90deg) translate(15em) rotate(-270deg) !important;
+}
+
+.deg135 {
+    transform: rotate(135deg) translate(15em) rotate(-270deg) !important;
+}
+
+.deg180 {
+    transform: rotate(180deg) translate(15em) rotate(-270deg) !important;
+}
+
+.deg225 {
+    transform: rotate(225deg) translate(15em) rotate(-270deg) !important;
+}
+
+.deg270 {
+    transform: rotate(270deg) translate(15em) rotate(-270deg) !important;
+}
+
+.deg315 {
+    transform: rotate(315deg) translate(15em) rotate(-270deg) !important;
+}
+
+.HorisontalListBlock2 ul li {
+    width: 40% !important;
+}
+
+
+
+.height1em{    height: 0 !important;}
+.platform-android .bar .title {font-size: .2em !important;}
+.my-back-button {width: 18px !important;}
+.my-menu-button {width: 20px !important;}
+
+
+
+/**/
+.MapsTapsWrapper {
+    position: relative !important;
+    height: 14em !important;
+}
+.MapsTapsWrapper .tabs-top > .tabs, .MapsTapsWrapper .tabs.tabs-top {
+    top: 0px !important;
+}
+
+.MapsTapsWrapper .pane, .MapsTapsWrapper .view {
+    position: absolute !important;
+    top: 0 !important;
+    right: 0 !important;
+    left: 0 !important;
+    width: 100% !important;
+    height: 15em !important;
+    background-color: none !important;
+    overflow: hidden !important;
+}
+
+.MapsTapsWrapper .tab-item-active
+{
+    color: #FFF !important;
+    background-color: #896d32 !important;
+}
+.MapsTapsWrapper .tab-item
+{
+    color: #FFF !important;
+    background-color: #b6985a !important;
+}
+.MapsTapsWrapper .padding 
+{
+    padding: 0 !important;
+}
+.MapsTapsWrapper .has-header 
+{
+    padding-top: 0px !important;
+}
+.MapsTapsWrapper .has-header img 
+{
+    max-width: initial !important;
+    height: 12em !important
+}
+/**/
+
+
+
+.Wrapper {
+    height: inherit !important;
+    margin-top: -50px !important;
+    padding-top: 0px !important;
+    padding-bottom: 170px !important;
+    -webkit-overflow-scrolling: touch;
+  	overflow-y: scroll;
+}
+
+
+.Wrapper-Iframe {
+    height: 80vh !important;
+    padding-top: 0px !important;
+    padding-bottom: 0 !important;
+    -webkit-overflow-scrolling: touch;
+    overflow-y: scroll;
+}
+
+.IFrame {
+    top: 0;
+    -webkit-overflow-scrolling: touch;
+    overflow: auto;
+    z-index: 99999;
+    display: block;
+}
+
+
+/**/
+.IFrame-Wrapper-Andro .has-header {
+    top: 0;
+}
+.iFrameion-content div.scroll 
+{
+   height: 90% !important;
+   -webkit-overflow-scrolling: touch !important;
+   overflow: scroll !important;
+   position: absolute;
+   top: 0px;
+}
+.webPage
+{
+   width: 100%;
+   height: 100%;
+}
+/**/
+.Home-Bottm-Logo {
+    bottom: 15%;
+}
+/**/
+
+.footerContainer {
+    height: 133px;
+}
+.BottomWrapper {
+    height: 9.3em;
+}
+.BottomWrapper ul {
+    margin: 4.2em 0 0 0;
+}
+.BottomWrapper ul li img {
+    height: 3.0em;
+}
+.BottomWrapper ul li.Home {
+    margin: -2.2em 0 0 0;
+}
+.BottomWrapper ul li span.AlertsNum {
+    padding: 4px 4px;
+    right: 35%;
+    font-size: 2.0em;
+}
+.BottomWrapper ul li.Home img {
+    width: 60%;
+}
+
+/**/
+
+.Happeness-Width-Table{
+    width: 100%;
+}
+
+.Happeness-face1 {
+    min-height: 7.5em;
+}
+
+.Happeness-face1-Light {
+    min-height: 7.5em;
+}
+
+.Happeness-face2 {
+    min-height: 7.5em;
+}
+
+.Happeness-face2-Light {
+    min-height: 7.5em;
+}
+
+.Happeness-face3 {
+    min-height: 7.5em;
+}
+
+.Happeness-face3-Light {
+    min-height: 7.5em;
+}
+
+}
