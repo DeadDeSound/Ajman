@@ -237,36 +237,28 @@
     right: 35%;
     font-size: 2.0em;
 }
-.BottomWrapper ul li.Home img {
-    width: 60%;
-}
+.BottomWrapper ul li.Home img {    width: 60%;}
 
 /**/
 
-.Happeness-Width-Table{
-    width: 100%;
-}
+.Happeness-Width-Table{    width: 100%;}
 
-.Happeness-face1 {
-    min-height: 7.5em;
-}
+.Happeness-face1 {    min-height: 5.5em;}
 
-.Happeness-face1-Light {
-    min-height: 7.5em;
-}
+.Happeness-face1-Light {    min-height: 5.5em;}
 
-.Happeness-face2 {
-    min-height: 7.5em;
-}
+.Happeness-face2 {    min-height: 5.5em;}
 
-.Happeness-face2-Light {
-    min-height: 7.5em;
-}
+.Happeness-face2-Light {    min-height: 5.5em;}
 
-.Happeness-face3 {
-    min-height: 7.5em;
-}
+.Happeness-face3 {    min-height: 5.5em;}
 
-.Happeness-face3-Light {
-    min-height: 7.5em;
-}
+.Happeness-face3-Light {    min-height: 5.5em;}
+.Happeness-face1-Light,.Happeness-face2-Light,.Happeness-face3-Light {    background-size: 50%;}
+/**/
+.tab-item {    max-width: initial;}
+/**/
+.MapsTapsWrapper {    height: 27em !important;}
+.MapsTapsWrapper .pane, .MapsTapsWrapper .view {    height: 27em !important;}
+.MapsTapsWrapper .has-tabs-top {    height: 25em;}
+.MapsTapsWrapper .has-tabs-top img {    max-width: none;width: 100%;}
