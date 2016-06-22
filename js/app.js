@@ -21,6 +21,9 @@ app.run(function ($rootScope) {
     $rootScope.SlidePage = false;
     $rootScope.iosCSS = "";
     $rootScope.iosCSS2 = "";
+    $rootScope.iPadStyle = "";
+    $rootScope.WinPhone = "";
+
 
 
 });
@@ -45,6 +48,29 @@ app.run(function ($ionicPlatform, $cordovaStatusbar, $rootScope, $window, $ionic
 
 
     }
+    var isWindowsPhone = ionic.Platform.isWindowsPhone();
+    var isIPad = ionic.Platform.isIPad();
+    var currentPlatform = ionic.Platform.platform();
+    console.log("currentPlatform", currentPlatform);
+    console.log("isWindowsPhone", isWindowsPhone);
+
+
+
+    console.log("Is Ipad", isIPad);
+    if (isIPad == true) {
+        $rootScope.iPadStyle = "Ipad";
+
+    }
+
+    if (isWindowsPhone == true) {
+        $rootScope.WinPhone = "WinPhoneStyle";
+
+    }
+
+
+
+
+
     $ionicPlatform.ready(function () {
 
         localStorage.setItem("Device_Model", "");
