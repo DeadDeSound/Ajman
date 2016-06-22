@@ -1,4 +1,12 @@
 /*SideCollapsMenu*/
+body,html
+{
+    font-size: 1.0em;
+}
+p {    font-size: 1em;}
+
+.VerticalListBlock2 ul li h2 {font-size: 1.4em;}
+
 .SideCollapsMenu .tabs-icon-top > .tabs .tab-item, 
 .SideCollapsMenu .tabs-icon-top.tabs .tab-item, 
 .SideCollapsMenu .tabs-icon-bottom > .tabs .tab-item, 
@@ -262,3 +270,7 @@
 .MapsTapsWrapper .pane, .MapsTapsWrapper .view {    height: 27em !important;}
 .MapsTapsWrapper .has-tabs-top {    height: 25em;}
 .MapsTapsWrapper .has-tabs-top img {    max-width: none;width: 100%;}
+
+.tab-title{font-size: 1.5em}
+
+.MainMenu li a {    font-size: 1.1em;}
