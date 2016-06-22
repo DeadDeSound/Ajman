@@ -61,50 +61,50 @@
 .Circle-Left {
     left: -30%;
 }
-
 .circle-container {
-    width: 20.5em !important;
-    height: 26.5em !important;
+    width: 50.5em !important;
+    height: 38.5em !important;
 }
 
 .circle-container img {
-    width: 7em !important;
-    height: 7em !important;
-    margin: -3.5em !important; /* 2em = 4em/2 */
+    width: 11em !important;
+    max-width: 11em !important;
+    height: 11em !important;
+    margin: -5.5em !important; /* 2em = 4em/2 */
     /* half the width */
 }
 
 .deg0 {
-    transform: rotate(0deg) translate(9em) rotate(-270deg) !important;
+    transform: rotate(0deg) translate(13em) rotate(-270deg) !important;
 }
 
 /* 12em = half the width of the wrapper */
 .deg45 {
-    transform: rotate(45deg) translate(9em) rotate(-270deg) !important;
+    transform: rotate(45deg) translate(13em) rotate(-270deg) !important;
 }
 
 .deg90 {
-    transform: rotate(90deg) translate(9em) rotate(-270deg) !important;
+    transform: rotate(90deg) translate(13em) rotate(-270deg) !important;
 }
 
 .deg135 {
-    transform: rotate(135deg) translate(9em) rotate(-270deg) !important;
+    transform: rotate(135deg) translate(13em) rotate(-270deg) !important;
 }
 
 .deg180 {
-    transform: rotate(180deg) translate(9em) rotate(-270deg) !important;
+    transform: rotate(180deg) translate(13em) rotate(-270deg) !important;
 }
 
 .deg225 {
-    transform: rotate(225deg) translate(9em) rotate(-270deg) !important;
+    transform: rotate(225deg) translate(13em) rotate(-270deg) !important;
 }
 
 .deg270 {
-    transform: rotate(270deg) translate(9em) rotate(-270deg) !important;
+    transform: rotate(270deg) translate(13em) rotate(-270deg) !important;
 }
 
 .deg315 {
-    transform: rotate(315deg) translate(9em) rotate(-270deg) !important;
+    transform: rotate(315deg) translate(13em) rotate(-270deg) !important;
 }
 
 .HorisontalListBlock2 ul li {
@@ -212,5 +212,61 @@
    height: 100%;
 }
 /**/
+.Home-Bottm-Logo {
+    bottom: 15%;
+}
+/**/
 
+.footerContainer {
+    height: 133px;
+}
+.BottomWrapper {
+    height: 9.3em;
+}
+.BottomWrapper ul {
+    margin: 4.2em 0 0 0;
+}
+.BottomWrapper ul li img {
+    height: 3.0em;
+}
+.BottomWrapper ul li.Home {
+    margin: -2.2em 0 0 0;
+}
+.BottomWrapper ul li span.AlertsNum {
+    padding: 4px 4px;
+    right: 35%;
+    font-size: 2.0em;
+}
+.BottomWrapper ul li.Home img {
+    width: 60%;
+}
 
+/**/
+
+.Happeness-Width-Table{
+    width: 100%;
+}
+
+.Happeness-face1 {
+    min-height: 7.5em;
+}
+
+.Happeness-face1-Light {
+    min-height: 7.5em;
+}
+
+.Happeness-face2 {
+    min-height: 7.5em;
+}
+
+.Happeness-face2-Light {
+    min-height: 7.5em;
+}
+
+.Happeness-face3 {
+    min-height: 7.5em;
+}
+
+.Happeness-face3-Light {
+    min-height: 7.5em;
+}

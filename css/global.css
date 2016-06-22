@@ -413,6 +413,9 @@ input[type=submit]:hover,
 }
 
 /**/
+.Happeness-Width-Table{
+    width: 90%;
+}
 h3.HappenessInnerTitle {
     color: #FFF;
     background-color: #896d32;
