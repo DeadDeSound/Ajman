@@ -21,7 +21,6 @@ serv.service("NewsService", function ($http, $q, $ionicPopup) {
             var d = $q.defer();
             $http.get("http://ded.sdg.ae/_MobFiles/AjmanDED_MobService.asmx/News_Get?NumberOfItems=" + items)
                 .success(function success(data) {
-                    //  data = data.split('~').join('http://24.ae');
                     var x2 = data.replace("<?xml version=\"1.0\" encoding=\"utf-8\"?>", "");
                     x2 = x2.replace("<string xmlns=\"http://AjmanDED-MobData.org/\">", "");
                     x2 = x2.replace("</string>", "");
@@ -29,7 +28,6 @@ serv.service("NewsService", function ($http, $q, $ionicPopup) {
                     //x2 = x2.replace("~",self.PhotoDomain);
                     //     data.replace('<string xmlns=\"http://AjmanDED-MobData.org">', '');
                     //   data.replace('</string>', '');
-                    //var old = JSON.stringify(data).split('~').join('http://24.ae');
 
                     var NewArray = JSON.parse(x2);
                     self.NewsArticles = NewArray;
