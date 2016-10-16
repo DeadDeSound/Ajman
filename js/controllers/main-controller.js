@@ -347,19 +347,6 @@ app.controller('mainController', function ($scope,
     //
     //});
 
-
-    var path = $location.path();
-    $scope.options = $scope.options || {};
-    if (path=="OnlineServices") {
-        $scope.options.hideBackButton = true;
-        console.log("Online Services is Here")
-    }
-      else
-    {
-    $scope.options.hideBackButton = false;
-    }
-
-
 $scope.CloseSlide = function () {
 
     $ionicHistory.nextViewOptions({
