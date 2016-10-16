@@ -210,7 +210,7 @@
 }
 .iFrameion-content-hidden div.scroll {
     height: 90% !important;
-    -webkit-overflow-scrolling: touch !important;
+    /*-webkit-overflow-scrolling: touch !important;*/
     overflow: hidden !important;
     position: absolute;
     top: 0px;
