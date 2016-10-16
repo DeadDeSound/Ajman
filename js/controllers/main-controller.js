@@ -316,6 +316,7 @@ app.controller('mainController', function ($scope,
                                            $cordovaStatusbar,
                                            $cordovaSocialSharing,
                                            $ionicPopup,
+                                           $location,
                                            $ionicSlideBoxDelegate,
                                            $window, NewsService, $ionicPlatform, $cordovaDevice) {
 
@@ -347,335 +348,348 @@ app.controller('mainController', function ($scope,
     //});
 
 
-    $scope.CloseSlide = function () {
-
-        $ionicHistory.nextViewOptions({
-            historyRoot: true
-        });
-        $ionicViewService.clearHistory();
-        console.log("home");
-        $state.go('home')
-    };
-
-
-    $scope.nextSlide2 = function () {
-        $ionicSlideBoxDelegate.next();
-        console.log("Next");
-    };
+    var path = $location.path();
+    $scope.options = $scope.options || {};
+    if (path=="OnlineServices") {
+        $scope.options.hideBackButton = true;
+        console.log("Online Services is Here")
+    }
+      else
+    {
+    $scope.options.hideBackButton = false;
+    }
 
 
-    $scope.GoToNotification = function () {
+$scope.CloseSlide = function () {
 
-        if (NewsService.EnableNotification) {
-
-            $state.go('notification');
-        }
-    };
-
-
-    $scope.model = NewsService;
-    NewsService.LoadNotification(localStorage.getItem("Device_ID"));
+    $ionicHistory.nextViewOptions({
+        historyRoot: true
+    });
+    $ionicViewService.clearHistory();
+    console.log("home");
+    $state.go('home')
+};
 
 
-    $scope.getInclude = function () {
-        if (localStorage.getItem("lang") === "en") {
-            return "templates/en/sideMenu.html"
-        } else {
-            return "templates/ar/sideMenu.html"
-        }
-
-    };
-
-    $scope.GetAnnualReport = function () {
-
-        if (ionic.Platform.isAndroid()) {
-
-            if (localStorage.getItem("lang") === "en") {
-
-                return "templates/en/annual_report_android_en.html"
-            } else {
-                return "templates/ar/annual_report_android_ar.html"
-            }
-
-        } else {
-
-            if (localStorage.getItem("lang") === "en") {
-
-                return "templates/en/annual_report_ios_en.html"
-            } else {
-                return "templates/ar/annual_report_ios_ar.html"
-            }
-        }
+$scope.nextSlide2 = function () {
+    $ionicSlideBoxDelegate.next();
+    console.log("Next");
+};
 
 
-        if (localStorage.getItem("lang") === "en") {
+$scope.GoToNotification = function () {
 
-            return "templates/en/sideMenu.html"
-        } else {
-            return "templates/ar/sideMenu.html"
-        }
+    if (NewsService.EnableNotification) {
 
-    };
+        $state.go('notification');
+    }
+};
 
 
-    $scope.toggleMenu = function () {
-        $ionicSideMenuDelegate.toggleRight();
-    };
+$scope.model = NewsService;
+NewsService.LoadNotification(localStorage.getItem("Device_ID"));
 
-    $scope.closeMenu = function () {
-        $ionicSideMenuDelegate.toggleRight();
-    };
 
-    $scope.changeLang = function () {
-        console.log(localStorage.getItem("lang"));
-        if (localStorage.getItem("lang") === "en") {
-            localStorage.setItem("lang", "ar");
-            console.log(localStorage.getItem("lang"));
-            $window.location.reload(true);
+$scope.getInclude = function () {
+    if (localStorage.getItem("lang") === "en") {
+        return "templates/en/sideMenu.html"
+    } else {
+        return "templates/ar/sideMenu.html"
+    }
 
-        } else {
-            localStorage.setItem("lang", "en");
-            console.log(localStorage.getItem("lang"));
-            $window.location.reload(true);
+};
 
-        }
-    };
-
-    $scope.homePage = function () {
-        $ionicHistory.nextViewOptions({
-            historyRoot: true
-        });
-        $ionicViewService.clearHistory();
-        console.log("home");
-        $state.go('home')
-    };
-
+$scope.GetAnnualReport = function () {
 
     if (ionic.Platform.isAndroid()) {
-        var appLink = "https://play.google.com/store/apps/details?id=com.ajman.ded.ae&hl=en";
-    } else {
-        var appLink = "https://itunes.apple.com/eg/app/ajman-ded/id1098206759?mt=8";
 
+        if (localStorage.getItem("lang") === "en") {
+
+            return "templates/en/annual_report_android_en.html"
+        } else {
+            return "templates/ar/annual_report_android_ar.html"
+        }
+
+    } else {
+
+        if (localStorage.getItem("lang") === "en") {
+
+            return "templates/en/annual_report_ios_en.html"
+        } else {
+            return "templates/ar/annual_report_ios_ar.html"
+        }
     }
 
 
-    var appTitle = "Ajman DED";
+    if (localStorage.getItem("lang") === "en") {
+
+        return "templates/en/sideMenu.html"
+    } else {
+        return "templates/ar/sideMenu.html"
+    }
+
+};
+
+
+$scope.toggleMenu = function () {
+    $ionicSideMenuDelegate.toggleRight();
+};
+
+$scope.closeMenu = function () {
+    $ionicSideMenuDelegate.toggleRight();
+};
+
+$scope.changeLang = function () {
+    console.log(localStorage.getItem("lang"));
+    if (localStorage.getItem("lang") === "en") {
+        localStorage.setItem("lang", "ar");
+        console.log(localStorage.getItem("lang"));
+        $window.location.reload(true);
+
+    } else {
+        localStorage.setItem("lang", "en");
+        console.log(localStorage.getItem("lang"));
+        $window.location.reload(true);
+
+    }
+};
+
+$scope.homePage = function () {
+    $ionicHistory.nextViewOptions({
+        historyRoot: true
+    });
+    $ionicViewService.clearHistory();
+    console.log("home");
+    $state.go('home')
+};
+
+
+if (ionic.Platform.isAndroid()) {
+    var appLink = "https://play.google.com/store/apps/details?id=com.ajman.ded.ae&hl=en";
+} else {
+    var appLink = "https://itunes.apple.com/eg/app/ajman-ded/id1098206759?mt=8";
+
+}
+
+
+var appTitle = "Ajman DED";
 //    var appLink = "https://play.google.com/store/apps/details?id=com.ajman.ded.ae&hl=en";
 
-    $scope.shareSocial = function () {
-        console.log("App Link", appLink);
-        $cordovaSocialSharing.share(appTitle, null, null, appLink);
-    };
+$scope.shareSocial = function () {
+    console.log("App Link", appLink);
+    $cordovaSocialSharing.share(appTitle, null, null, appLink);
+};
 
 
-    //$scope.callAlertWithVariable = function (x) {
-    //    //document.location.href = 'tel:80055';
-    //    //A confirm dialog
-    //    var confirmPopup = $ionicPopup.confirm({
-    //        title: x,
-    //        template: x,
-    //        cssClass: 'custom-popup'
-    //        //buttons: [
-    //        //    {
-    //        //        text: 'cancel'
-    //        //    },
-    //        //    {
-    //        //        text: 'OK',
-    //        //        type: 'button-positive',
-    //        //        onTap: function (e) {
-    //        //          document.location.href = 'tel:80055';
-    //        //        }
-    //        //    }
-    //        //]
-    //    });
-    //
-    //    confirmPopup.then(function (res) {
-    //        if (res) {
-    //            document.location.href = 'tel:80055';
-    //            console.log('Yes');
-    //        } else {
-    //            console.log('No');
-    //        }
-    //    });
-    //};
+//$scope.callAlertWithVariable = function (x) {
+//    //document.location.href = 'tel:80055';
+//    //A confirm dialog
+//    var confirmPopup = $ionicPopup.confirm({
+//        title: x,
+//        template: x,
+//        cssClass: 'custom-popup'
+//        //buttons: [
+//        //    {
+//        //        text: 'cancel'
+//        //    },
+//        //    {
+//        //        text: 'OK',
+//        //        type: 'button-positive',
+//        //        onTap: function (e) {
+//        //          document.location.href = 'tel:80055';
+//        //        }
+//        //    }
+//        //]
+//    });
+//
+//    confirmPopup.then(function (res) {
+//        if (res) {
+//            document.location.href = 'tel:80055';
+//            console.log('Yes');
+//        } else {
+//            console.log('No');
+//        }
+//    });
+//};
 
-    function UnicodeAlert() {
-        var str;
-        str = document.getElementById('inputElement').value;
-        alert(str.replace(/&#(\d+);/g));
-        return false;
+function UnicodeAlert() {
+    var str;
+    str = document.getElementById('inputElement').value;
+    alert(str.replace(/&#(\d+);/g));
+    return false;
+}
+
+
+$scope.callAlert = function () {
+    //document.location.href = 'tel:80055';
+    //A confirm dialog
+
+
+    if (localStorage.getItem("lang") === "en") {
+
+        var Title = "Call Customer Service";
+        var BtnOK = "Ok";
+        var BtnCancel = "Cancel";
+    } else {
+        var Title = "الإتصال بخدمة العملاء";
+        var BtnOK = "موافق";
+        var BtnCancel = "إلغاء";
+
     }
 
 
-    $scope.callAlert = function () {
-        //document.location.href = 'tel:80055';
-        //A confirm dialog
+    var confirmPopup = $ionicPopup.confirm({
 
 
-        if (localStorage.getItem("lang") === "en") {
-
-            var Title = "Call Customer Service";
-            var BtnOK = "Ok";
-            var BtnCancel = "Cancel";
-        } else {
-            var Title = "الإتصال بخدمة العملاء";
-            var BtnOK = "موافق";
-            var BtnCancel = "إلغاء";
-
-        }
-
-
-        var confirmPopup = $ionicPopup.confirm({
-
-
-            title: Title,
-            templateUrl: 'templates/CallTemplateMain.html',
-            cssClass: 'custom-popup',
-            buttons: [
-                {
-                    text: BtnCancel
-                },
-                {
-                    text: BtnOK,
-                    type: 'button-positive',
-                    onTap: function (e) {
-                        document.location.href = 'tel:80055';
-                        console.log("Inside CAll Status")
-                    }
-
-
+        title: Title,
+        templateUrl: 'templates/CallTemplateMain.html',
+        cssClass: 'custom-popup',
+        buttons: [
+            {
+                text: BtnCancel
+            },
+            {
+                text: BtnOK,
+                type: 'button-positive',
+                onTap: function (e) {
+                    document.location.href = 'tel:80055';
+                    console.log("Inside CAll Status")
                 }
-            ]
-        });
 
-        confirmPopup.then(function (res) {
-            if (res == BtnOK) {
-                // document.location.href = 'tel:80055';
-                document.location.href = 'tel:80055';
-                console.log(' CAll Status : Yes');
-            } else {
-                console.log('Call Status :  No');
+
             }
-        });
-    };
+        ]
+    });
 
-
-    $scope.callAlert2 = function () {
-
-
-        //        document.location.href = 'tel:80055';
-
-
-        if (localStorage.getItem("lang") === "en") {
-
-            var Title = "How was your experience?"
-            var BtnOK = "Ok";
-            var BtnCancel = "Cancel";
+    confirmPopup.then(function (res) {
+        if (res == BtnOK) {
+            // document.location.href = 'tel:80055';
+            document.location.href = 'tel:80055';
+            console.log(' CAll Status : Yes');
         } else {
-            var Title = "كيف كانت تجربتك؟";
-            var BtnOK = "موافق";
-            var BtnCancel = "إلغاء";
+            console.log('Call Status :  No');
         }
+    });
+};
 
-        //       A confirm dialog
-        var confirmPopup = $ionicPopup.confirm({
-            title: Title,
-            templateUrl: 'templates/MessageMain.html',
-            cssClass: 'custom-popup',
-            buttons: [
-                {
-                    text: BtnCancel
 
-                },
-                {
-                    text: BtnOK,
-                    type: 'button-positive'
-                }
-            ]
-        });
+$scope.callAlert2 = function () {
 
-        confirmPopup.then(function (res) {
-            if (res) {
-                console.log('Yes');
-            } else {
-                console.log('No');
+
+    //        document.location.href = 'tel:80055';
+
+
+    if (localStorage.getItem("lang") === "en") {
+
+        var Title = "How was your experience?"
+        var BtnOK = "Ok";
+        var BtnCancel = "Cancel";
+    } else {
+        var Title = "كيف كانت تجربتك؟";
+        var BtnOK = "موافق";
+        var BtnCancel = "إلغاء";
+    }
+
+    //       A confirm dialog
+    var confirmPopup = $ionicPopup.confirm({
+        title: Title,
+        templateUrl: 'templates/MessageMain.html',
+        cssClass: 'custom-popup',
+        buttons: [
+            {
+                text: BtnCancel
+
+            },
+            {
+                text: BtnOK,
+                type: 'button-positive'
             }
-        });
-    };
+        ]
+    });
+
+    confirmPopup.then(function (res) {
+        if (res) {
+            console.log('Yes');
+        } else {
+            console.log('No');
+        }
+    });
+};
 
 
-    $scope.callAlert3 = function () {
-        //document.location.href = 'tel:80055';
-        //A confirm dialog
+$scope.callAlert3 = function () {
+    //document.location.href = 'tel:80055';
+    //A confirm dialog
 
-        var name = localStorage.getItem("Device_Model");
-        var naem2 = $rootScope.iosCSS2;
-        var confirmPopup = $ionicPopup.confirm({
-            title: name,
-            template: naem2,
-            cssClass: 'custom-popup'
-            //buttons: [
-            //    {
-            //        text: 'cancel'
-            //    },
-            //    {
-            //        text: 'OK',
-            //        type: 'button-positive',
-            //        onTap: function (e) {
-            //          document.location.href = 'tel:80055';
-            //        }
-            //    }
-            //]
-        });
+    var name = localStorage.getItem("Device_Model");
+    var naem2 = $rootScope.iosCSS2;
+    var confirmPopup = $ionicPopup.confirm({
+        title: name,
+        template: naem2,
+        cssClass: 'custom-popup'
+        //buttons: [
+        //    {
+        //        text: 'cancel'
+        //    },
+        //    {
+        //        text: 'OK',
+        //        type: 'button-positive',
+        //        onTap: function (e) {
+        //          document.location.href = 'tel:80055';
+        //        }
+        //    }
+        //]
+    });
 
-        confirmPopup.then(function (res) {
-            if (res) {
-                document.location.href = 'tel:80055';
-                console.log('Yes');
-            } else {
-                console.log('No');
-            }
-        });
-    };
-
-
-    $scope.Answer1 = function (id) {
-        document.getElementById("happy1").className = "Happeness-face1";
-        document.getElementById("happy2").className = "Happeness-face2-Light";
-        document.getElementById("happy3").className = "Happeness-face3-Light";
-        NewsService.LoadVote_SendAnswer(localStorage.getItem("Device_ID"), 1, id);
-        console.log("Answer 1 ");
-        console.log(document.getElementById("happy1").className);
-
-    };
-    $scope.Answer2 = function (id) {
-        document.getElementById("happy2").className = "Happeness-face2";
-        document.getElementById("happy1").className = "Happeness-face1-Light";
-        document.getElementById("happy3").className = "Happeness-face3-Light";
-        NewsService.LoadVote_SendAnswer(localStorage.getItem("Device_ID"), 1, id);
-        console.log("Answer 2 ");
-        console.log(document.getElementById("happy2").className);
-
-    };
-    $scope.Answer3 = function (id) {
-        document.getElementById("happy3").className = "Happeness-face3";
-        document.getElementById("happy1").className = "Happeness-face1-Light";
-        document.getElementById("happy2").className = "Happeness-face2-Light";
-        NewsService.LoadVote_SendAnswer(localStorage.getItem("Device_ID"), 1, id);
-        console.log("Answer 3 ");
-        console.log(document.getElementById("happy3").className);
-
-    };
+    confirmPopup.then(function (res) {
+        if (res) {
+            document.location.href = 'tel:80055';
+            console.log('Yes');
+        } else {
+            console.log('No');
+        }
+    });
+};
 
 
-    $scope.nextSlide = function () {
-        $ionicSlideBoxDelegate.enableSlide(true);
-        $ionicSlideBoxDelegate.next();
+$scope.Answer1 = function (id) {
+    document.getElementById("happy1").className = "Happeness-face1";
+    document.getElementById("happy2").className = "Happeness-face2-Light";
+    document.getElementById("happy3").className = "Happeness-face3-Light";
+    NewsService.LoadVote_SendAnswer(localStorage.getItem("Device_ID"), 1, id);
+    console.log("Answer 1 ");
+    console.log(document.getElementById("happy1").className);
 
-    };
+};
+$scope.Answer2 = function (id) {
+    document.getElementById("happy2").className = "Happeness-face2";
+    document.getElementById("happy1").className = "Happeness-face1-Light";
+    document.getElementById("happy3").className = "Happeness-face3-Light";
+    NewsService.LoadVote_SendAnswer(localStorage.getItem("Device_ID"), 1, id);
+    console.log("Answer 2 ");
+    console.log(document.getElementById("happy2").className);
+
+};
+$scope.Answer3 = function (id) {
+    document.getElementById("happy3").className = "Happeness-face3";
+    document.getElementById("happy1").className = "Happeness-face1-Light";
+    document.getElementById("happy2").className = "Happeness-face2-Light";
+    NewsService.LoadVote_SendAnswer(localStorage.getItem("Device_ID"), 1, id);
+    console.log("Answer 3 ");
+    console.log(document.getElementById("happy3").className);
+
+};
 
 
-});
+$scope.nextSlide = function () {
+    $ionicSlideBoxDelegate.enableSlide(true);
+    $ionicSlideBoxDelegate.next();
+
+};
+
+
+})
+;
 
 
 app.controller('splashController', function ($scope, $state, $rootScope, $timeout, $ionicViewService, $ionicHistory, $window) {
