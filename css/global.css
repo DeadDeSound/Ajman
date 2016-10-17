@@ -591,6 +591,9 @@ h3.HappenessInnerTitle {
    position: absolute;
    top: 0px;
 }
+.iFrameion-content-hidden {
+    padding-top: 0 !important;
+}
 .webPage
 {
    width: 100%;
