@@ -469,7 +469,7 @@ $scope.shareSocial = function () {
 
 
 //$scope.callAlertWithVariable = function (x) {
-//    //document.location.href = 'tel:80055';
+//    //document.location.href = 'tel:80070';
 //    //A confirm dialog
 //    var confirmPopup = $ionicPopup.confirm({
 //        title: x,
@@ -483,7 +483,7 @@ $scope.shareSocial = function () {
 //        //        text: 'OK',
 //        //        type: 'button-positive',
 //        //        onTap: function (e) {
-//        //          document.location.href = 'tel:80055';
+//        //          document.location.href = 'tel:80070';
 //        //        }
 //        //    }
 //        //]
@@ -491,7 +491,7 @@ $scope.shareSocial = function () {
 //
 //    confirmPopup.then(function (res) {
 //        if (res) {
-//            document.location.href = 'tel:80055';
+//            document.location.href = 'tel:80070';
 //            console.log('Yes');
 //        } else {
 //            console.log('No');
@@ -508,7 +508,7 @@ function UnicodeAlert() {
 
 
 $scope.callAlert = function () {
-    //document.location.href = 'tel:80055';
+    //document.location.href = 'tel:80070';
     //A confirm dialog
 
 
@@ -539,7 +539,7 @@ $scope.callAlert = function () {
                 text: BtnOK,
                 type: 'button-positive',
                 onTap: function (e) {
-                    document.location.href = 'tel:80055';
+                    document.location.href = 'tel:80070';
                     console.log("Inside CAll Status")
                 }
 
@@ -550,8 +550,8 @@ $scope.callAlert = function () {
 
     confirmPopup.then(function (res) {
         if (res == BtnOK) {
-            // document.location.href = 'tel:80055';
-            document.location.href = 'tel:80055';
+            // document.location.href = 'tel:80070';
+            document.location.href = 'tel:80070';
             console.log(' CAll Status : Yes');
         } else {
             console.log('Call Status :  No');
@@ -563,7 +563,7 @@ $scope.callAlert = function () {
 $scope.callAlert2 = function () {
 
 
-    //        document.location.href = 'tel:80055';
+    //        document.location.href = 'tel:80070';
 
 
     if (localStorage.getItem("lang") === "en") {
@@ -605,7 +605,7 @@ $scope.callAlert2 = function () {
 
 
 $scope.callAlert3 = function () {
-    //document.location.href = 'tel:80055';
+    //document.location.href = 'tel:80070';
     //A confirm dialog
 
     var name = localStorage.getItem("Device_Model");
@@ -622,7 +622,7 @@ $scope.callAlert3 = function () {
         //        text: 'OK',
         //        type: 'button-positive',
         //        onTap: function (e) {
-        //          document.location.href = 'tel:80055';
+        //          document.location.href = 'tel:80070';
         //        }
         //    }
         //]
@@ -630,7 +630,7 @@ $scope.callAlert3 = function () {
 
     confirmPopup.then(function (res) {
         if (res) {
-            document.location.href = 'tel:80055';
+            document.location.href = 'tel:80070';
             console.log('Yes');
         } else {
             console.log('No');
