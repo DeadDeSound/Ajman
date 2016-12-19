@@ -71,26 +71,21 @@
             </ion-nav-bar>
             <ion-nav-view  class="contentIonic">
             </ion-nav-view>
-            <ion-footer-bar  id="homeFooterContainer" class="footerContainer animated05 fadeInUpBig hide-on-keyboard-open" ng-if="!SlidePage">
+            <ion-footer-bar  id="homeFooterContainer" class="footerContainer hide-on-keyboard-open" ng-if="!SlidePage">
                 <div id="homeFooter" class="BottomWrapper">
                     <ul>
-                        <li class="animated06 fadeInUpBig">
+                        <li class="">
                             <!--<a ui-sref="messages"><img alt="" src="img/icon/smile.png"/></a>-->
                             <a ng-click="callAlert2()"><img alt="" src="img/icon/smile.png"></a>
 
                         </li>
-                        <li class="animated07 fadeInUpBig">
+                        <li class="">
                             <a ng-click="GoToNotification()"><img alt="" src="img/icon/alerts.png"></a>
                             <span class="AlertsNum">{{model.No_Notification}}</span>
                         </li>
-                        <li ui-sref="home" class="Home animated08 fadeInUpBig"><a><img alt=""
-                                                                                       src="img/icon/home.png"></a></li>
-                        <li ng-click="shareSocial()" class="animated09 fadeInUpBig"><a><img alt=""
-                                                                                            src="img/icon/share.png"></a>
-                        </li>
-                        <li ng-click="callAlert()" class="animated010 fadeInUpBig"><a><img alt=""
-                                                                                           src="img/icon/call.png"></a>
-                        </li>
+                        <li ui-sref="home" class="Home"><a><img alt="" src="img/icon/home.png"></a></li>
+                        <li ng-click="shareSocial()" class=""><a><img alt="" src="img/icon/share.png"></a></li>
+                        <li ng-click="callAlert()" class=""><a><img alt="" src="img/icon/call.png"></a></li>
                     </ul>
                 </div>
             </ion-footer-bar>
